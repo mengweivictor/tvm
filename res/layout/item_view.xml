@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android = "http://schemas.android.com/apk/res/android"
+              android:orientation   = "vertical"
+              android:layout_width  = "fill_parent"
+              android:layout_height = "fill_parent">
+              
+    
+    <!--  ============S3文件内容显示页=================  -->
+    
+    <LinearLayout xmlns:android = "http://schemas.android.com/apk/res/android"
+    	          android:orientation   = "horizontal"
+    	          android:layout_width  = "fill_parent"
+    	          android:layout_height = "wrap_content">    
+
+        <!--正在加载标签-->				  
+    	<TextView android:id            = "@+id/item_view_loading_text"
+    		      android:text          = "Loading..."
+    		      android:layout_width  = "fill_parent"
+			      android:textStyle     = "bold"
+			      android:textColor     = "#ffe3ce08"
+    		      android:layout_height = "40dip"			
+			      android:gravity       = "center"
+    	          android:layout_weight = "1"/>
+		
+		<!--删除按钮-->	
+    	<Button android:id            = "@+id/delete_item"
+    	        android:text          = "Delete"
+    	        android:layout_width  = "wrap_content"
+    	        android:layout_height = "wrap_content"
+    	        android:gravity       = "right"/>
+	</LinearLayout>    	
+    
+	<!--底部文本内容框-->
+    <TextView android:id              = "@+id/item_view_body_text"
+    	      android:layout_width    = "fill_parent"
+		      android:textColor       = "#ffffff"
+    	      android:layout_height   = "40dip"/>
+    
+    <!--底部图片内容框-->
+    <ImageView android:id             = "@+id/item_view_body_image"
+               android:layout_width   = "wrap_content"
+               android:layout_height  = "wrap_content"
+               android:layout_gravity = "center"/>
+</LinearLayout>

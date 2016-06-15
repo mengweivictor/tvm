@@ -1,0 +1,86 @@
+
+
+cd /usr/share/tomcat7/
+cd /var/lib/tomcat7/webapps/ROOT/WEB-INF/classes/com/amazonaws/tvm/custom
+
+testUser/password=user13/12345678   
+
+ec2-user/amzonplm
+
+sudo su
+
+vmstat 1
+
+TVM
+http://mobile.awsblog.com/post/Tx371Y7CA0QJ95X/-Simplifying-span-class-matches-Token-span-span-class-matches-Vending-span-span
+
+
+logfile in the android: /storage/emulated/legacy/S3PersonalFileStore/log4j.txt 
+
+mengwei IP:52.1.189.140
+leo IP:52.4.101.243
+
+ chown -R tomcat.tomcat com
+ 
+ service tomcat7 status
+ 
+ 
+ test user:mr001/12345678
+ 
+ 
+ https://888250974927.signin.aws.amazon.com/console
+mw/amazonplm
+
+
+Access Key ID: 
+AKIAIADRR2NIZYGA3Q4A 
+Secret Access Key: 
+jH8PvlyGl1bhP8LivRc5ew1R0zSj4HDdhTBAlo+O
+
+
+mengwei
+∑√Œ √‹‘ø ID:
+AKIAJAOTEUJP5ISBTCNQ
+ÀΩ”–∑√Œ √‹‘ø:
+Z3bCTU2yFjRSA842a2qarCsKWAeH3EF5Wl8IVZVl
+
+
+
+
+BJS information
+TVM-v2: 54.223.192.55  tvm.leoflow.biz
+ssh login: ec2-user/amazonplm
+role:  TVMRole
+
+BJS Admin:
+https://leoflow.signin.amazonaws.cn/console
+login: mw/amazonplm
+
+Access Key ID:
+AKIAPB7Y2GANVPWTUR4Q
+Secret Access Key:
+knZAj9EqtpTIegx6pp0frbXCStIYj0i8NvLtar5T
+
+### Check IAM TVM with metadata
+# curl http://169.254.169.254/latest/meta-data/iam/security-credentials/TVMRole
+{
+  "Code" : "Success",
+  "LastUpdated" : "2015-06-24T00:50:44Z",
+  "Type" : "AWS-HMAC",
+  "AccessKeyId" : "ASIAPF3I4I4XWJLVPJCQ",
+  "SecretAccessKey" : "Ogvho/k2MIQ6f0SRgEDC8GVIpxAPXd+BY3yUvMhw",
+  "Token" : "AQoDYXdzEOH//////////wEa4AMD8+IgmgkntrO1GjCDT5J04wgzFChf5qSbv8r4K8N66723pbA/v2tbudPlrG/+UxqE9sJoBlxj7ZPhVYLVLDAiKr0emfsGNtYhNUGWp+e7d/QwE84lINIX2gz59JuZwPETxKh4q727MvAyckXg1BifhE8bZzHio5XwrHWlvuByRxYj3GPmV9R4P2xpnwwCCmiVEDn3ZeiV6eJkirAUpImBgv3EaKAp3qTjVITrrUGxbO+5E2+AbOhGM0dGNBX0SUQxq99AMepFSH7W5fsOV3F/gXawAE4zMCQwQt5RNE32oMvtUtriYyLXkd73wvb2Twc4lYabzTJJ6IvEEGK0gGVkA/2tq/4TGvu3Zwew5M8G3ZDOAVlxspnMBDLGOyTa3O/qwzsnX5fcJqUkrtSLZur3vYz5YG1J1+egxhH1stnbipMOmaFNuToZIEbwFFcoTZndMHw8w1NxanlwLjAAi74Yx3KYu2c3XBflUX1ntF5BfwswyiTP4DorxdBM/hQeyIEt2u7yteIjvIRC2ErRzqzMVhVgjcLbOIWNXXOO8GfekT6hKa9HlYL20gdGUJ76xAat5B8b+RWwkYM6FpcAfB93XH5FL7pFP6LyIgoKj+ylub7sHoEpvanH/mmYxrKaSoog3/2nrAU=",
+  "Expiration" : "2015-06-24T07:20:30Z"
+
+
+TODO:
+1)  Remove the credentials from the TVM java codes and use temporary role (TVMRole) from metadata ( @MengWei)
+2)  Leave /var/lib/tomcat7/webapps/ROOT/WEB-INF/classes/TokenVendingMachinePolicy.json unchanged until you verify step1 (@MengWei)
+3)  Change /var/lib/tomcat7/webapps/ROOT/WEB-INF/classes/TokenVendingMachinePolicy.json to more specific S3 control (@leo )
+4)  °≠. Well Done
+
+Future:
+1)  Preparation for 7.9 demo presentation  (@leo)
+ 
+
+ 

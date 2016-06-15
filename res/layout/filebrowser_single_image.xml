@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- 选择图片详细图片显示页面 -->
+<LinearLayout xmlns:android = "http://schemas.android.com/apk/res/android"
+              android:layout_width  = "match_parent"
+              android:layout_height = "match_parent"
+              android:orientation   = "vertical"
+              android:background    = "@android:color/white" >
+    
+    <LinearLayout android:layout_width  = "match_parent"
+                  android:layout_height = "wrap_content"
+                  android:orientation   = "vertical" >
+        <!-- 图片显示视图控件 -->
+        <ImageView android:id             = "@+id/fb_single_image_view"
+                   android:layout_width   = "wrap_content"
+                   android:layout_height  = "wrap_content"
+                   android:layout_gravity = "center"/>
+    </LinearLayout>
+    
+    <LinearLayout android:layout_width  = "match_parent"
+                  android:layout_height = "wrap_content">
+
+        <!-- 按钮 -->
+        <Button android:id            = "@+id/fb_single_image_button_select"
+				android:layout_width  = "wrap_content"
+				android:layout_height = "wrap_content"
+				android:layout_weight = "1"
+				android:text          = "upload" />
+        
+        <Button android:id            = "@+id/fb_single_image_button_return"
+				android:layout_width  = "wrap_content"
+				android:layout_height = "wrap_content"
+				android:layout_weight = "1"
+				android:text          = "return" />
+   	</LinearLayout>       
+</LinearLayout>

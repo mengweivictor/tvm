@@ -1,0 +1,24 @@
+# view AndroidManifest.xml #generated:27
+-keep class com.amazonaws.demo.personalfilestore.Login { <init>(...); }
+
+# view AndroidManifest.xml #generated:19
+-keep class com.amazonaws.demo.personalfilestore.S3PersonalFileStore { <init>(...); }
+
+# view AndroidManifest.xml #generated:14
+-keep class com.amazonaws.demo.personalfilestore.S3PersonalFileStoreApplication { <init>(...); }
+
+# view AndroidManifest.xml #generated:33
+-keep class com.amazonaws.demo.personalfilestore.filebrowser.FileBrowserActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:34
+-keep class com.amazonaws.demo.personalfilestore.filebrowser.FileSingleImageActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:31
+-keep class com.amazonaws.demo.personalfilestore.s3.S3AddObjectView { <init>(...); }
+
+# view AndroidManifest.xml #generated:29
+-keep class com.amazonaws.demo.personalfilestore.s3.S3BucketView { <init>(...); }
+
+# view AndroidManifest.xml #generated:30
+-keep class com.amazonaws.demo.personalfilestore.s3.S3ObjectView { <init>(...); }
+

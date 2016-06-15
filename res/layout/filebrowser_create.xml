@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- 在当前目录下创建文件视图 -->
+<LinearLayout xmlns:android = "http://schemas.android.com/apk/res/android"
+              android:layout_width  = "fill_parent"
+              android:layout_height = "wrap_content" >
+
+    <!-- 文件名输入 -->
+    <EditText android:id            = "@+id/file_name"
+              android:layout_width  = "fill_parent"
+              android:layout_height = "wrap_content"
+              android:layout_margin = "5dip"
+              android:singleLine    = "true"
+              android:text          = "" >
+    </EditText>
+
+</LinearLayout>

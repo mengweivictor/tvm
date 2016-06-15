@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android = "http://schemas.android.com/apk/res/android"
+              android:orientation   = "vertical"
+              android:layout_width  = "fill_parent"
+              android:layout_height = "fill_parent">
+              
+    <!--  ============S3文件列表页=================  -->
+    
+	<!--水平布局-->
+    <LinearLayout xmlns:android = "http://schemas.android.com/apk/res/android"
+    	          android:orientation   = "horizontal"
+    	          android:layout_width  = "fill_parent"
+    	          android:layout_height = "wrap_content">
+        
+		<!--正在加载提示和标题-->
+    	<TextView android:id            = "@+id/item_list_loading_text"
+	    	      android:text          = "Loading..."
+    		      android:layout_width  = "wrap_content"
+			      android:textStyle     = "bold"
+			      android:textColor     = "#ffe3ce08"
+    		      android:layout_height = "40dip"
+    		      android:gravity       = "center"
+    	          android:layout_weight = "1"/>
+    	
+    	 
+	</LinearLayout>   
+	
+    <LinearLayout xmlns:android = "http://schemas.android.com/apk/res/android"
+              android:orientation   = "horizontal"
+              android:layout_width  = "fill_parent"
+              android:layout_height = "wrap_content">
+        
+            <!--添加文本按钮-->       
+            <Button android:id            = "@+id/add_item"
+                    android:text          = "Add Text"
+                    android:layout_width  = "wrap_content"
+                    android:layout_height = "wrap_content"/>
+            
+            <!--选择文件按钮-->        
+            <Button android:id            = "@+id/select_item"
+                    android:text          = "Select one photo"
+                    android:layout_width  = "wrap_content"
+                    android:layout_height = "wrap_content"
+                    />
+        
+        </LinearLayout>  	
+    
+	<!--底部S3内容列表-->	
+	<ListView android:id            = "@+id/item_list_view"
+		      android:layout_width  = "fill_parent"
+		      android:layout_height = "340dip"/>
+			  
+</LinearLayout>
