@@ -15,12 +15,17 @@
 package com.amazonaws.demo.personalfilestore;
 
 
+import java.util.List;
+
 import org.apache.log4j.Logger;
 
 import android.content.SharedPreferences;
+import android.net.Credentials;
 import android.util.Log;
 
 import com.amazonaws.auth.AWSCredentials;
+import com.amazonaws.auth.BasicSessionCredentials;
+import com.amazonaws.demo.personalfilestore.s3.S3fortest;
 import com.amazonaws.regions.Region;
 import com.amazonaws.regions.Regions;
 import com.amazonaws.services.s3.AmazonS3Client;
@@ -98,18 +103,42 @@ public class AmazonClientManager
             {
                 ableToGetToken = tvm.getToken();            
             }
+            
+            
+//            /*this code is for test purpose*/
+//            AWSCredentials testcredentials = 
+//                    AmazonSharedPreferencesWrapper.getCredentialsFromSharedPreferences( this.sharedPreferences );
+//	        		
+//	        AmazonS3Client s3Client = new AmazonS3Client( testcredentials);
+//	        s3Client.setEndpoint("s3.cn-north-1.amazonaws.com.cn");
+//	        
+//	        List<String> testresult =S3fortest.getObjectNamesForBucket("tvm-examplebucket", 
+//													                    "mwtestuser1",
+//													                    10,
+//													                    s3Client);
+//	        log4j.info(testresult);
         }
 
         if (ableToGetToken.requestWasSuccessful() && s3Client == null ) 
         {        
-            
             AWSCredentials credentials = 
                 AmazonSharedPreferencesWrapper.getCredentialsFromSharedPreferences( this.sharedPreferences );
             
 		    s3Client = new AmazonS3Client( credentials );
 		    s3Client.setRegion(Region.getRegion(Regions.CN_NORTH_1));
+		    
+		    
+		    /*this code is for test purpose*/
+	        
+//	        List<String> testresult =S3fortest.getObjectNamesForBucket("tvm-examplebucket", 
+//													                    "mwtestuser1",
+//													                    10,
+//													                    s3Client);
+//	        log4j.info(testresult);
 
         }
+        
+        
         
         return ableToGetToken;
     }

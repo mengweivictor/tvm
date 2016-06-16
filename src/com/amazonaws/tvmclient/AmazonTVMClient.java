@@ -225,5 +225,4 @@ public class AmazonTVMClient
     	
     	return endpoint.substring( startIndex, endIndex );
     }
-
 }

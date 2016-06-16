@@ -27,9 +27,12 @@ import java.util.List;
 
 import org.apache.log4j.Logger;
 
+import com.amazonaws.auth.BasicAWSCredentials;
+import com.amazonaws.auth.BasicSessionCredentials;
 import com.amazonaws.demo.personalfilestore.S3PersonalFileStore;
 import com.amazonaws.demo.personalfilestore.S3PersonalFileStoreApplication;
 import com.amazonaws.services.s3.AmazonS3;
+import com.amazonaws.services.s3.AmazonS3Client;
 import com.amazonaws.services.s3.model.ListObjectsRequest;
 import com.amazonaws.services.s3.model.ObjectListing;
 import com.amazonaws.services.s3.model.ObjectMetadata;
@@ -62,7 +65,7 @@ public class S3
 		
 		req.setMaxKeys(new Integer(numItems));//返回记录数限制
 		req.setBucketName(bucketName);//存储桶名字
-		req.setPrefix(prefix + "/");//用户目录名字（同用户名）
+		req.setPrefix(prefix + "/");//用户目录名字（同用户名)
 	
 		
 		ObjectListing objects = null;
@@ -94,7 +97,7 @@ public class S3
 		}
 
 		return objectNames;		
-	}	
+	}
 	
 	//向S3存储桶中添加字符串对象
 	public static void createObjectForBucket( String bucketName, String objectName, String data ) 
