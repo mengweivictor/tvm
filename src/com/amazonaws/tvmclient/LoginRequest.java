@@ -38,7 +38,7 @@ public class LoginRequest extends Request
         this.endpoint = endpoint;
         this.useSSL   = useSSL;
         this.appName  = appName;
-        this.uid      = uid;
+        this.uid      = uid;/*this uid is a random string*/
         this.username = username;
         this.password = password;
         
@@ -77,7 +77,7 @@ public class LoginRequest extends Request
             
             return Utilities.getSignature( salt, this.password );
         }
-        catch ( Exception exception ) 
+        catch ( Exception exception )
         {
             return null;
         }

@@ -19,6 +19,12 @@ import java.security.SecureRandom;
 import org.apache.commons.codec.binary.Hex;
 import org.apache.log4j.Logger;
 
+import com.amazonaws.demo.weibologin.AccessTokenKeeper;
+import com.amazonaws.demo.weibologin.Constants;
+import com.amazonaws.demo.weibologin.WeiboLoginRequest;
+import com.amazonaws.demo.weibologin.WeiboLoginResponseHandler;
+import com.sina.weibo.sdk.auth.Oauth2AccessToken;
+
 import android.content.SharedPreferences;
 import android.util.Log;
 
@@ -79,7 +85,9 @@ public class AmazonTVMClient
      */
     public Response getToken() 
     {
+    	//this uid is used for server to find the same key from device table
         String uid = AmazonSharedPreferencesWrapper.getUidForDevice( this.sharedPreferences );
+        //this key is encrpyt the get token request
         String key = AmazonSharedPreferencesWrapper.getKeyForDevice( this.sharedPreferences );
         
         //构造请求对象
@@ -128,8 +136,6 @@ public class AmazonTVMClient
                                                          uid, 
                                                          username, 
                                                          password );
-            
-            
             log4j.debug("login() " + "loginRequest;{" + loginRequest + "}");
             
             ResponseHandler handler = new LoginResponseHandler( loginRequest.getDecryptionKey() );
@@ -152,6 +158,42 @@ public class AmazonTVMClient
 
         return response;
     }
+    public Response login(Oauth2AccessToken accessToken) {
+    	Response response = Response.SUCCESSFUL;
+    	
+    	 if ( AmazonSharedPreferencesWrapper.getUidForDevice( this.sharedPreferences ) == null ) 
+         {
+             String uid = AmazonTVMClient.generateRandomString();
+             
+             WeiboLoginRequest wbloginRequest = new WeiboLoginRequest(this.endpoint,
+                                                          this.useSSL, 
+                                                          this.appName,
+                                                          uid,
+                                                          accessToken.getUid(), 
+                                                          accessToken.getToken(),
+                                                          Constants.APP_KEY);
+             log4j.debug("login() " + "weibologinRequest;{" + wbloginRequest + "}");
+             ResponseHandler handler = new WeiboLoginResponseHandler( wbloginRequest.getDecryptionKey() );
+             
+             
+             log4j.debug("login() " + "weiboresponse;{" + response + "}");
+
+             response = this.processRequest( wbloginRequest, handler );
+             
+             if ( response.requestWasSuccessful() ) 
+             {
+                 AmazonSharedPreferencesWrapper.registerDeviceId(this.sharedPreferences, 
+                                                                 uid, 
+                                                                 ((LoginResponse)response).getKey());
+                 
+                 AmazonSharedPreferencesWrapper.storeUsername( this.sharedPreferences, accessToken.getUid() );                        
+             }
+             
+         }
+
+         return response;
+    	
+	}
     
     /**
      *  Process Request
@@ -162,7 +204,7 @@ public class AmazonTVMClient
         int retries = 2;
         
         //发送最多预定次数的远程请求
-        do 
+        do
         {            
             response = TokenVendingMachineService.sendRequest( request, handler );
             

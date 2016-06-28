@@ -30,6 +30,7 @@ public class GetTokenRequest extends Request
         this.useSSL = useSSL;
         this.uid = uid;
         this.key = key;
+        /*this key is device id!!!*/
     }
     
     public String buildRequestUrl() 

@@ -14,17 +14,36 @@
  */
 package com.amazonaws.demo.personalfilestore;
 
-import org.apache.log4j.Logger;
+import java.text.SimpleDateFormat;
 
+import org.apache.log4j.Logger;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import com.amazonaws.demo.weibologin.AccessTokenKeeper;
 import com.amazonaws.tvmclient.Response;
+import com.sina.weibo.sdk.auth.Oauth2AccessToken;
+import com.sina.weibo.sdk.auth.WeiboAuthListener;
+import com.amazonaws.demo.weibologin.Constants;
+import com.sina.weibo.sdk.exception.WeiboException;
+import com.sina.weibo.sdk.net.RequestListener;
+import com.sina.weibo.sdk.widget.LoginoutButton;
+
+import com.sina.weibo.sdk.auth.AuthInfo;
+import com.sina.weibo.sdk.openapi.LogoutAPI;
+import com.sina.weibo.sdk.widget.LoginButton;
+import com.sina.weibo.sdk.widget.LoginoutButton;
+
 
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 import android.widget.EditText;
 import android.net.Uri;
 
@@ -62,6 +81,8 @@ public class Login extends AlertActivity
         
         okButton = (Button) findViewById(R.id.login_main_ok_button);
         registerButton = (Button) findViewById(R.id.login_main_register_button);
+        
+        
 
         wireButtons();
     }
@@ -120,6 +141,9 @@ public class Login extends AlertActivity
 			}
 		});
 	}
+	
+	
+	
     
     protected void displayCredentialsIssueAndExit() 
     {

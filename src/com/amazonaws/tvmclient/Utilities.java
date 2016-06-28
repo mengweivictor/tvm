@@ -29,6 +29,9 @@ import com.amazonaws.auth.AWSSessionCredentials;
 import com.amazonaws.auth.AbstractAWSSigner;
 import com.amazonaws.util.DateUtils;
 
+import android.content.Context;
+import android.widget.Toast;
+
 public class Utilities 
 {
     //获取一个标准格式的日期，这个日期将被服务器和客户端用来产生认证签名
@@ -54,7 +57,26 @@ public class Utilities
         
         return null;            
     }
-   
+    public static String extractNumber( String json, String element ) 
+    {
+        boolean hasElement = ( json.indexOf( element ) != -1 );
+        
+        if ( hasElement ) 
+        {        
+            int elementIndex = json.indexOf( element );
+            int startIndex   = json.indexOf( ":", elementIndex );
+            int endIndex     = json.indexOf( ",", startIndex + 1 );
+
+            return json.substring( startIndex + 1, endIndex );
+        }
+        
+        return null;            
+    }
+    
+    public static void MyToast(Context context, String message) {
+		Toast toast = Toast.makeText(context,message,Toast.LENGTH_SHORT);
+		toast.show();
+	}
     public static String getSignature( String dataToSign, String key ) 
     {
         return new Signer().getSignature( dataToSign, key );

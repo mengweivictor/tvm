@@ -1,0 +1,900 @@
+com.amazonaws.AmazonClientException: long serialVersionUID
+com.amazonaws.AmazonClientException: AmazonClientException(java.lang.String,java.lang.Throwable)
+com.amazonaws.AmazonClientException: AmazonClientException(java.lang.String)
+com.amazonaws.AmazonClientException: boolean isRetryable()
+com.amazonaws.AmazonServiceException: long serialVersionUID
+com.amazonaws.AmazonServiceException: java.lang.String requestId
+com.amazonaws.AmazonServiceException: java.lang.String errorCode
+com.amazonaws.AmazonServiceException: com.amazonaws.AmazonServiceException$ErrorType errorType
+com.amazonaws.AmazonServiceException: java.lang.String errorMessage
+com.amazonaws.AmazonServiceException: int statusCode
+com.amazonaws.AmazonServiceException: java.lang.String serviceName
+com.amazonaws.AmazonServiceException: AmazonServiceException(java.lang.String)
+com.amazonaws.AmazonServiceException: AmazonServiceException(java.lang.String,java.lang.Exception)
+com.amazonaws.AmazonServiceException: void setRequestId(java.lang.String)
+com.amazonaws.AmazonServiceException: java.lang.String getRequestId()
+com.amazonaws.AmazonServiceException: void setServiceName(java.lang.String)
+com.amazonaws.AmazonServiceException: java.lang.String getServiceName()
+com.amazonaws.AmazonServiceException: void setErrorCode(java.lang.String)
+com.amazonaws.AmazonServiceException: java.lang.String getErrorCode()
+com.amazonaws.AmazonServiceException: void setErrorType(com.amazonaws.AmazonServiceException$ErrorType)
+com.amazonaws.AmazonServiceException: com.amazonaws.AmazonServiceException$ErrorType getErrorType()
+com.amazonaws.AmazonServiceException: java.lang.String getErrorMessage()
+com.amazonaws.AmazonServiceException: void setStatusCode(int)
+com.amazonaws.AmazonServiceException: int getStatusCode()
+com.amazonaws.AmazonServiceException: java.lang.String getMessage()
+com.amazonaws.AmazonServiceException$ErrorType: com.amazonaws.AmazonServiceException$ErrorType[] values()
+com.amazonaws.AmazonServiceException$ErrorType: com.amazonaws.AmazonServiceException$ErrorType valueOf(java.lang.String)
+com.amazonaws.HttpMethod: com.amazonaws.HttpMethod[] values()
+com.amazonaws.HttpMethod: com.amazonaws.HttpMethod valueOf(java.lang.String)
+com.amazonaws.Protocol: com.amazonaws.Protocol[] values()
+com.amazonaws.Protocol: com.amazonaws.Protocol valueOf(java.lang.String)
+com.amazonaws.RequestClientOptions$Marker: com.amazonaws.RequestClientOptions$Marker[] values()
+com.amazonaws.RequestClientOptions$Marker: com.amazonaws.RequestClientOptions$Marker valueOf(java.lang.String)
+com.amazonaws.ServiceNameFactory: com.amazonaws.ServiceNameFactory[] values()
+com.amazonaws.ServiceNameFactory: com.amazonaws.ServiceNameFactory valueOf(java.lang.String)
+com.amazonaws.auth.SignatureVersion: com.amazonaws.auth.SignatureVersion[] values()
+com.amazonaws.auth.SignatureVersion: com.amazonaws.auth.SignatureVersion valueOf(java.lang.String)
+com.amazonaws.auth.SigningAlgorithm: com.amazonaws.auth.SigningAlgorithm[] values()
+com.amazonaws.auth.SigningAlgorithm: com.amazonaws.auth.SigningAlgorithm valueOf(java.lang.String)
+com.amazonaws.auth.policy.Principal$Services: com.amazonaws.auth.policy.Principal$Services[] values()
+com.amazonaws.auth.policy.Principal$Services: com.amazonaws.auth.policy.Principal$Services valueOf(java.lang.String)
+com.amazonaws.auth.policy.Principal$WebIdentityProviders: com.amazonaws.auth.policy.Principal$WebIdentityProviders[] values()
+com.amazonaws.auth.policy.Principal$WebIdentityProviders: com.amazonaws.auth.policy.Principal$WebIdentityProviders valueOf(java.lang.String)
+com.amazonaws.auth.policy.STSActions: com.amazonaws.auth.policy.STSActions[] values()
+com.amazonaws.auth.policy.STSActions: com.amazonaws.auth.policy.STSActions valueOf(java.lang.String)
+com.amazonaws.auth.policy.Statement$Effect: com.amazonaws.auth.policy.Statement$Effect[] values()
+com.amazonaws.auth.policy.Statement$Effect: com.amazonaws.auth.policy.Statement$Effect valueOf(java.lang.String)
+com.amazonaws.auth.policy.actions.AutoScalingActions: com.amazonaws.auth.policy.actions.AutoScalingActions[] values()
+com.amazonaws.auth.policy.actions.AutoScalingActions: com.amazonaws.auth.policy.actions.AutoScalingActions valueOf(java.lang.String)
+com.amazonaws.auth.policy.actions.CloudWatchActions: com.amazonaws.auth.policy.actions.CloudWatchActions[] values()
+com.amazonaws.auth.policy.actions.CloudWatchActions: com.amazonaws.auth.policy.actions.CloudWatchActions valueOf(java.lang.String)
+com.amazonaws.auth.policy.actions.DynamoDBv2Actions: com.amazonaws.auth.policy.actions.DynamoDBv2Actions[] values()
+com.amazonaws.auth.policy.actions.DynamoDBv2Actions: com.amazonaws.auth.policy.actions.DynamoDBv2Actions valueOf(java.lang.String)
+com.amazonaws.auth.policy.actions.EC2Actions: com.amazonaws.auth.policy.actions.EC2Actions[] values()
+com.amazonaws.auth.policy.actions.EC2Actions: com.amazonaws.auth.policy.actions.EC2Actions valueOf(java.lang.String)
+com.amazonaws.auth.policy.actions.ElasticLoadBalancingActions: com.amazonaws.auth.policy.actions.ElasticLoadBalancingActions[] values()
+com.amazonaws.auth.policy.actions.ElasticLoadBalancingActions: com.amazonaws.auth.policy.actions.ElasticLoadBalancingActions valueOf(java.lang.String)
+com.amazonaws.auth.policy.actions.S3Actions: com.amazonaws.auth.policy.actions.S3Actions[] values()
+com.amazonaws.auth.policy.actions.S3Actions: com.amazonaws.auth.policy.actions.S3Actions valueOf(java.lang.String)
+com.amazonaws.auth.policy.actions.SNSActions: com.amazonaws.auth.policy.actions.SNSActions[] values()
+com.amazonaws.auth.policy.actions.SNSActions: com.amazonaws.auth.policy.actions.SNSActions valueOf(java.lang.String)
+com.amazonaws.auth.policy.actions.SQSActions: com.amazonaws.auth.policy.actions.SQSActions[] values()
+com.amazonaws.auth.policy.actions.SQSActions: com.amazonaws.auth.policy.actions.SQSActions valueOf(java.lang.String)
+com.amazonaws.auth.policy.actions.SecurityTokenServiceActions: com.amazonaws.auth.policy.actions.SecurityTokenServiceActions[] values()
+com.amazonaws.auth.policy.actions.SecurityTokenServiceActions: com.amazonaws.auth.policy.actions.SecurityTokenServiceActions valueOf(java.lang.String)
+com.amazonaws.auth.policy.actions.SimpleDBActions: com.amazonaws.auth.policy.actions.SimpleDBActions[] values()
+com.amazonaws.auth.policy.actions.SimpleDBActions: com.amazonaws.auth.policy.actions.SimpleDBActions valueOf(java.lang.String)
+com.amazonaws.auth.policy.actions.SimpleEmailServiceActions: com.amazonaws.auth.policy.actions.SimpleEmailServiceActions[] values()
+com.amazonaws.auth.policy.actions.SimpleEmailServiceActions: com.amazonaws.auth.policy.actions.SimpleEmailServiceActions valueOf(java.lang.String)
+com.amazonaws.auth.policy.conditions.ArnCondition$ArnComparisonType: com.amazonaws.auth.policy.conditions.ArnCondition$ArnComparisonType[] values()
+com.amazonaws.auth.policy.conditions.ArnCondition$ArnComparisonType: com.amazonaws.auth.policy.conditions.ArnCondition$ArnComparisonType valueOf(java.lang.String)
+com.amazonaws.auth.policy.conditions.DateCondition$DateComparisonType: com.amazonaws.auth.policy.conditions.DateCondition$DateComparisonType[] values()
+com.amazonaws.auth.policy.conditions.DateCondition$DateComparisonType: com.amazonaws.auth.policy.conditions.DateCondition$DateComparisonType valueOf(java.lang.String)
+com.amazonaws.auth.policy.conditions.IpAddressCondition$IpAddressComparisonType: com.amazonaws.auth.policy.conditions.IpAddressCondition$IpAddressComparisonType[] values()
+com.amazonaws.auth.policy.conditions.IpAddressCondition$IpAddressComparisonType: com.amazonaws.auth.policy.conditions.IpAddressCondition$IpAddressComparisonType valueOf(java.lang.String)
+com.amazonaws.auth.policy.conditions.NumericCondition$NumericComparisonType: com.amazonaws.auth.policy.conditions.NumericCondition$NumericComparisonType[] values()
+com.amazonaws.auth.policy.conditions.NumericCondition$NumericComparisonType: com.amazonaws.auth.policy.conditions.NumericCondition$NumericComparisonType valueOf(java.lang.String)
+com.amazonaws.auth.policy.conditions.StringCondition$StringComparisonType: com.amazonaws.auth.policy.conditions.StringCondition$StringComparisonType[] values()
+com.amazonaws.auth.policy.conditions.StringCondition$StringComparisonType: com.amazonaws.auth.policy.conditions.StringCondition$StringComparisonType valueOf(java.lang.String)
+com.amazonaws.com.google.gson.FieldNamingPolicy: com.amazonaws.com.google.gson.FieldNamingPolicy[] values()
+com.amazonaws.com.google.gson.FieldNamingPolicy: com.amazonaws.com.google.gson.FieldNamingPolicy valueOf(java.lang.String)
+com.amazonaws.com.google.gson.LongSerializationPolicy: com.amazonaws.com.google.gson.LongSerializationPolicy[] values()
+com.amazonaws.com.google.gson.LongSerializationPolicy: com.amazonaws.com.google.gson.LongSerializationPolicy valueOf(java.lang.String)
+com.amazonaws.com.google.gson.stream.JsonToken: com.amazonaws.com.google.gson.stream.JsonToken[] values()
+com.amazonaws.com.google.gson.stream.JsonToken: com.amazonaws.com.google.gson.stream.JsonToken valueOf(java.lang.String)
+com.amazonaws.demo.personalfilestore.AlertActivity: AlertActivity()
+com.amazonaws.demo.personalfilestore.CustomListActivity: CustomListActivity()
+com.amazonaws.demo.personalfilestore.Login
+com.amazonaws.demo.personalfilestore.Login: Login()
+com.amazonaws.demo.personalfilestore.R$drawable: int doc
+com.amazonaws.demo.personalfilestore.R$drawable: int folder
+com.amazonaws.demo.personalfilestore.R$drawable: int icon
+com.amazonaws.demo.personalfilestore.R$id: int add_item
+com.amazonaws.demo.personalfilestore.R$id: int cancel_button
+com.amazonaws.demo.personalfilestore.R$id: int delete_item
+com.amazonaws.demo.personalfilestore.R$id: int fb_main_file_titlelayout
+com.amazonaws.demo.personalfilestore.R$id: int fb_main_list
+com.amazonaws.demo.personalfilestore.R$id: int fb_single_image_button_return
+com.amazonaws.demo.personalfilestore.R$id: int fb_single_image_button_select
+com.amazonaws.demo.personalfilestore.R$id: int fb_single_image_view
+com.amazonaws.demo.personalfilestore.R$id: int file_icon
+com.amazonaws.demo.personalfilestore.R$id: int file_name
+com.amazonaws.demo.personalfilestore.R$id: int item_list_loading_text
+com.amazonaws.demo.personalfilestore.R$id: int item_list_view
+com.amazonaws.demo.personalfilestore.R$id: int item_view_body_image
+com.amazonaws.demo.personalfilestore.R$id: int item_view_body_text
+com.amazonaws.demo.personalfilestore.R$id: int item_view_loading_text
+com.amazonaws.demo.personalfilestore.R$id: int login_intro_text
+com.amazonaws.demo.personalfilestore.R$id: int login_main_ok_button
+com.amazonaws.demo.personalfilestore.R$id: int login_main_register_button
+com.amazonaws.demo.personalfilestore.R$id: int login_password_header
+com.amazonaws.demo.personalfilestore.R$id: int login_password_input_field
+com.amazonaws.demo.personalfilestore.R$id: int login_username_header
+com.amazonaws.demo.personalfilestore.R$id: int login_username_input_field
+com.amazonaws.demo.personalfilestore.R$id: int main_into_text
+com.amazonaws.demo.personalfilestore.R$id: int main_login_button
+com.amazonaws.demo.personalfilestore.R$id: int main_logout_button
+com.amazonaws.demo.personalfilestore.R$id: int main_storage_button
+com.amazonaws.demo.personalfilestore.R$id: int object_data
+com.amazonaws.demo.personalfilestore.R$id: int object_name
+com.amazonaws.demo.personalfilestore.R$id: int ok_button
+com.amazonaws.demo.personalfilestore.R$id: int row_of_item_list_aligned_left
+com.amazonaws.demo.personalfilestore.R$id: int row_of_item_list_centered
+com.amazonaws.demo.personalfilestore.R$id: int select_item
+com.amazonaws.demo.personalfilestore.R$layout: int add_item_view
+com.amazonaws.demo.personalfilestore.R$layout: int filebrowser_create
+com.amazonaws.demo.personalfilestore.R$layout: int filebrowser_item
+com.amazonaws.demo.personalfilestore.R$layout: int filebrowser_main
+com.amazonaws.demo.personalfilestore.R$layout: int filebrowser_single_image
+com.amazonaws.demo.personalfilestore.R$layout: int item_list
+com.amazonaws.demo.personalfilestore.R$layout: int item_view
+com.amazonaws.demo.personalfilestore.R$layout: int login_menu
+com.amazonaws.demo.personalfilestore.R$layout: int main
+com.amazonaws.demo.personalfilestore.R$layout: int row
+com.amazonaws.demo.personalfilestore.R$layout: int row_left
+com.amazonaws.demo.personalfilestore.R$string: int app_name
+com.amazonaws.demo.personalfilestore.S3PersonalFileStore
+com.amazonaws.demo.personalfilestore.S3PersonalFileStore: S3PersonalFileStore()
+com.amazonaws.demo.personalfilestore.S3PersonalFileStoreApplication
+com.amazonaws.demo.personalfilestore.S3PersonalFileStoreApplication: S3PersonalFileStoreApplication()
+com.amazonaws.demo.personalfilestore.filebrowser.FileBrowserActivity
+com.amazonaws.demo.personalfilestore.filebrowser.FileBrowserActivity: FileBrowserActivity()
+com.amazonaws.demo.personalfilestore.filebrowser.FileSingleImageActivity
+com.amazonaws.demo.personalfilestore.filebrowser.FileSingleImageActivity: FileSingleImageActivity()
+com.amazonaws.demo.personalfilestore.s3.S3AddObjectView
+com.amazonaws.demo.personalfilestore.s3.S3AddObjectView: S3AddObjectView()
+com.amazonaws.demo.personalfilestore.s3.S3BucketView
+com.amazonaws.demo.personalfilestore.s3.S3BucketView: S3BucketView()
+com.amazonaws.demo.personalfilestore.s3.S3ObjectView
+com.amazonaws.demo.personalfilestore.s3.S3ObjectView: S3ObjectView()
+com.amazonaws.handlers.AbstractRequestHandler: AbstractRequestHandler()
+com.amazonaws.handlers.AbstractRequestHandler: void beforeRequest(com.amazonaws.Request)
+com.amazonaws.handlers.AbstractRequestHandler: void afterResponse(com.amazonaws.Request,java.lang.Object,com.amazonaws.util.TimingInfo)
+com.amazonaws.handlers.AbstractRequestHandler: void afterError(com.amazonaws.Request,java.lang.Exception)
+com.amazonaws.http.HttpMethodName: com.amazonaws.http.HttpMethodName[] values()
+com.amazonaws.http.HttpMethodName: com.amazonaws.http.HttpMethodName valueOf(java.lang.String)
+com.amazonaws.metrics.AwsSdkMetrics: com.amazonaws.metrics.AwsSdkMetrics[] values()
+com.amazonaws.metrics.AwsSdkMetrics: com.amazonaws.metrics.AwsSdkMetrics valueOf(java.lang.String)
+com.amazonaws.metrics.internal.ServiceMetricTypeGuesser: com.amazonaws.metrics.internal.ServiceMetricTypeGuesser[] values()
+com.amazonaws.metrics.internal.ServiceMetricTypeGuesser: com.amazonaws.metrics.internal.ServiceMetricTypeGuesser valueOf(java.lang.String)
+com.amazonaws.mobileconnectors.amazonmobileanalytics.internal.session.client.DefaultSessionClient$SessionState: com.amazonaws.mobileconnectors.amazonmobileanalytics.internal.session.client.DefaultSessionClient$SessionState[] values()
+com.amazonaws.mobileconnectors.amazonmobileanalytics.internal.session.client.DefaultSessionClient$SessionState: com.amazonaws.mobileconnectors.amazonmobileanalytics.internal.session.client.DefaultSessionClient$SessionState valueOf(java.lang.String)
+com.amazonaws.mobileconnectors.dynamodbv2.dynamodbmapper.DynamoDBMapperConfig$ConsistentReads: com.amazonaws.mobileconnectors.dynamodbv2.dynamodbmapper.DynamoDBMapperConfig$ConsistentReads[] values()
+com.amazonaws.mobileconnectors.dynamodbv2.dynamodbmapper.DynamoDBMapperConfig$ConsistentReads: com.amazonaws.mobileconnectors.dynamodbv2.dynamodbmapper.DynamoDBMapperConfig$ConsistentReads valueOf(java.lang.String)
+com.amazonaws.mobileconnectors.dynamodbv2.dynamodbmapper.DynamoDBMapperConfig$PaginationLoadingStrategy: com.amazonaws.mobileconnectors.dynamodbv2.dynamodbmapper.DynamoDBMapperConfig$PaginationLoadingStrategy[] values()
+com.amazonaws.mobileconnectors.dynamodbv2.dynamodbmapper.DynamoDBMapperConfig$PaginationLoadingStrategy: com.amazonaws.mobileconnectors.dynamodbv2.dynamodbmapper.DynamoDBMapperConfig$PaginationLoadingStrategy valueOf(java.lang.String)
+com.amazonaws.mobileconnectors.dynamodbv2.dynamodbmapper.DynamoDBMapperConfig$SaveBehavior: com.amazonaws.mobileconnectors.dynamodbv2.dynamodbmapper.DynamoDBMapperConfig$SaveBehavior[] values()
+com.amazonaws.mobileconnectors.dynamodbv2.dynamodbmapper.DynamoDBMapperConfig$SaveBehavior: com.amazonaws.mobileconnectors.dynamodbv2.dynamodbmapper.DynamoDBMapperConfig$SaveBehavior valueOf(java.lang.String)
+com.amazonaws.mobileconnectors.dynamodbv2.dynamodbmapper.DynamoDBMapperFieldModel$DynamoDBAttributeType: com.amazonaws.mobileconnectors.dynamodbv2.dynamodbmapper.DynamoDBMapperFieldModel$DynamoDBAttributeType[] values()
+com.amazonaws.mobileconnectors.dynamodbv2.dynamodbmapper.DynamoDBMapperFieldModel$DynamoDBAttributeType: com.amazonaws.mobileconnectors.dynamodbv2.dynamodbmapper.DynamoDBMapperFieldModel$DynamoDBAttributeType valueOf(java.lang.String)
+com.amazonaws.mobileconnectors.dynamodbv2.dynamodbmapper.ParallelScanTask$SegmentScanState: com.amazonaws.mobileconnectors.dynamodbv2.dynamodbmapper.ParallelScanTask$SegmentScanState[] values()
+com.amazonaws.mobileconnectors.dynamodbv2.dynamodbmapper.ParallelScanTask$SegmentScanState: com.amazonaws.mobileconnectors.dynamodbv2.dynamodbmapper.ParallelScanTask$SegmentScanState valueOf(java.lang.String)
+com.amazonaws.mobileconnectors.s3.transfermanager.PauseStatus: com.amazonaws.mobileconnectors.s3.transfermanager.PauseStatus[] values()
+com.amazonaws.mobileconnectors.s3.transfermanager.PauseStatus: com.amazonaws.mobileconnectors.s3.transfermanager.PauseStatus valueOf(java.lang.String)
+com.amazonaws.mobileconnectors.s3.transfermanager.Transfer$TransferState: com.amazonaws.mobileconnectors.s3.transfermanager.Transfer$TransferState[] values()
+com.amazonaws.mobileconnectors.s3.transfermanager.Transfer$TransferState: com.amazonaws.mobileconnectors.s3.transfermanager.Transfer$TransferState valueOf(java.lang.String)
+com.amazonaws.regions.Regions: com.amazonaws.regions.Regions[] values()
+com.amazonaws.regions.Regions: com.amazonaws.regions.Regions valueOf(java.lang.String)
+com.amazonaws.services.autoscaling.model.AlreadyExistsException
+com.amazonaws.services.autoscaling.model.AlreadyExistsException: long serialVersionUID
+com.amazonaws.services.autoscaling.model.AlreadyExistsException: AlreadyExistsException(java.lang.String)
+com.amazonaws.services.autoscaling.model.InvalidNextTokenException
+com.amazonaws.services.autoscaling.model.InvalidNextTokenException: long serialVersionUID
+com.amazonaws.services.autoscaling.model.InvalidNextTokenException: InvalidNextTokenException(java.lang.String)
+com.amazonaws.services.autoscaling.model.LifecycleState: com.amazonaws.services.autoscaling.model.LifecycleState[] values()
+com.amazonaws.services.autoscaling.model.LifecycleState: com.amazonaws.services.autoscaling.model.LifecycleState valueOf(java.lang.String)
+com.amazonaws.services.autoscaling.model.LimitExceededException
+com.amazonaws.services.autoscaling.model.LimitExceededException: long serialVersionUID
+com.amazonaws.services.autoscaling.model.LimitExceededException: LimitExceededException(java.lang.String)
+com.amazonaws.services.autoscaling.model.ResourceInUseException
+com.amazonaws.services.autoscaling.model.ResourceInUseException: long serialVersionUID
+com.amazonaws.services.autoscaling.model.ResourceInUseException: ResourceInUseException(java.lang.String)
+com.amazonaws.services.autoscaling.model.ScalingActivityInProgressException
+com.amazonaws.services.autoscaling.model.ScalingActivityInProgressException: long serialVersionUID
+com.amazonaws.services.autoscaling.model.ScalingActivityInProgressException: ScalingActivityInProgressException(java.lang.String)
+com.amazonaws.services.autoscaling.model.ScalingActivityStatusCode: com.amazonaws.services.autoscaling.model.ScalingActivityStatusCode[] values()
+com.amazonaws.services.autoscaling.model.ScalingActivityStatusCode: com.amazonaws.services.autoscaling.model.ScalingActivityStatusCode valueOf(java.lang.String)
+com.amazonaws.services.cloudwatch.model.ComparisonOperator: com.amazonaws.services.cloudwatch.model.ComparisonOperator[] values()
+com.amazonaws.services.cloudwatch.model.ComparisonOperator: com.amazonaws.services.cloudwatch.model.ComparisonOperator valueOf(java.lang.String)
+com.amazonaws.services.cloudwatch.model.HistoryItemType: com.amazonaws.services.cloudwatch.model.HistoryItemType[] values()
+com.amazonaws.services.cloudwatch.model.HistoryItemType: com.amazonaws.services.cloudwatch.model.HistoryItemType valueOf(java.lang.String)
+com.amazonaws.services.cloudwatch.model.InternalServiceException
+com.amazonaws.services.cloudwatch.model.InternalServiceException: long serialVersionUID
+com.amazonaws.services.cloudwatch.model.InternalServiceException: InternalServiceException(java.lang.String)
+com.amazonaws.services.cloudwatch.model.InvalidFormatException
+com.amazonaws.services.cloudwatch.model.InvalidFormatException: long serialVersionUID
+com.amazonaws.services.cloudwatch.model.InvalidFormatException: InvalidFormatException(java.lang.String)
+com.amazonaws.services.cloudwatch.model.InvalidNextTokenException
+com.amazonaws.services.cloudwatch.model.InvalidNextTokenException: long serialVersionUID
+com.amazonaws.services.cloudwatch.model.InvalidNextTokenException: InvalidNextTokenException(java.lang.String)
+com.amazonaws.services.cloudwatch.model.InvalidParameterCombinationException
+com.amazonaws.services.cloudwatch.model.InvalidParameterCombinationException: long serialVersionUID
+com.amazonaws.services.cloudwatch.model.InvalidParameterCombinationException: InvalidParameterCombinationException(java.lang.String)
+com.amazonaws.services.cloudwatch.model.InvalidParameterValueException
+com.amazonaws.services.cloudwatch.model.InvalidParameterValueException: long serialVersionUID
+com.amazonaws.services.cloudwatch.model.InvalidParameterValueException: InvalidParameterValueException(java.lang.String)
+com.amazonaws.services.cloudwatch.model.LimitExceededException
+com.amazonaws.services.cloudwatch.model.LimitExceededException: long serialVersionUID
+com.amazonaws.services.cloudwatch.model.LimitExceededException: LimitExceededException(java.lang.String)
+com.amazonaws.services.cloudwatch.model.MissingRequiredParameterException
+com.amazonaws.services.cloudwatch.model.MissingRequiredParameterException: long serialVersionUID
+com.amazonaws.services.cloudwatch.model.MissingRequiredParameterException: MissingRequiredParameterException(java.lang.String)
+com.amazonaws.services.cloudwatch.model.ResourceNotFoundException
+com.amazonaws.services.cloudwatch.model.ResourceNotFoundException: long serialVersionUID
+com.amazonaws.services.cloudwatch.model.ResourceNotFoundException: ResourceNotFoundException(java.lang.String)
+com.amazonaws.services.cloudwatch.model.StandardUnit: com.amazonaws.services.cloudwatch.model.StandardUnit[] values()
+com.amazonaws.services.cloudwatch.model.StandardUnit: com.amazonaws.services.cloudwatch.model.StandardUnit valueOf(java.lang.String)
+com.amazonaws.services.cloudwatch.model.StateValue: com.amazonaws.services.cloudwatch.model.StateValue[] values()
+com.amazonaws.services.cloudwatch.model.StateValue: com.amazonaws.services.cloudwatch.model.StateValue valueOf(java.lang.String)
+com.amazonaws.services.cloudwatch.model.Statistic: com.amazonaws.services.cloudwatch.model.Statistic[] values()
+com.amazonaws.services.cloudwatch.model.Statistic: com.amazonaws.services.cloudwatch.model.Statistic valueOf(java.lang.String)
+com.amazonaws.services.cognitoidentity.model.InternalErrorException
+com.amazonaws.services.cognitoidentity.model.InternalErrorException: long serialVersionUID
+com.amazonaws.services.cognitoidentity.model.InternalErrorException: InternalErrorException(java.lang.String)
+com.amazonaws.services.cognitoidentity.model.InvalidIdentityPoolConfigurationException
+com.amazonaws.services.cognitoidentity.model.InvalidIdentityPoolConfigurationException: long serialVersionUID
+com.amazonaws.services.cognitoidentity.model.InvalidIdentityPoolConfigurationException: InvalidIdentityPoolConfigurationException(java.lang.String)
+com.amazonaws.services.cognitoidentity.model.InvalidParameterException
+com.amazonaws.services.cognitoidentity.model.InvalidParameterException: long serialVersionUID
+com.amazonaws.services.cognitoidentity.model.InvalidParameterException: InvalidParameterException(java.lang.String)
+com.amazonaws.services.cognitoidentity.model.LimitExceededException
+com.amazonaws.services.cognitoidentity.model.LimitExceededException: long serialVersionUID
+com.amazonaws.services.cognitoidentity.model.LimitExceededException: LimitExceededException(java.lang.String)
+com.amazonaws.services.cognitoidentity.model.NotAuthorizedException
+com.amazonaws.services.cognitoidentity.model.NotAuthorizedException: long serialVersionUID
+com.amazonaws.services.cognitoidentity.model.NotAuthorizedException: NotAuthorizedException(java.lang.String)
+com.amazonaws.services.cognitoidentity.model.ResourceConflictException
+com.amazonaws.services.cognitoidentity.model.ResourceConflictException: long serialVersionUID
+com.amazonaws.services.cognitoidentity.model.ResourceConflictException: ResourceConflictException(java.lang.String)
+com.amazonaws.services.cognitoidentity.model.ResourceNotFoundException
+com.amazonaws.services.cognitoidentity.model.ResourceNotFoundException: long serialVersionUID
+com.amazonaws.services.cognitoidentity.model.ResourceNotFoundException: ResourceNotFoundException(java.lang.String)
+com.amazonaws.services.cognitoidentity.model.TooManyRequestsException
+com.amazonaws.services.cognitoidentity.model.TooManyRequestsException: long serialVersionUID
+com.amazonaws.services.cognitoidentity.model.TooManyRequestsException: TooManyRequestsException(java.lang.String)
+com.amazonaws.services.dynamodbv2.metrics.DynamoDBRequestMetric: com.amazonaws.services.dynamodbv2.metrics.DynamoDBRequestMetric[] values()
+com.amazonaws.services.dynamodbv2.metrics.DynamoDBRequestMetric: com.amazonaws.services.dynamodbv2.metrics.DynamoDBRequestMetric valueOf(java.lang.String)
+com.amazonaws.services.dynamodbv2.model.AttributeAction: com.amazonaws.services.dynamodbv2.model.AttributeAction[] values()
+com.amazonaws.services.dynamodbv2.model.AttributeAction: com.amazonaws.services.dynamodbv2.model.AttributeAction valueOf(java.lang.String)
+com.amazonaws.services.dynamodbv2.model.ComparisonOperator: com.amazonaws.services.dynamodbv2.model.ComparisonOperator[] values()
+com.amazonaws.services.dynamodbv2.model.ComparisonOperator: com.amazonaws.services.dynamodbv2.model.ComparisonOperator valueOf(java.lang.String)
+com.amazonaws.services.dynamodbv2.model.ConditionalCheckFailedException
+com.amazonaws.services.dynamodbv2.model.ConditionalCheckFailedException: long serialVersionUID
+com.amazonaws.services.dynamodbv2.model.ConditionalCheckFailedException: ConditionalCheckFailedException(java.lang.String)
+com.amazonaws.services.dynamodbv2.model.ConditionalOperator: com.amazonaws.services.dynamodbv2.model.ConditionalOperator[] values()
+com.amazonaws.services.dynamodbv2.model.ConditionalOperator: com.amazonaws.services.dynamodbv2.model.ConditionalOperator valueOf(java.lang.String)
+com.amazonaws.services.dynamodbv2.model.IndexStatus: com.amazonaws.services.dynamodbv2.model.IndexStatus[] values()
+com.amazonaws.services.dynamodbv2.model.IndexStatus: com.amazonaws.services.dynamodbv2.model.IndexStatus valueOf(java.lang.String)
+com.amazonaws.services.dynamodbv2.model.InternalServerErrorException
+com.amazonaws.services.dynamodbv2.model.InternalServerErrorException: long serialVersionUID
+com.amazonaws.services.dynamodbv2.model.InternalServerErrorException: InternalServerErrorException(java.lang.String)
+com.amazonaws.services.dynamodbv2.model.ItemCollectionSizeLimitExceededException
+com.amazonaws.services.dynamodbv2.model.ItemCollectionSizeLimitExceededException: long serialVersionUID
+com.amazonaws.services.dynamodbv2.model.ItemCollectionSizeLimitExceededException: ItemCollectionSizeLimitExceededException(java.lang.String)
+com.amazonaws.services.dynamodbv2.model.KeyType: com.amazonaws.services.dynamodbv2.model.KeyType[] values()
+com.amazonaws.services.dynamodbv2.model.KeyType: com.amazonaws.services.dynamodbv2.model.KeyType valueOf(java.lang.String)
+com.amazonaws.services.dynamodbv2.model.LimitExceededException
+com.amazonaws.services.dynamodbv2.model.LimitExceededException: long serialVersionUID
+com.amazonaws.services.dynamodbv2.model.LimitExceededException: LimitExceededException(java.lang.String)
+com.amazonaws.services.dynamodbv2.model.ProjectionType: com.amazonaws.services.dynamodbv2.model.ProjectionType[] values()
+com.amazonaws.services.dynamodbv2.model.ProjectionType: com.amazonaws.services.dynamodbv2.model.ProjectionType valueOf(java.lang.String)
+com.amazonaws.services.dynamodbv2.model.ProvisionedThroughputExceededException
+com.amazonaws.services.dynamodbv2.model.ProvisionedThroughputExceededException: long serialVersionUID
+com.amazonaws.services.dynamodbv2.model.ProvisionedThroughputExceededException: ProvisionedThroughputExceededException(java.lang.String)
+com.amazonaws.services.dynamodbv2.model.ResourceInUseException
+com.amazonaws.services.dynamodbv2.model.ResourceInUseException: long serialVersionUID
+com.amazonaws.services.dynamodbv2.model.ResourceInUseException: ResourceInUseException(java.lang.String)
+com.amazonaws.services.dynamodbv2.model.ResourceNotFoundException
+com.amazonaws.services.dynamodbv2.model.ResourceNotFoundException: long serialVersionUID
+com.amazonaws.services.dynamodbv2.model.ResourceNotFoundException: ResourceNotFoundException(java.lang.String)
+com.amazonaws.services.dynamodbv2.model.ReturnConsumedCapacity: com.amazonaws.services.dynamodbv2.model.ReturnConsumedCapacity[] values()
+com.amazonaws.services.dynamodbv2.model.ReturnConsumedCapacity: com.amazonaws.services.dynamodbv2.model.ReturnConsumedCapacity valueOf(java.lang.String)
+com.amazonaws.services.dynamodbv2.model.ReturnItemCollectionMetrics: com.amazonaws.services.dynamodbv2.model.ReturnItemCollectionMetrics[] values()
+com.amazonaws.services.dynamodbv2.model.ReturnItemCollectionMetrics: com.amazonaws.services.dynamodbv2.model.ReturnItemCollectionMetrics valueOf(java.lang.String)
+com.amazonaws.services.dynamodbv2.model.ReturnValue: com.amazonaws.services.dynamodbv2.model.ReturnValue[] values()
+com.amazonaws.services.dynamodbv2.model.ReturnValue: com.amazonaws.services.dynamodbv2.model.ReturnValue valueOf(java.lang.String)
+com.amazonaws.services.dynamodbv2.model.ScalarAttributeType: com.amazonaws.services.dynamodbv2.model.ScalarAttributeType[] values()
+com.amazonaws.services.dynamodbv2.model.ScalarAttributeType: com.amazonaws.services.dynamodbv2.model.ScalarAttributeType valueOf(java.lang.String)
+com.amazonaws.services.dynamodbv2.model.Select: com.amazonaws.services.dynamodbv2.model.Select[] values()
+com.amazonaws.services.dynamodbv2.model.Select: com.amazonaws.services.dynamodbv2.model.Select valueOf(java.lang.String)
+com.amazonaws.services.dynamodbv2.model.TableStatus: com.amazonaws.services.dynamodbv2.model.TableStatus[] values()
+com.amazonaws.services.dynamodbv2.model.TableStatus: com.amazonaws.services.dynamodbv2.model.TableStatus valueOf(java.lang.String)
+com.amazonaws.services.ec2.model.AccountAttributeName: com.amazonaws.services.ec2.model.AccountAttributeName[] values()
+com.amazonaws.services.ec2.model.AccountAttributeName: com.amazonaws.services.ec2.model.AccountAttributeName valueOf(java.lang.String)
+com.amazonaws.services.ec2.model.ArchitectureValues: com.amazonaws.services.ec2.model.ArchitectureValues[] values()
+com.amazonaws.services.ec2.model.ArchitectureValues: com.amazonaws.services.ec2.model.ArchitectureValues valueOf(java.lang.String)
+com.amazonaws.services.ec2.model.AttachmentStatus: com.amazonaws.services.ec2.model.AttachmentStatus[] values()
+com.amazonaws.services.ec2.model.AttachmentStatus: com.amazonaws.services.ec2.model.AttachmentStatus valueOf(java.lang.String)
+com.amazonaws.services.ec2.model.AvailabilityZoneState: com.amazonaws.services.ec2.model.AvailabilityZoneState[] values()
+com.amazonaws.services.ec2.model.AvailabilityZoneState: com.amazonaws.services.ec2.model.AvailabilityZoneState valueOf(java.lang.String)
+com.amazonaws.services.ec2.model.BundleTaskState: com.amazonaws.services.ec2.model.BundleTaskState[] values()
+com.amazonaws.services.ec2.model.BundleTaskState: com.amazonaws.services.ec2.model.BundleTaskState valueOf(java.lang.String)
+com.amazonaws.services.ec2.model.CancelSpotInstanceRequestState: com.amazonaws.services.ec2.model.CancelSpotInstanceRequestState[] values()
+com.amazonaws.services.ec2.model.CancelSpotInstanceRequestState: com.amazonaws.services.ec2.model.CancelSpotInstanceRequestState valueOf(java.lang.String)
+com.amazonaws.services.ec2.model.ContainerFormat: com.amazonaws.services.ec2.model.ContainerFormat[] values()
+com.amazonaws.services.ec2.model.ContainerFormat: com.amazonaws.services.ec2.model.ContainerFormat valueOf(java.lang.String)
+com.amazonaws.services.ec2.model.ConversionTaskState: com.amazonaws.services.ec2.model.ConversionTaskState[] values()
+com.amazonaws.services.ec2.model.ConversionTaskState: com.amazonaws.services.ec2.model.ConversionTaskState valueOf(java.lang.String)
+com.amazonaws.services.ec2.model.CurrencyCodeValues: com.amazonaws.services.ec2.model.CurrencyCodeValues[] values()
+com.amazonaws.services.ec2.model.CurrencyCodeValues: com.amazonaws.services.ec2.model.CurrencyCodeValues valueOf(java.lang.String)
+com.amazonaws.services.ec2.model.DatafeedSubscriptionState: com.amazonaws.services.ec2.model.DatafeedSubscriptionState[] values()
+com.amazonaws.services.ec2.model.DatafeedSubscriptionState: com.amazonaws.services.ec2.model.DatafeedSubscriptionState valueOf(java.lang.String)
+com.amazonaws.services.ec2.model.DeviceType: com.amazonaws.services.ec2.model.DeviceType[] values()
+com.amazonaws.services.ec2.model.DeviceType: com.amazonaws.services.ec2.model.DeviceType valueOf(java.lang.String)
+com.amazonaws.services.ec2.model.DiskImageFormat: com.amazonaws.services.ec2.model.DiskImageFormat[] values()
+com.amazonaws.services.ec2.model.DiskImageFormat: com.amazonaws.services.ec2.model.DiskImageFormat valueOf(java.lang.String)
+com.amazonaws.services.ec2.model.DomainType: com.amazonaws.services.ec2.model.DomainType[] values()
+com.amazonaws.services.ec2.model.DomainType: com.amazonaws.services.ec2.model.DomainType valueOf(java.lang.String)
+com.amazonaws.services.ec2.model.EventCode: com.amazonaws.services.ec2.model.EventCode[] values()
+com.amazonaws.services.ec2.model.EventCode: com.amazonaws.services.ec2.model.EventCode valueOf(java.lang.String)
+com.amazonaws.services.ec2.model.ExportEnvironment: com.amazonaws.services.ec2.model.ExportEnvironment[] values()
+com.amazonaws.services.ec2.model.ExportEnvironment: com.amazonaws.services.ec2.model.ExportEnvironment valueOf(java.lang.String)
+com.amazonaws.services.ec2.model.ExportTaskState: com.amazonaws.services.ec2.model.ExportTaskState[] values()
+com.amazonaws.services.ec2.model.ExportTaskState: com.amazonaws.services.ec2.model.ExportTaskState valueOf(java.lang.String)
+com.amazonaws.services.ec2.model.GatewayType: com.amazonaws.services.ec2.model.GatewayType[] values()
+com.amazonaws.services.ec2.model.GatewayType: com.amazonaws.services.ec2.model.GatewayType valueOf(java.lang.String)
+com.amazonaws.services.ec2.model.HypervisorType: com.amazonaws.services.ec2.model.HypervisorType[] values()
+com.amazonaws.services.ec2.model.HypervisorType: com.amazonaws.services.ec2.model.HypervisorType valueOf(java.lang.String)
+com.amazonaws.services.ec2.model.ImageAttributeName: com.amazonaws.services.ec2.model.ImageAttributeName[] values()
+com.amazonaws.services.ec2.model.ImageAttributeName: com.amazonaws.services.ec2.model.ImageAttributeName valueOf(java.lang.String)
+com.amazonaws.services.ec2.model.ImageState: com.amazonaws.services.ec2.model.ImageState[] values()
+com.amazonaws.services.ec2.model.ImageState: com.amazonaws.services.ec2.model.ImageState valueOf(java.lang.String)
+com.amazonaws.services.ec2.model.ImageTypeValues: com.amazonaws.services.ec2.model.ImageTypeValues[] values()
+com.amazonaws.services.ec2.model.ImageTypeValues: com.amazonaws.services.ec2.model.ImageTypeValues valueOf(java.lang.String)
+com.amazonaws.services.ec2.model.InstanceAttributeName: com.amazonaws.services.ec2.model.InstanceAttributeName[] values()
+com.amazonaws.services.ec2.model.InstanceAttributeName: com.amazonaws.services.ec2.model.InstanceAttributeName valueOf(java.lang.String)
+com.amazonaws.services.ec2.model.InstanceLifecycleType: com.amazonaws.services.ec2.model.InstanceLifecycleType[] values()
+com.amazonaws.services.ec2.model.InstanceLifecycleType: com.amazonaws.services.ec2.model.InstanceLifecycleType valueOf(java.lang.String)
+com.amazonaws.services.ec2.model.InstanceStateName: com.amazonaws.services.ec2.model.InstanceStateName[] values()
+com.amazonaws.services.ec2.model.InstanceStateName: com.amazonaws.services.ec2.model.InstanceStateName valueOf(java.lang.String)
+com.amazonaws.services.ec2.model.InstanceType: com.amazonaws.services.ec2.model.InstanceType[] values()
+com.amazonaws.services.ec2.model.InstanceType: com.amazonaws.services.ec2.model.InstanceType valueOf(java.lang.String)
+com.amazonaws.services.ec2.model.ListingState: com.amazonaws.services.ec2.model.ListingState[] values()
+com.amazonaws.services.ec2.model.ListingState: com.amazonaws.services.ec2.model.ListingState valueOf(java.lang.String)
+com.amazonaws.services.ec2.model.ListingStatus: com.amazonaws.services.ec2.model.ListingStatus[] values()
+com.amazonaws.services.ec2.model.ListingStatus: com.amazonaws.services.ec2.model.ListingStatus valueOf(java.lang.String)
+com.amazonaws.services.ec2.model.MonitoringState: com.amazonaws.services.ec2.model.MonitoringState[] values()
+com.amazonaws.services.ec2.model.MonitoringState: com.amazonaws.services.ec2.model.MonitoringState valueOf(java.lang.String)
+com.amazonaws.services.ec2.model.NetworkInterfaceStatus: com.amazonaws.services.ec2.model.NetworkInterfaceStatus[] values()
+com.amazonaws.services.ec2.model.NetworkInterfaceStatus: com.amazonaws.services.ec2.model.NetworkInterfaceStatus valueOf(java.lang.String)
+com.amazonaws.services.ec2.model.OfferingTypeValues: com.amazonaws.services.ec2.model.OfferingTypeValues[] values()
+com.amazonaws.services.ec2.model.OfferingTypeValues: com.amazonaws.services.ec2.model.OfferingTypeValues valueOf(java.lang.String)
+com.amazonaws.services.ec2.model.PermissionGroup: com.amazonaws.services.ec2.model.PermissionGroup[] values()
+com.amazonaws.services.ec2.model.PermissionGroup: com.amazonaws.services.ec2.model.PermissionGroup valueOf(java.lang.String)
+com.amazonaws.services.ec2.model.PlacementGroupState: com.amazonaws.services.ec2.model.PlacementGroupState[] values()
+com.amazonaws.services.ec2.model.PlacementGroupState: com.amazonaws.services.ec2.model.PlacementGroupState valueOf(java.lang.String)
+com.amazonaws.services.ec2.model.PlacementStrategy: com.amazonaws.services.ec2.model.PlacementStrategy[] values()
+com.amazonaws.services.ec2.model.PlacementStrategy: com.amazonaws.services.ec2.model.PlacementStrategy valueOf(java.lang.String)
+com.amazonaws.services.ec2.model.PlatformValues: com.amazonaws.services.ec2.model.PlatformValues[] values()
+com.amazonaws.services.ec2.model.PlatformValues: com.amazonaws.services.ec2.model.PlatformValues valueOf(java.lang.String)
+com.amazonaws.services.ec2.model.ProductCodeValues: com.amazonaws.services.ec2.model.ProductCodeValues[] values()
+com.amazonaws.services.ec2.model.ProductCodeValues: com.amazonaws.services.ec2.model.ProductCodeValues valueOf(java.lang.String)
+com.amazonaws.services.ec2.model.RIProductDescription: com.amazonaws.services.ec2.model.RIProductDescription[] values()
+com.amazonaws.services.ec2.model.RIProductDescription: com.amazonaws.services.ec2.model.RIProductDescription valueOf(java.lang.String)
+com.amazonaws.services.ec2.model.RecurringChargeFrequency: com.amazonaws.services.ec2.model.RecurringChargeFrequency[] values()
+com.amazonaws.services.ec2.model.RecurringChargeFrequency: com.amazonaws.services.ec2.model.RecurringChargeFrequency valueOf(java.lang.String)
+com.amazonaws.services.ec2.model.ReportInstanceReasonCodes: com.amazonaws.services.ec2.model.ReportInstanceReasonCodes[] values()
+com.amazonaws.services.ec2.model.ReportInstanceReasonCodes: com.amazonaws.services.ec2.model.ReportInstanceReasonCodes valueOf(java.lang.String)
+com.amazonaws.services.ec2.model.ReportStatusType: com.amazonaws.services.ec2.model.ReportStatusType[] values()
+com.amazonaws.services.ec2.model.ReportStatusType: com.amazonaws.services.ec2.model.ReportStatusType valueOf(java.lang.String)
+com.amazonaws.services.ec2.model.ReservedInstanceState: com.amazonaws.services.ec2.model.ReservedInstanceState[] values()
+com.amazonaws.services.ec2.model.ReservedInstanceState: com.amazonaws.services.ec2.model.ReservedInstanceState valueOf(java.lang.String)
+com.amazonaws.services.ec2.model.ResetImageAttributeName: com.amazonaws.services.ec2.model.ResetImageAttributeName[] values()
+com.amazonaws.services.ec2.model.ResetImageAttributeName: com.amazonaws.services.ec2.model.ResetImageAttributeName valueOf(java.lang.String)
+com.amazonaws.services.ec2.model.ResourceType: com.amazonaws.services.ec2.model.ResourceType[] values()
+com.amazonaws.services.ec2.model.ResourceType: com.amazonaws.services.ec2.model.ResourceType valueOf(java.lang.String)
+com.amazonaws.services.ec2.model.RouteOrigin: com.amazonaws.services.ec2.model.RouteOrigin[] values()
+com.amazonaws.services.ec2.model.RouteOrigin: com.amazonaws.services.ec2.model.RouteOrigin valueOf(java.lang.String)
+com.amazonaws.services.ec2.model.RouteState: com.amazonaws.services.ec2.model.RouteState[] values()
+com.amazonaws.services.ec2.model.RouteState: com.amazonaws.services.ec2.model.RouteState valueOf(java.lang.String)
+com.amazonaws.services.ec2.model.RuleAction: com.amazonaws.services.ec2.model.RuleAction[] values()
+com.amazonaws.services.ec2.model.RuleAction: com.amazonaws.services.ec2.model.RuleAction valueOf(java.lang.String)
+com.amazonaws.services.ec2.model.ShutdownBehavior: com.amazonaws.services.ec2.model.ShutdownBehavior[] values()
+com.amazonaws.services.ec2.model.ShutdownBehavior: com.amazonaws.services.ec2.model.ShutdownBehavior valueOf(java.lang.String)
+com.amazonaws.services.ec2.model.SnapshotAttributeName: com.amazonaws.services.ec2.model.SnapshotAttributeName[] values()
+com.amazonaws.services.ec2.model.SnapshotAttributeName: com.amazonaws.services.ec2.model.SnapshotAttributeName valueOf(java.lang.String)
+com.amazonaws.services.ec2.model.SnapshotState: com.amazonaws.services.ec2.model.SnapshotState[] values()
+com.amazonaws.services.ec2.model.SnapshotState: com.amazonaws.services.ec2.model.SnapshotState valueOf(java.lang.String)
+com.amazonaws.services.ec2.model.SpotInstanceState: com.amazonaws.services.ec2.model.SpotInstanceState[] values()
+com.amazonaws.services.ec2.model.SpotInstanceState: com.amazonaws.services.ec2.model.SpotInstanceState valueOf(java.lang.String)
+com.amazonaws.services.ec2.model.SpotInstanceType: com.amazonaws.services.ec2.model.SpotInstanceType[] values()
+com.amazonaws.services.ec2.model.SpotInstanceType: com.amazonaws.services.ec2.model.SpotInstanceType valueOf(java.lang.String)
+com.amazonaws.services.ec2.model.StatusName: com.amazonaws.services.ec2.model.StatusName[] values()
+com.amazonaws.services.ec2.model.StatusName: com.amazonaws.services.ec2.model.StatusName valueOf(java.lang.String)
+com.amazonaws.services.ec2.model.StatusType: com.amazonaws.services.ec2.model.StatusType[] values()
+com.amazonaws.services.ec2.model.StatusType: com.amazonaws.services.ec2.model.StatusType valueOf(java.lang.String)
+com.amazonaws.services.ec2.model.SubnetState: com.amazonaws.services.ec2.model.SubnetState[] values()
+com.amazonaws.services.ec2.model.SubnetState: com.amazonaws.services.ec2.model.SubnetState valueOf(java.lang.String)
+com.amazonaws.services.ec2.model.SummaryStatus: com.amazonaws.services.ec2.model.SummaryStatus[] values()
+com.amazonaws.services.ec2.model.SummaryStatus: com.amazonaws.services.ec2.model.SummaryStatus valueOf(java.lang.String)
+com.amazonaws.services.ec2.model.TelemetryStatus: com.amazonaws.services.ec2.model.TelemetryStatus[] values()
+com.amazonaws.services.ec2.model.TelemetryStatus: com.amazonaws.services.ec2.model.TelemetryStatus valueOf(java.lang.String)
+com.amazonaws.services.ec2.model.Tenancy: com.amazonaws.services.ec2.model.Tenancy[] values()
+com.amazonaws.services.ec2.model.Tenancy: com.amazonaws.services.ec2.model.Tenancy valueOf(java.lang.String)
+com.amazonaws.services.ec2.model.VirtualizationType: com.amazonaws.services.ec2.model.VirtualizationType[] values()
+com.amazonaws.services.ec2.model.VirtualizationType: com.amazonaws.services.ec2.model.VirtualizationType valueOf(java.lang.String)
+com.amazonaws.services.ec2.model.VolumeAttachmentState: com.amazonaws.services.ec2.model.VolumeAttachmentState[] values()
+com.amazonaws.services.ec2.model.VolumeAttachmentState: com.amazonaws.services.ec2.model.VolumeAttachmentState valueOf(java.lang.String)
+com.amazonaws.services.ec2.model.VolumeAttributeName: com.amazonaws.services.ec2.model.VolumeAttributeName[] values()
+com.amazonaws.services.ec2.model.VolumeAttributeName: com.amazonaws.services.ec2.model.VolumeAttributeName valueOf(java.lang.String)
+com.amazonaws.services.ec2.model.VolumeState: com.amazonaws.services.ec2.model.VolumeState[] values()
+com.amazonaws.services.ec2.model.VolumeState: com.amazonaws.services.ec2.model.VolumeState valueOf(java.lang.String)
+com.amazonaws.services.ec2.model.VolumeStatusInfoStatus: com.amazonaws.services.ec2.model.VolumeStatusInfoStatus[] values()
+com.amazonaws.services.ec2.model.VolumeStatusInfoStatus: com.amazonaws.services.ec2.model.VolumeStatusInfoStatus valueOf(java.lang.String)
+com.amazonaws.services.ec2.model.VolumeStatusName: com.amazonaws.services.ec2.model.VolumeStatusName[] values()
+com.amazonaws.services.ec2.model.VolumeStatusName: com.amazonaws.services.ec2.model.VolumeStatusName valueOf(java.lang.String)
+com.amazonaws.services.ec2.model.VolumeType: com.amazonaws.services.ec2.model.VolumeType[] values()
+com.amazonaws.services.ec2.model.VolumeType: com.amazonaws.services.ec2.model.VolumeType valueOf(java.lang.String)
+com.amazonaws.services.ec2.model.VpcAttributeName: com.amazonaws.services.ec2.model.VpcAttributeName[] values()
+com.amazonaws.services.ec2.model.VpcAttributeName: com.amazonaws.services.ec2.model.VpcAttributeName valueOf(java.lang.String)
+com.amazonaws.services.ec2.model.VpcState: com.amazonaws.services.ec2.model.VpcState[] values()
+com.amazonaws.services.ec2.model.VpcState: com.amazonaws.services.ec2.model.VpcState valueOf(java.lang.String)
+com.amazonaws.services.ec2.model.VpnState: com.amazonaws.services.ec2.model.VpnState[] values()
+com.amazonaws.services.ec2.model.VpnState: com.amazonaws.services.ec2.model.VpnState valueOf(java.lang.String)
+com.amazonaws.services.ec2.model.VpnStaticRouteSource: com.amazonaws.services.ec2.model.VpnStaticRouteSource[] values()
+com.amazonaws.services.ec2.model.VpnStaticRouteSource: com.amazonaws.services.ec2.model.VpnStaticRouteSource valueOf(java.lang.String)
+com.amazonaws.services.elasticloadbalancing.model.CertificateNotFoundException
+com.amazonaws.services.elasticloadbalancing.model.CertificateNotFoundException: long serialVersionUID
+com.amazonaws.services.elasticloadbalancing.model.CertificateNotFoundException: CertificateNotFoundException(java.lang.String)
+com.amazonaws.services.elasticloadbalancing.model.DuplicateListenerException
+com.amazonaws.services.elasticloadbalancing.model.DuplicateListenerException: long serialVersionUID
+com.amazonaws.services.elasticloadbalancing.model.DuplicateListenerException: DuplicateListenerException(java.lang.String)
+com.amazonaws.services.elasticloadbalancing.model.DuplicateLoadBalancerNameException
+com.amazonaws.services.elasticloadbalancing.model.DuplicateLoadBalancerNameException: long serialVersionUID
+com.amazonaws.services.elasticloadbalancing.model.DuplicateLoadBalancerNameException: DuplicateLoadBalancerNameException(java.lang.String)
+com.amazonaws.services.elasticloadbalancing.model.DuplicatePolicyNameException
+com.amazonaws.services.elasticloadbalancing.model.DuplicatePolicyNameException: long serialVersionUID
+com.amazonaws.services.elasticloadbalancing.model.DuplicatePolicyNameException: DuplicatePolicyNameException(java.lang.String)
+com.amazonaws.services.elasticloadbalancing.model.InvalidConfigurationRequestException
+com.amazonaws.services.elasticloadbalancing.model.InvalidConfigurationRequestException: long serialVersionUID
+com.amazonaws.services.elasticloadbalancing.model.InvalidConfigurationRequestException: InvalidConfigurationRequestException(java.lang.String)
+com.amazonaws.services.elasticloadbalancing.model.InvalidInstanceException
+com.amazonaws.services.elasticloadbalancing.model.InvalidInstanceException: long serialVersionUID
+com.amazonaws.services.elasticloadbalancing.model.InvalidInstanceException: InvalidInstanceException(java.lang.String)
+com.amazonaws.services.elasticloadbalancing.model.InvalidSchemeException
+com.amazonaws.services.elasticloadbalancing.model.InvalidSchemeException: long serialVersionUID
+com.amazonaws.services.elasticloadbalancing.model.InvalidSchemeException: InvalidSchemeException(java.lang.String)
+com.amazonaws.services.elasticloadbalancing.model.InvalidSecurityGroupException
+com.amazonaws.services.elasticloadbalancing.model.InvalidSecurityGroupException: long serialVersionUID
+com.amazonaws.services.elasticloadbalancing.model.InvalidSecurityGroupException: InvalidSecurityGroupException(java.lang.String)
+com.amazonaws.services.elasticloadbalancing.model.InvalidSubnetException
+com.amazonaws.services.elasticloadbalancing.model.InvalidSubnetException: long serialVersionUID
+com.amazonaws.services.elasticloadbalancing.model.InvalidSubnetException: InvalidSubnetException(java.lang.String)
+com.amazonaws.services.elasticloadbalancing.model.ListenerNotFoundException
+com.amazonaws.services.elasticloadbalancing.model.ListenerNotFoundException: long serialVersionUID
+com.amazonaws.services.elasticloadbalancing.model.ListenerNotFoundException: ListenerNotFoundException(java.lang.String)
+com.amazonaws.services.elasticloadbalancing.model.LoadBalancerAttributeNotFoundException
+com.amazonaws.services.elasticloadbalancing.model.LoadBalancerAttributeNotFoundException: long serialVersionUID
+com.amazonaws.services.elasticloadbalancing.model.LoadBalancerAttributeNotFoundException: LoadBalancerAttributeNotFoundException(java.lang.String)
+com.amazonaws.services.elasticloadbalancing.model.LoadBalancerNotFoundException
+com.amazonaws.services.elasticloadbalancing.model.LoadBalancerNotFoundException: long serialVersionUID
+com.amazonaws.services.elasticloadbalancing.model.LoadBalancerNotFoundException: LoadBalancerNotFoundException(java.lang.String)
+com.amazonaws.services.elasticloadbalancing.model.PolicyNotFoundException
+com.amazonaws.services.elasticloadbalancing.model.PolicyNotFoundException: long serialVersionUID
+com.amazonaws.services.elasticloadbalancing.model.PolicyNotFoundException: PolicyNotFoundException(java.lang.String)
+com.amazonaws.services.elasticloadbalancing.model.PolicyTypeNotFoundException
+com.amazonaws.services.elasticloadbalancing.model.PolicyTypeNotFoundException: long serialVersionUID
+com.amazonaws.services.elasticloadbalancing.model.PolicyTypeNotFoundException: PolicyTypeNotFoundException(java.lang.String)
+com.amazonaws.services.elasticloadbalancing.model.SubnetNotFoundException
+com.amazonaws.services.elasticloadbalancing.model.SubnetNotFoundException: long serialVersionUID
+com.amazonaws.services.elasticloadbalancing.model.SubnetNotFoundException: SubnetNotFoundException(java.lang.String)
+com.amazonaws.services.elasticloadbalancing.model.TooManyLoadBalancersException
+com.amazonaws.services.elasticloadbalancing.model.TooManyLoadBalancersException: long serialVersionUID
+com.amazonaws.services.elasticloadbalancing.model.TooManyLoadBalancersException: TooManyLoadBalancersException(java.lang.String)
+com.amazonaws.services.elasticloadbalancing.model.TooManyPoliciesException
+com.amazonaws.services.elasticloadbalancing.model.TooManyPoliciesException: long serialVersionUID
+com.amazonaws.services.elasticloadbalancing.model.TooManyPoliciesException: TooManyPoliciesException(java.lang.String)
+com.amazonaws.services.kinesis.model.ExpiredIteratorException
+com.amazonaws.services.kinesis.model.ExpiredIteratorException: long serialVersionUID
+com.amazonaws.services.kinesis.model.ExpiredIteratorException: ExpiredIteratorException(java.lang.String)
+com.amazonaws.services.kinesis.model.InvalidArgumentException
+com.amazonaws.services.kinesis.model.InvalidArgumentException: long serialVersionUID
+com.amazonaws.services.kinesis.model.InvalidArgumentException: InvalidArgumentException(java.lang.String)
+com.amazonaws.services.kinesis.model.LimitExceededException
+com.amazonaws.services.kinesis.model.LimitExceededException: long serialVersionUID
+com.amazonaws.services.kinesis.model.LimitExceededException: LimitExceededException(java.lang.String)
+com.amazonaws.services.kinesis.model.ProvisionedThroughputExceededException
+com.amazonaws.services.kinesis.model.ProvisionedThroughputExceededException: long serialVersionUID
+com.amazonaws.services.kinesis.model.ProvisionedThroughputExceededException: ProvisionedThroughputExceededException(java.lang.String)
+com.amazonaws.services.kinesis.model.ResourceInUseException
+com.amazonaws.services.kinesis.model.ResourceInUseException: long serialVersionUID
+com.amazonaws.services.kinesis.model.ResourceInUseException: ResourceInUseException(java.lang.String)
+com.amazonaws.services.kinesis.model.ResourceNotFoundException
+com.amazonaws.services.kinesis.model.ResourceNotFoundException: long serialVersionUID
+com.amazonaws.services.kinesis.model.ResourceNotFoundException: ResourceNotFoundException(java.lang.String)
+com.amazonaws.services.kinesis.model.ShardIteratorType: com.amazonaws.services.kinesis.model.ShardIteratorType[] values()
+com.amazonaws.services.kinesis.model.ShardIteratorType: com.amazonaws.services.kinesis.model.ShardIteratorType valueOf(java.lang.String)
+com.amazonaws.services.kinesis.model.StreamStatus: com.amazonaws.services.kinesis.model.StreamStatus[] values()
+com.amazonaws.services.kinesis.model.StreamStatus: com.amazonaws.services.kinesis.model.StreamStatus valueOf(java.lang.String)
+com.amazonaws.services.lambda.model.EventSourcePosition: com.amazonaws.services.lambda.model.EventSourcePosition[] values()
+com.amazonaws.services.lambda.model.EventSourcePosition: com.amazonaws.services.lambda.model.EventSourcePosition valueOf(java.lang.String)
+com.amazonaws.services.lambda.model.InvalidRequestContentException
+com.amazonaws.services.lambda.model.InvalidRequestContentException: long serialVersionUID
+com.amazonaws.services.lambda.model.InvalidRequestContentException: java.lang.String type
+com.amazonaws.services.lambda.model.InvalidRequestContentException: InvalidRequestContentException(java.lang.String)
+com.amazonaws.services.lambda.model.InvalidRequestContentException: java.lang.String getType()
+com.amazonaws.services.lambda.model.InvalidRequestContentException: void setType(java.lang.String)
+com.amazonaws.services.lambda.model.InvocationType: com.amazonaws.services.lambda.model.InvocationType[] values()
+com.amazonaws.services.lambda.model.InvocationType: com.amazonaws.services.lambda.model.InvocationType valueOf(java.lang.String)
+com.amazonaws.services.lambda.model.LogType: com.amazonaws.services.lambda.model.LogType[] values()
+com.amazonaws.services.lambda.model.LogType: com.amazonaws.services.lambda.model.LogType valueOf(java.lang.String)
+com.amazonaws.services.lambda.model.RequestTooLargeException
+com.amazonaws.services.lambda.model.RequestTooLargeException: long serialVersionUID
+com.amazonaws.services.lambda.model.RequestTooLargeException: java.lang.String type
+com.amazonaws.services.lambda.model.RequestTooLargeException: RequestTooLargeException(java.lang.String)
+com.amazonaws.services.lambda.model.RequestTooLargeException: java.lang.String getType()
+com.amazonaws.services.lambda.model.RequestTooLargeException: void setType(java.lang.String)
+com.amazonaws.services.lambda.model.ResourceNotFoundException
+com.amazonaws.services.lambda.model.ResourceNotFoundException: long serialVersionUID
+com.amazonaws.services.lambda.model.ResourceNotFoundException: java.lang.String type
+com.amazonaws.services.lambda.model.ResourceNotFoundException: ResourceNotFoundException(java.lang.String)
+com.amazonaws.services.lambda.model.ResourceNotFoundException: java.lang.String getType()
+com.amazonaws.services.lambda.model.ResourceNotFoundException: void setType(java.lang.String)
+com.amazonaws.services.lambda.model.Runtime: com.amazonaws.services.lambda.model.Runtime[] values()
+com.amazonaws.services.lambda.model.Runtime: com.amazonaws.services.lambda.model.Runtime valueOf(java.lang.String)
+com.amazonaws.services.lambda.model.ServiceException
+com.amazonaws.services.lambda.model.ServiceException: long serialVersionUID
+com.amazonaws.services.lambda.model.ServiceException: java.lang.String type
+com.amazonaws.services.lambda.model.ServiceException: ServiceException(java.lang.String)
+com.amazonaws.services.lambda.model.ServiceException: java.lang.String getType()
+com.amazonaws.services.lambda.model.ServiceException: void setType(java.lang.String)
+com.amazonaws.services.lambda.model.TooManyRequestsException
+com.amazonaws.services.lambda.model.TooManyRequestsException: long serialVersionUID
+com.amazonaws.services.lambda.model.TooManyRequestsException: java.lang.String retryAfterSeconds
+com.amazonaws.services.lambda.model.TooManyRequestsException: java.lang.String type
+com.amazonaws.services.lambda.model.TooManyRequestsException: TooManyRequestsException(java.lang.String)
+com.amazonaws.services.lambda.model.TooManyRequestsException: java.lang.String getRetryAfterSeconds()
+com.amazonaws.services.lambda.model.TooManyRequestsException: void setRetryAfterSeconds(java.lang.String)
+com.amazonaws.services.lambda.model.TooManyRequestsException: java.lang.String getType()
+com.amazonaws.services.lambda.model.TooManyRequestsException: void setType(java.lang.String)
+com.amazonaws.services.lambda.model.UnsupportedMediaTypeException
+com.amazonaws.services.lambda.model.UnsupportedMediaTypeException: long serialVersionUID
+com.amazonaws.services.lambda.model.UnsupportedMediaTypeException: java.lang.String type
+com.amazonaws.services.lambda.model.UnsupportedMediaTypeException: UnsupportedMediaTypeException(java.lang.String)
+com.amazonaws.services.lambda.model.UnsupportedMediaTypeException: java.lang.String getType()
+com.amazonaws.services.lambda.model.UnsupportedMediaTypeException: void setType(java.lang.String)
+com.amazonaws.services.machinelearning.model.Algorithm: com.amazonaws.services.machinelearning.model.Algorithm[] values()
+com.amazonaws.services.machinelearning.model.Algorithm: com.amazonaws.services.machinelearning.model.Algorithm valueOf(java.lang.String)
+com.amazonaws.services.machinelearning.model.BatchPredictionFilterVariable: com.amazonaws.services.machinelearning.model.BatchPredictionFilterVariable[] values()
+com.amazonaws.services.machinelearning.model.BatchPredictionFilterVariable: com.amazonaws.services.machinelearning.model.BatchPredictionFilterVariable valueOf(java.lang.String)
+com.amazonaws.services.machinelearning.model.DataSourceFilterVariable: com.amazonaws.services.machinelearning.model.DataSourceFilterVariable[] values()
+com.amazonaws.services.machinelearning.model.DataSourceFilterVariable: com.amazonaws.services.machinelearning.model.DataSourceFilterVariable valueOf(java.lang.String)
+com.amazonaws.services.machinelearning.model.DetailsAttributes: com.amazonaws.services.machinelearning.model.DetailsAttributes[] values()
+com.amazonaws.services.machinelearning.model.DetailsAttributes: com.amazonaws.services.machinelearning.model.DetailsAttributes valueOf(java.lang.String)
+com.amazonaws.services.machinelearning.model.EntityStatus: com.amazonaws.services.machinelearning.model.EntityStatus[] values()
+com.amazonaws.services.machinelearning.model.EntityStatus: com.amazonaws.services.machinelearning.model.EntityStatus valueOf(java.lang.String)
+com.amazonaws.services.machinelearning.model.EvaluationFilterVariable: com.amazonaws.services.machinelearning.model.EvaluationFilterVariable[] values()
+com.amazonaws.services.machinelearning.model.EvaluationFilterVariable: com.amazonaws.services.machinelearning.model.EvaluationFilterVariable valueOf(java.lang.String)
+com.amazonaws.services.machinelearning.model.InternalServerException
+com.amazonaws.services.machinelearning.model.InternalServerException: long serialVersionUID
+com.amazonaws.services.machinelearning.model.InternalServerException: java.lang.Integer code
+com.amazonaws.services.machinelearning.model.InternalServerException: InternalServerException(java.lang.String)
+com.amazonaws.services.machinelearning.model.InternalServerException: java.lang.Integer getCode()
+com.amazonaws.services.machinelearning.model.InternalServerException: void setCode(java.lang.Integer)
+com.amazonaws.services.machinelearning.model.InvalidInputException
+com.amazonaws.services.machinelearning.model.InvalidInputException: long serialVersionUID
+com.amazonaws.services.machinelearning.model.InvalidInputException: java.lang.Integer code
+com.amazonaws.services.machinelearning.model.InvalidInputException: InvalidInputException(java.lang.String)
+com.amazonaws.services.machinelearning.model.InvalidInputException: java.lang.Integer getCode()
+com.amazonaws.services.machinelearning.model.InvalidInputException: void setCode(java.lang.Integer)
+com.amazonaws.services.machinelearning.model.LimitExceededException
+com.amazonaws.services.machinelearning.model.LimitExceededException: long serialVersionUID
+com.amazonaws.services.machinelearning.model.LimitExceededException: java.lang.Integer code
+com.amazonaws.services.machinelearning.model.LimitExceededException: LimitExceededException(java.lang.String)
+com.amazonaws.services.machinelearning.model.LimitExceededException: java.lang.Integer getCode()
+com.amazonaws.services.machinelearning.model.LimitExceededException: void setCode(java.lang.Integer)
+com.amazonaws.services.machinelearning.model.MLModelFilterVariable: com.amazonaws.services.machinelearning.model.MLModelFilterVariable[] values()
+com.amazonaws.services.machinelearning.model.MLModelFilterVariable: com.amazonaws.services.machinelearning.model.MLModelFilterVariable valueOf(java.lang.String)
+com.amazonaws.services.machinelearning.model.MLModelType: com.amazonaws.services.machinelearning.model.MLModelType[] values()
+com.amazonaws.services.machinelearning.model.MLModelType: com.amazonaws.services.machinelearning.model.MLModelType valueOf(java.lang.String)
+com.amazonaws.services.machinelearning.model.PredictorNotMountedException
+com.amazonaws.services.machinelearning.model.PredictorNotMountedException: long serialVersionUID
+com.amazonaws.services.machinelearning.model.PredictorNotMountedException: PredictorNotMountedException(java.lang.String)
+com.amazonaws.services.machinelearning.model.RealtimeEndpointStatus: com.amazonaws.services.machinelearning.model.RealtimeEndpointStatus[] values()
+com.amazonaws.services.machinelearning.model.RealtimeEndpointStatus: com.amazonaws.services.machinelearning.model.RealtimeEndpointStatus valueOf(java.lang.String)
+com.amazonaws.services.machinelearning.model.ResourceNotFoundException
+com.amazonaws.services.machinelearning.model.ResourceNotFoundException: long serialVersionUID
+com.amazonaws.services.machinelearning.model.ResourceNotFoundException: java.lang.Integer code
+com.amazonaws.services.machinelearning.model.ResourceNotFoundException: ResourceNotFoundException(java.lang.String)
+com.amazonaws.services.machinelearning.model.ResourceNotFoundException: java.lang.Integer getCode()
+com.amazonaws.services.machinelearning.model.ResourceNotFoundException: void setCode(java.lang.Integer)
+com.amazonaws.services.machinelearning.model.SortOrder: com.amazonaws.services.machinelearning.model.SortOrder[] values()
+com.amazonaws.services.machinelearning.model.SortOrder: com.amazonaws.services.machinelearning.model.SortOrder valueOf(java.lang.String)
+com.amazonaws.services.mobileanalytics.model.BadRequestException
+com.amazonaws.services.mobileanalytics.model.BadRequestException: long serialVersionUID
+com.amazonaws.services.mobileanalytics.model.BadRequestException: BadRequestException(java.lang.String)
+com.amazonaws.services.s3.internal.BucketNameUtils: com.amazonaws.services.s3.internal.BucketNameUtils[] values()
+com.amazonaws.services.s3.internal.BucketNameUtils: com.amazonaws.services.s3.internal.BucketNameUtils valueOf(java.lang.String)
+com.amazonaws.services.s3.model.AmazonS3Exception
+com.amazonaws.services.s3.model.AmazonS3Exception: long serialVersionUID
+com.amazonaws.services.s3.model.AmazonS3Exception: java.lang.String extendedRequestId
+com.amazonaws.services.s3.model.AmazonS3Exception: AmazonS3Exception(java.lang.String)
+com.amazonaws.services.s3.model.AmazonS3Exception: AmazonS3Exception(java.lang.String,java.lang.Exception)
+com.amazonaws.services.s3.model.AmazonS3Exception: java.lang.String getExtendedRequestId()
+com.amazonaws.services.s3.model.AmazonS3Exception: void setExtendedRequestId(java.lang.String)
+com.amazonaws.services.s3.model.AmazonS3Exception: java.lang.String toString()
+com.amazonaws.services.s3.model.CORSRule$AllowedMethods: com.amazonaws.services.s3.model.CORSRule$AllowedMethods[] values()
+com.amazonaws.services.s3.model.CORSRule$AllowedMethods: com.amazonaws.services.s3.model.CORSRule$AllowedMethods valueOf(java.lang.String)
+com.amazonaws.services.s3.model.CannedAccessControlList: com.amazonaws.services.s3.model.CannedAccessControlList[] values()
+com.amazonaws.services.s3.model.CannedAccessControlList: com.amazonaws.services.s3.model.CannedAccessControlList valueOf(java.lang.String)
+com.amazonaws.services.s3.model.CryptoMode: com.amazonaws.services.s3.model.CryptoMode[] values()
+com.amazonaws.services.s3.model.CryptoMode: com.amazonaws.services.s3.model.CryptoMode valueOf(java.lang.String)
+com.amazonaws.services.s3.model.CryptoStorageMode: com.amazonaws.services.s3.model.CryptoStorageMode[] values()
+com.amazonaws.services.s3.model.CryptoStorageMode: com.amazonaws.services.s3.model.CryptoStorageMode valueOf(java.lang.String)
+com.amazonaws.services.s3.model.GroupGrantee: com.amazonaws.services.s3.model.GroupGrantee[] values()
+com.amazonaws.services.s3.model.GroupGrantee: com.amazonaws.services.s3.model.GroupGrantee valueOf(java.lang.String)
+com.amazonaws.services.s3.model.MultiObjectDeleteException
+com.amazonaws.services.s3.model.MultiObjectDeleteException: long serialVersionUID
+com.amazonaws.services.s3.model.MultiObjectDeleteException: java.util.List errors
+com.amazonaws.services.s3.model.MultiObjectDeleteException: java.util.List deletedObjects
+com.amazonaws.services.s3.model.MultiObjectDeleteException: MultiObjectDeleteException(java.util.Collection,java.util.Collection)
+com.amazonaws.services.s3.model.MultiObjectDeleteException: java.util.List getDeletedObjects()
+com.amazonaws.services.s3.model.MultiObjectDeleteException: java.util.List getErrors()
+com.amazonaws.services.s3.model.MultiObjectDeleteException$DeleteError
+com.amazonaws.services.s3.model.MultiObjectDeleteException$DeleteError: java.lang.String key
+com.amazonaws.services.s3.model.MultiObjectDeleteException$DeleteError: java.lang.String versionId
+com.amazonaws.services.s3.model.MultiObjectDeleteException$DeleteError: java.lang.String code
+com.amazonaws.services.s3.model.MultiObjectDeleteException$DeleteError: java.lang.String message
+com.amazonaws.services.s3.model.MultiObjectDeleteException$DeleteError: MultiObjectDeleteException$DeleteError()
+com.amazonaws.services.s3.model.MultiObjectDeleteException$DeleteError: java.lang.String getKey()
+com.amazonaws.services.s3.model.MultiObjectDeleteException$DeleteError: void setKey(java.lang.String)
+com.amazonaws.services.s3.model.MultiObjectDeleteException$DeleteError: java.lang.String getVersionId()
+com.amazonaws.services.s3.model.MultiObjectDeleteException$DeleteError: void setVersionId(java.lang.String)
+com.amazonaws.services.s3.model.MultiObjectDeleteException$DeleteError: java.lang.String getCode()
+com.amazonaws.services.s3.model.MultiObjectDeleteException$DeleteError: void setCode(java.lang.String)
+com.amazonaws.services.s3.model.MultiObjectDeleteException$DeleteError: java.lang.String getMessage()
+com.amazonaws.services.s3.model.MultiObjectDeleteException$DeleteError: void setMessage(java.lang.String)
+com.amazonaws.services.s3.model.Permission: com.amazonaws.services.s3.model.Permission[] values()
+com.amazonaws.services.s3.model.Permission: com.amazonaws.services.s3.model.Permission valueOf(java.lang.String)
+com.amazonaws.services.s3.model.Region: com.amazonaws.services.s3.model.Region[] values()
+com.amazonaws.services.s3.model.Region: com.amazonaws.services.s3.model.Region valueOf(java.lang.String)
+com.amazonaws.services.s3.model.RequestPaymentConfiguration$Payer: com.amazonaws.services.s3.model.RequestPaymentConfiguration$Payer[] values()
+com.amazonaws.services.s3.model.RequestPaymentConfiguration$Payer: com.amazonaws.services.s3.model.RequestPaymentConfiguration$Payer valueOf(java.lang.String)
+com.amazonaws.services.s3.model.StorageClass: com.amazonaws.services.s3.model.StorageClass[] values()
+com.amazonaws.services.s3.model.StorageClass: com.amazonaws.services.s3.model.StorageClass valueOf(java.lang.String)
+com.amazonaws.services.securitytoken.model.ExpiredTokenException
+com.amazonaws.services.securitytoken.model.ExpiredTokenException: long serialVersionUID
+com.amazonaws.services.securitytoken.model.ExpiredTokenException: ExpiredTokenException(java.lang.String)
+com.amazonaws.services.securitytoken.model.IDPCommunicationErrorException
+com.amazonaws.services.securitytoken.model.IDPCommunicationErrorException: long serialVersionUID
+com.amazonaws.services.securitytoken.model.IDPCommunicationErrorException: IDPCommunicationErrorException(java.lang.String)
+com.amazonaws.services.securitytoken.model.IDPRejectedClaimException
+com.amazonaws.services.securitytoken.model.IDPRejectedClaimException: long serialVersionUID
+com.amazonaws.services.securitytoken.model.IDPRejectedClaimException: IDPRejectedClaimException(java.lang.String)
+com.amazonaws.services.securitytoken.model.InvalidIdentityTokenException
+com.amazonaws.services.securitytoken.model.InvalidIdentityTokenException: long serialVersionUID
+com.amazonaws.services.securitytoken.model.InvalidIdentityTokenException: InvalidIdentityTokenException(java.lang.String)
+com.amazonaws.services.securitytoken.model.MalformedPolicyDocumentException
+com.amazonaws.services.securitytoken.model.MalformedPolicyDocumentException: long serialVersionUID
+com.amazonaws.services.securitytoken.model.MalformedPolicyDocumentException: MalformedPolicyDocumentException(java.lang.String)
+com.amazonaws.services.securitytoken.model.PackedPolicyTooLargeException
+com.amazonaws.services.securitytoken.model.PackedPolicyTooLargeException: long serialVersionUID
+com.amazonaws.services.securitytoken.model.PackedPolicyTooLargeException: PackedPolicyTooLargeException(java.lang.String)
+com.amazonaws.services.simpledb.model.AttributeDoesNotExistException
+com.amazonaws.services.simpledb.model.AttributeDoesNotExistException: long serialVersionUID
+com.amazonaws.services.simpledb.model.AttributeDoesNotExistException: java.lang.Float boxUsage
+com.amazonaws.services.simpledb.model.AttributeDoesNotExistException: AttributeDoesNotExistException(java.lang.String)
+com.amazonaws.services.simpledb.model.AttributeDoesNotExistException: java.lang.Float getBoxUsage()
+com.amazonaws.services.simpledb.model.AttributeDoesNotExistException: void setBoxUsage(java.lang.Float)
+com.amazonaws.services.simpledb.model.DuplicateItemNameException
+com.amazonaws.services.simpledb.model.DuplicateItemNameException: long serialVersionUID
+com.amazonaws.services.simpledb.model.DuplicateItemNameException: java.lang.Float boxUsage
+com.amazonaws.services.simpledb.model.DuplicateItemNameException: DuplicateItemNameException(java.lang.String)
+com.amazonaws.services.simpledb.model.DuplicateItemNameException: java.lang.Float getBoxUsage()
+com.amazonaws.services.simpledb.model.DuplicateItemNameException: void setBoxUsage(java.lang.Float)
+com.amazonaws.services.simpledb.model.InvalidNextTokenException
+com.amazonaws.services.simpledb.model.InvalidNextTokenException: long serialVersionUID
+com.amazonaws.services.simpledb.model.InvalidNextTokenException: java.lang.Float boxUsage
+com.amazonaws.services.simpledb.model.InvalidNextTokenException: InvalidNextTokenException(java.lang.String)
+com.amazonaws.services.simpledb.model.InvalidNextTokenException: java.lang.Float getBoxUsage()
+com.amazonaws.services.simpledb.model.InvalidNextTokenException: void setBoxUsage(java.lang.Float)
+com.amazonaws.services.simpledb.model.InvalidNumberPredicatesException
+com.amazonaws.services.simpledb.model.InvalidNumberPredicatesException: long serialVersionUID
+com.amazonaws.services.simpledb.model.InvalidNumberPredicatesException: java.lang.Float boxUsage
+com.amazonaws.services.simpledb.model.InvalidNumberPredicatesException: InvalidNumberPredicatesException(java.lang.String)
+com.amazonaws.services.simpledb.model.InvalidNumberPredicatesException: java.lang.Float getBoxUsage()
+com.amazonaws.services.simpledb.model.InvalidNumberPredicatesException: void setBoxUsage(java.lang.Float)
+com.amazonaws.services.simpledb.model.InvalidNumberValueTestsException
+com.amazonaws.services.simpledb.model.InvalidNumberValueTestsException: long serialVersionUID
+com.amazonaws.services.simpledb.model.InvalidNumberValueTestsException: java.lang.Float boxUsage
+com.amazonaws.services.simpledb.model.InvalidNumberValueTestsException: InvalidNumberValueTestsException(java.lang.String)
+com.amazonaws.services.simpledb.model.InvalidNumberValueTestsException: java.lang.Float getBoxUsage()
+com.amazonaws.services.simpledb.model.InvalidNumberValueTestsException: void setBoxUsage(java.lang.Float)
+com.amazonaws.services.simpledb.model.InvalidParameterValueException
+com.amazonaws.services.simpledb.model.InvalidParameterValueException: long serialVersionUID
+com.amazonaws.services.simpledb.model.InvalidParameterValueException: java.lang.Float boxUsage
+com.amazonaws.services.simpledb.model.InvalidParameterValueException: InvalidParameterValueException(java.lang.String)
+com.amazonaws.services.simpledb.model.InvalidParameterValueException: java.lang.Float getBoxUsage()
+com.amazonaws.services.simpledb.model.InvalidParameterValueException: void setBoxUsage(java.lang.Float)
+com.amazonaws.services.simpledb.model.InvalidQueryExpressionException
+com.amazonaws.services.simpledb.model.InvalidQueryExpressionException: long serialVersionUID
+com.amazonaws.services.simpledb.model.InvalidQueryExpressionException: java.lang.Float boxUsage
+com.amazonaws.services.simpledb.model.InvalidQueryExpressionException: InvalidQueryExpressionException(java.lang.String)
+com.amazonaws.services.simpledb.model.InvalidQueryExpressionException: java.lang.Float getBoxUsage()
+com.amazonaws.services.simpledb.model.InvalidQueryExpressionException: void setBoxUsage(java.lang.Float)
+com.amazonaws.services.simpledb.model.MissingParameterException
+com.amazonaws.services.simpledb.model.MissingParameterException: long serialVersionUID
+com.amazonaws.services.simpledb.model.MissingParameterException: java.lang.Float boxUsage
+com.amazonaws.services.simpledb.model.MissingParameterException: MissingParameterException(java.lang.String)
+com.amazonaws.services.simpledb.model.MissingParameterException: java.lang.Float getBoxUsage()
+com.amazonaws.services.simpledb.model.MissingParameterException: void setBoxUsage(java.lang.Float)
+com.amazonaws.services.simpledb.model.NoSuchDomainException
+com.amazonaws.services.simpledb.model.NoSuchDomainException: long serialVersionUID
+com.amazonaws.services.simpledb.model.NoSuchDomainException: java.lang.Float boxUsage
+com.amazonaws.services.simpledb.model.NoSuchDomainException: NoSuchDomainException(java.lang.String)
+com.amazonaws.services.simpledb.model.NoSuchDomainException: java.lang.Float getBoxUsage()
+com.amazonaws.services.simpledb.model.NoSuchDomainException: void setBoxUsage(java.lang.Float)
+com.amazonaws.services.simpledb.model.NumberDomainAttributesExceededException
+com.amazonaws.services.simpledb.model.NumberDomainAttributesExceededException: long serialVersionUID
+com.amazonaws.services.simpledb.model.NumberDomainAttributesExceededException: java.lang.Float boxUsage
+com.amazonaws.services.simpledb.model.NumberDomainAttributesExceededException: NumberDomainAttributesExceededException(java.lang.String)
+com.amazonaws.services.simpledb.model.NumberDomainAttributesExceededException: java.lang.Float getBoxUsage()
+com.amazonaws.services.simpledb.model.NumberDomainAttributesExceededException: void setBoxUsage(java.lang.Float)
+com.amazonaws.services.simpledb.model.NumberDomainBytesExceededException
+com.amazonaws.services.simpledb.model.NumberDomainBytesExceededException: long serialVersionUID
+com.amazonaws.services.simpledb.model.NumberDomainBytesExceededException: java.lang.Float boxUsage
+com.amazonaws.services.simpledb.model.NumberDomainBytesExceededException: NumberDomainBytesExceededException(java.lang.String)
+com.amazonaws.services.simpledb.model.NumberDomainBytesExceededException: java.lang.Float getBoxUsage()
+com.amazonaws.services.simpledb.model.NumberDomainBytesExceededException: void setBoxUsage(java.lang.Float)
+com.amazonaws.services.simpledb.model.NumberDomainsExceededException
+com.amazonaws.services.simpledb.model.NumberDomainsExceededException: long serialVersionUID
+com.amazonaws.services.simpledb.model.NumberDomainsExceededException: java.lang.Float boxUsage
+com.amazonaws.services.simpledb.model.NumberDomainsExceededException: NumberDomainsExceededException(java.lang.String)
+com.amazonaws.services.simpledb.model.NumberDomainsExceededException: java.lang.Float getBoxUsage()
+com.amazonaws.services.simpledb.model.NumberDomainsExceededException: void setBoxUsage(java.lang.Float)
+com.amazonaws.services.simpledb.model.NumberItemAttributesExceededException
+com.amazonaws.services.simpledb.model.NumberItemAttributesExceededException: long serialVersionUID
+com.amazonaws.services.simpledb.model.NumberItemAttributesExceededException: java.lang.Float boxUsage
+com.amazonaws.services.simpledb.model.NumberItemAttributesExceededException: NumberItemAttributesExceededException(java.lang.String)
+com.amazonaws.services.simpledb.model.NumberItemAttributesExceededException: java.lang.Float getBoxUsage()
+com.amazonaws.services.simpledb.model.NumberItemAttributesExceededException: void setBoxUsage(java.lang.Float)
+com.amazonaws.services.simpledb.model.NumberSubmittedAttributesExceededException
+com.amazonaws.services.simpledb.model.NumberSubmittedAttributesExceededException: long serialVersionUID
+com.amazonaws.services.simpledb.model.NumberSubmittedAttributesExceededException: java.lang.Float boxUsage
+com.amazonaws.services.simpledb.model.NumberSubmittedAttributesExceededException: NumberSubmittedAttributesExceededException(java.lang.String)
+com.amazonaws.services.simpledb.model.NumberSubmittedAttributesExceededException: java.lang.Float getBoxUsage()
+com.amazonaws.services.simpledb.model.NumberSubmittedAttributesExceededException: void setBoxUsage(java.lang.Float)
+com.amazonaws.services.simpledb.model.NumberSubmittedItemsExceededException
+com.amazonaws.services.simpledb.model.NumberSubmittedItemsExceededException: long serialVersionUID
+com.amazonaws.services.simpledb.model.NumberSubmittedItemsExceededException: java.lang.Float boxUsage
+com.amazonaws.services.simpledb.model.NumberSubmittedItemsExceededException: NumberSubmittedItemsExceededException(java.lang.String)
+com.amazonaws.services.simpledb.model.NumberSubmittedItemsExceededException: java.lang.Float getBoxUsage()
+com.amazonaws.services.simpledb.model.NumberSubmittedItemsExceededException: void setBoxUsage(java.lang.Float)
+com.amazonaws.services.simpledb.model.RequestTimeoutException
+com.amazonaws.services.simpledb.model.RequestTimeoutException: long serialVersionUID
+com.amazonaws.services.simpledb.model.RequestTimeoutException: java.lang.Float boxUsage
+com.amazonaws.services.simpledb.model.RequestTimeoutException: RequestTimeoutException(java.lang.String)
+com.amazonaws.services.simpledb.model.RequestTimeoutException: java.lang.Float getBoxUsage()
+com.amazonaws.services.simpledb.model.RequestTimeoutException: void setBoxUsage(java.lang.Float)
+com.amazonaws.services.simpledb.model.TooManyRequestedAttributesException
+com.amazonaws.services.simpledb.model.TooManyRequestedAttributesException: long serialVersionUID
+com.amazonaws.services.simpledb.model.TooManyRequestedAttributesException: java.lang.Float boxUsage
+com.amazonaws.services.simpledb.model.TooManyRequestedAttributesException: TooManyRequestedAttributesException(java.lang.String)
+com.amazonaws.services.simpledb.model.TooManyRequestedAttributesException: java.lang.Float getBoxUsage()
+com.amazonaws.services.simpledb.model.TooManyRequestedAttributesException: void setBoxUsage(java.lang.Float)
+com.amazonaws.services.simpleemail.model.IdentityType: com.amazonaws.services.simpleemail.model.IdentityType[] values()
+com.amazonaws.services.simpleemail.model.IdentityType: com.amazonaws.services.simpleemail.model.IdentityType valueOf(java.lang.String)
+com.amazonaws.services.simpleemail.model.MessageRejectedException
+com.amazonaws.services.simpleemail.model.MessageRejectedException: long serialVersionUID
+com.amazonaws.services.simpleemail.model.MessageRejectedException: MessageRejectedException(java.lang.String)
+com.amazonaws.services.simpleemail.model.NotificationType: com.amazonaws.services.simpleemail.model.NotificationType[] values()
+com.amazonaws.services.simpleemail.model.NotificationType: com.amazonaws.services.simpleemail.model.NotificationType valueOf(java.lang.String)
+com.amazonaws.services.simpleemail.model.VerificationStatus: com.amazonaws.services.simpleemail.model.VerificationStatus[] values()
+com.amazonaws.services.simpleemail.model.VerificationStatus: com.amazonaws.services.simpleemail.model.VerificationStatus valueOf(java.lang.String)
+com.amazonaws.services.sns.model.AuthorizationErrorException
+com.amazonaws.services.sns.model.AuthorizationErrorException: long serialVersionUID
+com.amazonaws.services.sns.model.AuthorizationErrorException: AuthorizationErrorException(java.lang.String)
+com.amazonaws.services.sns.model.EndpointDisabledException
+com.amazonaws.services.sns.model.EndpointDisabledException: long serialVersionUID
+com.amazonaws.services.sns.model.EndpointDisabledException: EndpointDisabledException(java.lang.String)
+com.amazonaws.services.sns.model.InternalErrorException
+com.amazonaws.services.sns.model.InternalErrorException: long serialVersionUID
+com.amazonaws.services.sns.model.InternalErrorException: InternalErrorException(java.lang.String)
+com.amazonaws.services.sns.model.InvalidParameterException
+com.amazonaws.services.sns.model.InvalidParameterException: long serialVersionUID
+com.amazonaws.services.sns.model.InvalidParameterException: InvalidParameterException(java.lang.String)
+com.amazonaws.services.sns.model.InvalidParameterValueException
+com.amazonaws.services.sns.model.InvalidParameterValueException: long serialVersionUID
+com.amazonaws.services.sns.model.InvalidParameterValueException: InvalidParameterValueException(java.lang.String)
+com.amazonaws.services.sns.model.NotFoundException
+com.amazonaws.services.sns.model.NotFoundException: long serialVersionUID
+com.amazonaws.services.sns.model.NotFoundException: NotFoundException(java.lang.String)
+com.amazonaws.services.sns.model.PlatformApplicationDisabledException
+com.amazonaws.services.sns.model.PlatformApplicationDisabledException: long serialVersionUID
+com.amazonaws.services.sns.model.PlatformApplicationDisabledException: PlatformApplicationDisabledException(java.lang.String)
+com.amazonaws.services.sns.model.SubscriptionLimitExceededException
+com.amazonaws.services.sns.model.SubscriptionLimitExceededException: long serialVersionUID
+com.amazonaws.services.sns.model.SubscriptionLimitExceededException: SubscriptionLimitExceededException(java.lang.String)
+com.amazonaws.services.sns.model.TopicLimitExceededException
+com.amazonaws.services.sns.model.TopicLimitExceededException: long serialVersionUID
+com.amazonaws.services.sns.model.TopicLimitExceededException: TopicLimitExceededException(java.lang.String)
+com.amazonaws.services.sqs.QueueUrlHandler
+com.amazonaws.services.sqs.QueueUrlHandler: java.lang.String QUEUE_URL_PARAMETER
+com.amazonaws.services.sqs.QueueUrlHandler: QueueUrlHandler()
+com.amazonaws.services.sqs.QueueUrlHandler: void beforeRequest(com.amazonaws.Request)
+com.amazonaws.services.sqs.model.BatchEntryIdsNotDistinctException
+com.amazonaws.services.sqs.model.BatchEntryIdsNotDistinctException: long serialVersionUID
+com.amazonaws.services.sqs.model.BatchEntryIdsNotDistinctException: BatchEntryIdsNotDistinctException(java.lang.String)
+com.amazonaws.services.sqs.model.BatchRequestTooLongException
+com.amazonaws.services.sqs.model.BatchRequestTooLongException: long serialVersionUID
+com.amazonaws.services.sqs.model.BatchRequestTooLongException: BatchRequestTooLongException(java.lang.String)
+com.amazonaws.services.sqs.model.EmptyBatchRequestException
+com.amazonaws.services.sqs.model.EmptyBatchRequestException: long serialVersionUID
+com.amazonaws.services.sqs.model.EmptyBatchRequestException: EmptyBatchRequestException(java.lang.String)
+com.amazonaws.services.sqs.model.InvalidAttributeNameException
+com.amazonaws.services.sqs.model.InvalidAttributeNameException: long serialVersionUID
+com.amazonaws.services.sqs.model.InvalidAttributeNameException: InvalidAttributeNameException(java.lang.String)
+com.amazonaws.services.sqs.model.InvalidBatchEntryIdException
+com.amazonaws.services.sqs.model.InvalidBatchEntryIdException: long serialVersionUID
+com.amazonaws.services.sqs.model.InvalidBatchEntryIdException: InvalidBatchEntryIdException(java.lang.String)
+com.amazonaws.services.sqs.model.InvalidIdFormatException
+com.amazonaws.services.sqs.model.InvalidIdFormatException: long serialVersionUID
+com.amazonaws.services.sqs.model.InvalidIdFormatException: InvalidIdFormatException(java.lang.String)
+com.amazonaws.services.sqs.model.InvalidMessageContentsException
+com.amazonaws.services.sqs.model.InvalidMessageContentsException: long serialVersionUID
+com.amazonaws.services.sqs.model.InvalidMessageContentsException: InvalidMessageContentsException(java.lang.String)
+com.amazonaws.services.sqs.model.MessageNotInflightException
+com.amazonaws.services.sqs.model.MessageNotInflightException: long serialVersionUID
+com.amazonaws.services.sqs.model.MessageNotInflightException: MessageNotInflightException(java.lang.String)
+com.amazonaws.services.sqs.model.OverLimitException
+com.amazonaws.services.sqs.model.OverLimitException: long serialVersionUID
+com.amazonaws.services.sqs.model.OverLimitException: OverLimitException(java.lang.String)
+com.amazonaws.services.sqs.model.QueueAttributeName: com.amazonaws.services.sqs.model.QueueAttributeName[] values()
+com.amazonaws.services.sqs.model.QueueAttributeName: com.amazonaws.services.sqs.model.QueueAttributeName valueOf(java.lang.String)
+com.amazonaws.services.sqs.model.QueueDeletedRecentlyException
+com.amazonaws.services.sqs.model.QueueDeletedRecentlyException: long serialVersionUID
+com.amazonaws.services.sqs.model.QueueDeletedRecentlyException: QueueDeletedRecentlyException(java.lang.String)
+com.amazonaws.services.sqs.model.QueueDoesNotExistException
+com.amazonaws.services.sqs.model.QueueDoesNotExistException: long serialVersionUID
+com.amazonaws.services.sqs.model.QueueDoesNotExistException: QueueDoesNotExistException(java.lang.String)
+com.amazonaws.services.sqs.model.QueueNameExistsException
+com.amazonaws.services.sqs.model.QueueNameExistsException: long serialVersionUID
+com.amazonaws.services.sqs.model.QueueNameExistsException: QueueNameExistsException(java.lang.String)
+com.amazonaws.services.sqs.model.ReceiptHandleIsInvalidException
+com.amazonaws.services.sqs.model.ReceiptHandleIsInvalidException: long serialVersionUID
+com.amazonaws.services.sqs.model.ReceiptHandleIsInvalidException: ReceiptHandleIsInvalidException(java.lang.String)
+com.amazonaws.services.sqs.model.TooManyEntriesInBatchRequestException
+com.amazonaws.services.sqs.model.TooManyEntriesInBatchRequestException: long serialVersionUID
+com.amazonaws.services.sqs.model.TooManyEntriesInBatchRequestException: TooManyEntriesInBatchRequestException(java.lang.String)
+com.amazonaws.services.sqs.model.UnsupportedOperationException
+com.amazonaws.services.sqs.model.UnsupportedOperationException: long serialVersionUID
+com.amazonaws.services.sqs.model.UnsupportedOperationException: UnsupportedOperationException(java.lang.String)
+com.amazonaws.util.AWSRequestMetrics$Field: com.amazonaws.util.AWSRequestMetrics$Field[] values()
+com.amazonaws.util.AWSRequestMetrics$Field: com.amazonaws.util.AWSRequestMetrics$Field valueOf(java.lang.String)
+com.amazonaws.util.AWSServiceMetrics: com.amazonaws.util.AWSServiceMetrics[] values()
+com.amazonaws.util.AWSServiceMetrics: com.amazonaws.util.AWSServiceMetrics valueOf(java.lang.String)
+com.amazonaws.util.Base16: com.amazonaws.util.Base16[] values()
+com.amazonaws.util.Base16: com.amazonaws.util.Base16 valueOf(java.lang.String)
+com.amazonaws.util.Base32: com.amazonaws.util.Base32[] values()
+com.amazonaws.util.Base32: com.amazonaws.util.Base32 valueOf(java.lang.String)
+com.amazonaws.util.Base64: com.amazonaws.util.Base64[] values()
+com.amazonaws.util.Base64: com.amazonaws.util.Base64 valueOf(java.lang.String)
+com.amazonaws.util.ClassLoaderHelper: com.amazonaws.util.ClassLoaderHelper[] values()
+com.amazonaws.util.ClassLoaderHelper: com.amazonaws.util.ClassLoaderHelper valueOf(java.lang.String)
+com.amazonaws.util.Classes: com.amazonaws.util.Classes[] values()
+com.amazonaws.util.Classes: com.amazonaws.util.Classes valueOf(java.lang.String)
+com.amazonaws.util.CodecUtils: com.amazonaws.util.CodecUtils[] values()
+com.amazonaws.util.CodecUtils: com.amazonaws.util.CodecUtils valueOf(java.lang.String)
+com.amazonaws.util.EncodingSchemeEnum: com.amazonaws.util.EncodingSchemeEnum[] values()
+com.amazonaws.util.EncodingSchemeEnum: com.amazonaws.util.EncodingSchemeEnum valueOf(java.lang.String)
+com.amazonaws.util.IOUtils: com.amazonaws.util.IOUtils[] values()
+com.amazonaws.util.IOUtils: com.amazonaws.util.IOUtils valueOf(java.lang.String)
+com.amazonaws.util.SdkRuntime: com.amazonaws.util.SdkRuntime[] values()
+com.amazonaws.util.SdkRuntime: com.amazonaws.util.SdkRuntime valueOf(java.lang.String)
+com.amazonaws.util.Throwables: com.amazonaws.util.Throwables[] values()
+com.amazonaws.util.Throwables: com.amazonaws.util.Throwables valueOf(java.lang.String)
+com.amazonaws.util.json.AwsJsonToken: com.amazonaws.util.json.AwsJsonToken[] values()
+com.amazonaws.util.json.AwsJsonToken: com.amazonaws.util.json.AwsJsonToken valueOf(java.lang.String)
+com.amazonaws.util.json.JsonUtils$JsonEngine: com.amazonaws.util.json.JsonUtils$JsonEngine[] values()
+com.amazonaws.util.json.JsonUtils$JsonEngine: com.amazonaws.util.json.JsonUtils$JsonEngine valueOf(java.lang.String)
+org.apache.commons.codec.digest.HmacAlgorithms: org.apache.commons.codec.digest.HmacAlgorithms[] values()
+org.apache.commons.codec.digest.HmacAlgorithms: org.apache.commons.codec.digest.HmacAlgorithms valueOf(java.lang.String)
+org.apache.commons.codec.language.bm.NameType: org.apache.commons.codec.language.bm.NameType[] values()
+org.apache.commons.codec.language.bm.NameType: org.apache.commons.codec.language.bm.NameType valueOf(java.lang.String)
+org.apache.commons.codec.language.bm.RuleType: org.apache.commons.codec.language.bm.RuleType[] values()
+org.apache.commons.codec.language.bm.RuleType: org.apache.commons.codec.language.bm.RuleType valueOf(java.lang.String)
+org.apache.log4j.nt.NTEventLogAppender
+org.apache.log4j.nt.NTEventLogAppender: int registerEventSource(java.lang.String,java.lang.String)
+org.apache.log4j.nt.NTEventLogAppender: void reportEvent(int,java.lang.String,int)
+org.apache.log4j.nt.NTEventLogAppender: void deregisterEventSource(int)

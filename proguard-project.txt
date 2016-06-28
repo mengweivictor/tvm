@@ -13,3 +13,4 @@
 -dontwarn org.codehaus.jackson.**
 -dontwarn org.apache.commons.logging.impl.**
 -dontwarn org.apache.http.conn.scheme.**
+-ignorewarnings

@@ -14,7 +14,11 @@
  */
 package com.amazonaws.demo.personalfilestore;
 
+import java.text.SimpleDateFormat;
+
 import org.apache.log4j.Logger;
+import org.json.JSONException;
+import org.json.JSONObject;
 
 import android.app.Activity;
 import android.app.AlertDialog;
@@ -22,16 +26,27 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.amazonaws.auth.AWSCredentials;
 import com.amazonaws.demo.personalfilestore.s3.S3;
 import com.amazonaws.demo.personalfilestore.s3.S3BucketView;
+import com.amazonaws.demo.weibologin.AccessTokenKeeper;
+import com.amazonaws.demo.weibologin.Constants;
 import com.amazonaws.tvmclient.AmazonSharedPreferencesWrapper;
 import com.amazonaws.tvmclient.Response;
+import com.amazonaws.tvmclient.Utilities;
+import com.sina.weibo.sdk.auth.AuthInfo;
+import com.sina.weibo.sdk.auth.Oauth2AccessToken;
+import com.sina.weibo.sdk.auth.WeiboAuthListener;
+import com.sina.weibo.sdk.exception.WeiboException;
+import com.sina.weibo.sdk.net.RequestListener;
+import com.sina.weibo.sdk.widget.LoginButton;
 
 public class S3PersonalFileStore extends Activity 
 {
@@ -45,6 +60,15 @@ public class S3PersonalFileStore extends Activity
 	protected Button logoutButton;
 	
 	protected TextView welcomeText;
+	
+	private LoginButton mLoginBtnDefault;
+	private TextView mTokenView;//for the test purpose 
+	
+	/** 登陆认证对应的listener */
+    private AuthListener mLoginListener = new AuthListener();
+    
+    private AuthInfo mAuthInfo;
+	
 	
     public static AmazonClientManager clientManager = null;
     	
@@ -61,14 +85,20 @@ public class S3PersonalFileStore extends Activity
         s3Button     = (Button)findViewById(R.id.main_storage_button);
         logoutButton = (Button)findViewById(R.id.main_logout_button);
         loginButton  = (Button)findViewById(R.id.main_login_button);
+        welcomeText = (TextView)findViewById(R.id.main_into_text);
+        
+        mAuthInfo = new AuthInfo(this, Constants.APP_KEY, Constants.REDIRECT_URL, Constants.SCOPE);
+        mLoginBtnDefault = (LoginButton)findViewById(R.id.loginButtond_defalut);
+        mLoginBtnDefault.setWeiboAuthInfo(mAuthInfo, mLoginListener);
+      
+        mTokenView = (TextView)findViewById(R.id.weibologin_status);
         
         
-        welcomeText = (TextView)findViewById(R.id.main_into_text);                                    
 
         clientManager = 
             new AmazonClientManager( 
                 getSharedPreferences( 
-                    "com.amazon.aws.demo.AWSDemo", Context.MODE_PRIVATE ) );
+                    "com.amazon.aws.demo.AWSDemo", Context.MODE_PRIVATE ), getApplicationContext() );
         
         AWSCredentials credentials  = 
             AmazonSharedPreferencesWrapper.getCredentialsFromSharedPreferences(
@@ -81,10 +111,11 @@ public class S3PersonalFileStore extends Activity
     		
     		welcomeText.setText(fail);
         }
-        else if ( !S3PersonalFileStore.clientManager.isLoggedIn() ) 
+        else if ( !S3PersonalFileStore.clientManager.isLoggedIn() )
         {
             welcomeText.setText(success);
             loginButton.setVisibility(View.VISIBLE);
+            mLoginBtnDefault.setVisibility(View.VISIBLE);
     		this.wireButtons();
         }
         else 
@@ -92,7 +123,7 @@ public class S3PersonalFileStore extends Activity
     		welcomeText.setText(success);
     		s3Button.setVisibility(View.VISIBLE);
             logoutButton.setVisibility(View.VISIBLE);
-            
+            mLoginBtnDefault.setVisibility(View.INVISIBLE);
     		this.wireButtons();
     	} 
     }
@@ -105,6 +136,7 @@ public class S3PersonalFileStore extends Activity
         {
             welcomeText.setText(success);
             loginButton.setVisibility(View.VISIBLE);
+            mLoginBtnDefault.setVisibility(View.VISIBLE);
     		this.wireButtons();
         }
         else 
@@ -114,10 +146,15 @@ public class S3PersonalFileStore extends Activity
     		welcomeText.setText(success);
     		s3Button.setVisibility(View.VISIBLE);
             logoutButton.setVisibility(View.VISIBLE);
-            
+            mLoginBtnDefault.setVisibility(View.INVISIBLE);
     		this.wireButtons();
     	} 
         
+    }
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);        
+        mLoginBtnDefault.onActivityResult(requestCode, resultCode, data);
     }
         
     private void wireButtons()
@@ -142,7 +179,17 @@ public class S3PersonalFileStore extends Activity
                 }
                 else 
                 {
-                	S3PersonalFileStore.this.displayErrorAndExit( response );                    
+                	if(response.getResponseCode() == 888)
+                	{
+                		logoutAction();
+                		//Utilities.MyToast(getApplicationContext(), "weibotoken error please relogin!");
+                		
+                	}
+                	else 
+                	{
+                		S3PersonalFileStore.this.displayErrorAndExit( response );                    
+					}
+                	
                 }
 			}
 		});
@@ -152,14 +199,7 @@ public class S3PersonalFileStore extends Activity
 			@Override
 			public void onClick(View v) 
 			{
-                clientManager.clearCredentials();  
-                clientManager.wipe();   
-                
-                displayLogoutSuccess();
-                
-    		    s3Button.setVisibility(View.INVISIBLE);
-                logoutButton.setVisibility(View.INVISIBLE);
-                loginButton.setVisibility(View.VISIBLE);                
+                logoutAction();
 			}
 		});  
               
@@ -172,6 +212,20 @@ public class S3PersonalFileStore extends Activity
 			}
 		});        
     }
+    private void logoutAction() {
+    	
+    	clientManager.clearCredentials();  
+        clientManager.wipe();
+        //清楚weibo AccessToken
+        AccessTokenKeeper.clear(getApplicationContext());
+        
+        //displayLogoutSuccess();
+        
+	    s3Button.setVisibility(View.INVISIBLE);
+        logoutButton.setVisibility(View.INVISIBLE);
+        loginButton.setVisibility(View.VISIBLE); 
+        mLoginBtnDefault.setVisibility(View.VISIBLE);
+	}
         
     protected void displayCredentialsIssueAndExit() 
     {
@@ -234,5 +288,46 @@ public class S3PersonalFileStore extends Activity
             });
         
         confirm.show().show();                
+    }
+    
+    
+    /**
+     * 登入按钮的监听器，接收授权结果。
+     */
+    private class AuthListener implements WeiboAuthListener {
+        @Override
+        public void onComplete(Bundle values) {
+            Oauth2AccessToken accessToken = Oauth2AccessToken.parseAccessToken(values);
+            if (accessToken != null && accessToken.isSessionValid()) {
+                String date = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss").format(
+                        new java.util.Date(accessToken.getExpiresTime()));
+                String format = getString(R.string.weibosdk_demo_token_to_string_format_1);
+                mTokenView.setText(String.format(format, accessToken.getToken(), date));
+                AccessTokenKeeper.writeAccessToken(getApplicationContext(), accessToken);
+                
+                
+                Response response = 
+                		S3PersonalFileStore.clientManager.login(accessToken);
+                if ( response != null && response.getResponseCode() == 404 ) 
+                {
+                	log4j.info("weibologin not found!");
+                }
+                else if ( response != null && response.getResponseCode() != 200 ) 
+                {
+                	log4j.info("weibologin error!!!!");
+                }
+            }  
+        }
+
+        @Override
+        public void onWeiboException(WeiboException e) {
+            Toast.makeText(S3PersonalFileStore.this, e.getMessage(), Toast.LENGTH_SHORT).show();
+        }
+
+        @Override
+        public void onCancel() {
+            Toast.makeText(S3PersonalFileStore.this, 
+                    R.string.weibosdk_demo_toast_auth_canceled, Toast.LENGTH_SHORT).show();
+        }
     }
 }

@@ -37,7 +37,7 @@
               android:inputType     = "textPassword"/>
 	
 	<!--底部按钮区-->
-    <LinearLayout xmlns:android         = "http://schemas.android.com/apk/res/android"
+    <LinearLayout
                   android:gravity       = "center"
                   android:orientation   = "horizontal"
                   android:layout_width  = "fill_parent"
@@ -55,5 +55,6 @@
 		        android:text            = "Register"
 		        android:layout_width    = "wrap_content"
 		        android:layout_height   = "wrap_content"/>
-    </LinearLayout>        
+    </LinearLayout>
+
 </LinearLayout>

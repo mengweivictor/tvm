@@ -17,21 +17,31 @@ package com.amazonaws.demo.personalfilestore;
 
 import java.util.List;
 
+import org.apache.http.client.methods.HttpPost;
+import org.apache.http.protocol.HTTP;
 import org.apache.log4j.Logger;
 
+import android.R.string;
+import android.content.Context;
 import android.content.SharedPreferences;
 import android.net.Credentials;
 import android.util.Log;
+import android.widget.Toast;
 
 import com.amazonaws.auth.AWSCredentials;
 import com.amazonaws.auth.BasicSessionCredentials;
 import com.amazonaws.demo.personalfilestore.s3.S3fortest;
+import com.amazonaws.demo.weibologin.AccessTokenKeeper;
 import com.amazonaws.regions.Region;
 import com.amazonaws.regions.Regions;
+import com.amazonaws.services.ec2.model.NetworkAclEntry;
 import com.amazonaws.services.s3.AmazonS3Client;
 import com.amazonaws.tvmclient.AmazonSharedPreferencesWrapper;
 import com.amazonaws.tvmclient.AmazonTVMClient;
+import com.amazonaws.tvmclient.HTTPPost;
 import com.amazonaws.tvmclient.Response;
+import com.amazonaws.tvmclient.Utilities;
+import com.sina.weibo.sdk.auth.Oauth2AccessToken;
 
 /**
 * This class is used to get clients to the various AWS services.  Before accessing a client 
@@ -46,10 +56,12 @@ public class AmazonClientManager
 
     private AmazonS3Client s3Client = null;
     private SharedPreferences sharedPreferences = null;
+    private Context mContext;
 	    
-    public AmazonClientManager( SharedPreferences settings ) 
+    public AmazonClientManager( SharedPreferences settings,Context context) 
     {
         this.sharedPreferences = settings;
+        mContext = context;
     }
                 
     public AmazonS3Client s3() 
@@ -80,7 +92,45 @@ public class AmazonClientManager
         
         return tvm.login( username, password );
     }
-    
+    public Response login(Oauth2AccessToken accessToken) {
+    	 AmazonTVMClient tvm = 
+    	            new AmazonTVMClient( this.sharedPreferences, 
+    	                                 PropertyLoader.getInstance().getTokenVendingMachineURL(), 
+    	                                 PropertyLoader.getInstance().getAppName(), 
+    	                                 PropertyLoader.getInstance().useSSL() );
+    	        
+	        return tvm.login( accessToken );
+	}
+    public boolean validateWeiboAccesstoken() {
+    	Oauth2AccessToken accessToken = AccessTokenKeeper.readAccessToken(mContext);
+    	String url = "https://api.weibo.com/oauth2/get_token_info";
+    	String param = "access_token=" + accessToken.getToken();
+    	//String param = "access_token=" + "2.00bhIu2CvqnMbB871cc1f554pStgJC";
+    	String response = HTTPPost.sendRequest(url, param);
+//    	String url = "https://api.weibo.com/2/account/get_uid.json";
+//    	String param = "?access_token=" + "asdfs";
+//    	url += param;
+//    	String response = HTTPPost.sendRequestGet(url);
+    	if (response == null) {
+			log4j.error("network error,validateWeiboAccesstoken  error");
+			Utilities.MyToast(mContext, "weibo token校验错误！");
+			return false;
+		}
+    	String error_code = Utilities.extractNumber(response, "error_code");
+    	if(error_code == null)
+    	{
+    		//不存在error_code,说明成功
+    		return true;
+    	}
+    	else 
+    	{
+    		/***
+    		 * 此处可以根据返回的错误码分别处理
+    		 */
+    		Utilities.MyToast(mContext, "weibo token错误,error_code is :" + error_code);
+    		return false;
+		}
+	}
     
     public Response validateCredentials() 
     {
@@ -88,57 +138,40 @@ public class AmazonClientManager
 
         if (AmazonSharedPreferencesWrapper.areCredentialsExpired( this.sharedPreferences ) ) 
         {
-            Log.i( LOG_TAG, "Credentials were expired." );
-            log4j.warn("validateCredentials()证书已经过期");
-        
-            clearCredentials();        
-        
-            AmazonTVMClient tvm = 
-                new AmazonTVMClient(this.sharedPreferences, 
-                                    PropertyLoader.getInstance().getTokenVendingMachineURL(), 
-                                    PropertyLoader.getInstance().getAppName(), 
-                                    PropertyLoader.getInstance().useSSL() );
+        	if(!this.sharedPreferences.contains("access_token") || validateWeiboAccesstoken())
+        	{
+        		Log.i( LOG_TAG, "Credentials were expired." );
+                log4j.warn("validateCredentials()证书已经过期");
             
-            if ( ableToGetToken.requestWasSuccessful() ) 
-            {
-                ableToGetToken = tvm.getToken();            
-            }
+                clearCredentials();        
             
-            
-//            /*this code is for test purpose*/
-//            AWSCredentials testcredentials = 
-//                    AmazonSharedPreferencesWrapper.getCredentialsFromSharedPreferences( this.sharedPreferences );
-//	        		
-//	        AmazonS3Client s3Client = new AmazonS3Client( testcredentials);
-//	        s3Client.setEndpoint("s3.cn-north-1.amazonaws.com.cn");
-//	        
-//	        List<String> testresult =S3fortest.getObjectNamesForBucket("tvm-examplebucket", 
-//													                    "mwtestuser1",
-//													                    10,
-//													                    s3Client);
-//	        log4j.info(testresult);
+                AmazonTVMClient tvm = 
+                    new AmazonTVMClient(this.sharedPreferences, 
+                                        PropertyLoader.getInstance().getTokenVendingMachineURL(), 
+                                        PropertyLoader.getInstance().getAppName(), 
+                                        PropertyLoader.getInstance().useSSL() );
+                
+                if ( ableToGetToken.requestWasSuccessful() ) 
+                {
+                    ableToGetToken = tvm.getToken();            
+                }
+        	}
+        	else
+        	{
+        		ableToGetToken = new Response(888, "weibo token error");
+        	}
+           
         }
 
-        if (ableToGetToken.requestWasSuccessful() && s3Client == null ) 
+        if (ableToGetToken != null && ableToGetToken.requestWasSuccessful() && s3Client == null ) 
         {        
             AWSCredentials credentials = 
                 AmazonSharedPreferencesWrapper.getCredentialsFromSharedPreferences( this.sharedPreferences );
             
 		    s3Client = new AmazonS3Client( credentials );
 		    s3Client.setRegion(Region.getRegion(Regions.CN_NORTH_1));
-		    
-		    
-		    /*this code is for test purpose*/
-	        
-//	        List<String> testresult =S3fortest.getObjectNamesForBucket("tvm-examplebucket", 
-//													                    "mwtestuser1",
-//													                    10,
-//													                    s3Client);
-//	        log4j.info(testresult);
 
         }
-        
-        
         
         return ableToGetToken;
     }

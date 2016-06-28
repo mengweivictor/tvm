@@ -1,4 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">S3 Personal File Store</string>
+    
+    
+    
+    
+    <string name="weibosdk_demo_login_hint"><b>一键登录按钮：</b>\n（有以下三种样式，第一种为默认效果）</string>
+    <string name="weibosdk_demo_login_with_text_hint"><b>登录/注销按钮：</b>\n（有以下两种样式，第一种为默认效果，可修改）</string>
+    <string name="weibosdk_demo_logout_hint"><b>注销按钮：</b>\n（注意：该按钮不再进行封装，第三方可直接调用 LogoutAPI，<b>一个 token 不能重复注销多次</b>）</string>
+    <string name="weibosdk_demo_logout">注销</string>
+    <string name="weibosdk_demo_logout_success">已注销</string>
+    <string name="weibosdk_demo_logout_failed">注销失败</string>
+    <string name="weibosdk_demo_token_to_string_format_1">Token：%1$s \n有效期：%2$s</string>
+    <string name="weibosdk_demo_toast_auth_canceled">取消授权</string>
+    <string name="weibosdk_demo_logout_failed_1">注销失败，请检查 Token 是否正确（一个 token 不能重复注销多次）</string>
 </resources>

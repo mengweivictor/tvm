@@ -1,0 +1,2988 @@
+com.amazonaws.AbortedException -> com.amazonaws.a:
+    boolean isRetryable() -> isRetryable
+com.amazonaws.AmazonClientException -> com.amazonaws.b:
+    long serialVersionUID -> serialVersionUID
+    boolean isRetryable() -> isRetryable
+com.amazonaws.AmazonServiceException -> com.amazonaws.c:
+    long serialVersionUID -> serialVersionUID
+    java.lang.String requestId -> requestId
+    java.lang.String errorCode -> errorCode
+    com.amazonaws.AmazonServiceException$ErrorType errorType -> errorType
+    java.lang.String errorMessage -> errorMessage
+    int statusCode -> statusCode
+    java.lang.String serviceName -> serviceName
+    void setRequestId(java.lang.String) -> setRequestId
+    java.lang.String getRequestId() -> getRequestId
+    void setServiceName(java.lang.String) -> setServiceName
+    java.lang.String getServiceName() -> getServiceName
+    void setErrorCode(java.lang.String) -> setErrorCode
+    java.lang.String getErrorCode() -> getErrorCode
+    void setErrorType(com.amazonaws.AmazonServiceException$ErrorType) -> setErrorType
+    com.amazonaws.AmazonServiceException$ErrorType getErrorType() -> getErrorType
+    java.lang.String getErrorMessage() -> getErrorMessage
+    void setStatusCode(int) -> setStatusCode
+    int getStatusCode() -> getStatusCode
+    java.lang.String getMessage() -> getMessage
+com.amazonaws.AmazonServiceException$ErrorType -> com.amazonaws.d:
+    com.amazonaws.AmazonServiceException$ErrorType Client -> a
+    com.amazonaws.AmazonServiceException$ErrorType Service -> b
+    com.amazonaws.AmazonServiceException$ErrorType Unknown -> c
+    com.amazonaws.AmazonServiceException$ErrorType[] $VALUES -> d
+    com.amazonaws.AmazonServiceException$ErrorType[] values() -> values
+    com.amazonaws.AmazonServiceException$ErrorType valueOf(java.lang.String) -> valueOf
+com.amazonaws.AmazonWebServiceClient -> com.amazonaws.e:
+    com.amazonaws.org.apache.commons.logging.Log log -> f
+    java.net.URI endpoint -> a
+    java.lang.String signerRegionOverride -> g
+    com.amazonaws.ClientConfiguration clientConfiguration -> b
+    com.amazonaws.http.AmazonHttpClient client -> c
+    java.util.List requestHandler2s -> d
+    int timeOffset -> e
+    com.amazonaws.auth.Signer signer -> h
+    java.lang.String serviceName -> i
+    com.amazonaws.auth.Signer getSigner() -> a
+    void setEndpoint(java.lang.String) -> a
+    java.net.URI toURI(java.lang.String) -> b
+    com.amazonaws.auth.Signer getSignerByURI(java.net.URI) -> a
+    com.amazonaws.auth.Signer computeSignerByURI(java.net.URI,java.lang.String,boolean) -> a
+    com.amazonaws.auth.Signer computeSignerByServiceRegion(java.lang.String,java.lang.String,java.lang.String,boolean) -> a
+    void setRegion(com.amazonaws.regions.Region) -> a
+    com.amazonaws.http.ExecutionContext createExecutionContext(com.amazonaws.AmazonWebServiceRequest) -> a
+    boolean isProfilingEnabled() -> b
+    boolean isRequestMetricsEnabled(com.amazonaws.AmazonWebServiceRequest) -> b
+    boolean isRMCEnabledAtClientOrSdkLevel() -> g
+    com.amazonaws.metrics.RequestMetricCollector getRequestMetricsCollector() -> c
+    com.amazonaws.metrics.RequestMetricCollector requestMetricCollector() -> d
+    com.amazonaws.metrics.RequestMetricCollector findRequestMetricCollector(com.amazonaws.Request) -> a
+    void endClientExecution(com.amazonaws.util.AWSRequestMetrics,com.amazonaws.Request,com.amazonaws.Response) -> a
+    void endClientExecution(com.amazonaws.util.AWSRequestMetrics,com.amazonaws.Request,com.amazonaws.Response,boolean) -> a
+    java.lang.String getServiceNameIntern() -> e
+    java.lang.String computeServiceName() -> h
+    java.lang.String getSignerRegionOverride() -> f
+com.amazonaws.AmazonWebServiceRequest -> com.amazonaws.f:
+    com.amazonaws.RequestClientOptions requestClientOptions -> a
+    com.amazonaws.metrics.RequestMetricCollector requestMetricCollector -> b
+    java.lang.String delegationToken -> c
+    com.amazonaws.auth.AWSCredentials credentials -> d
+    com.amazonaws.auth.AWSCredentials getRequestCredentials() -> a
+    java.util.Map copyPrivateRequestParameters() -> b
+    com.amazonaws.RequestClientOptions getRequestClientOptions() -> c
+    com.amazonaws.metrics.RequestMetricCollector getRequestMetricCollector() -> d
+    void setRequestMetricCollector(com.amazonaws.metrics.RequestMetricCollector) -> a
+    com.amazonaws.AmazonWebServiceRequest withRequestMetricCollector(com.amazonaws.metrics.RequestMetricCollector) -> b
+com.amazonaws.AmazonWebServiceResponse -> com.amazonaws.g:
+    java.lang.Object result -> a
+    com.amazonaws.ResponseMetadata responseMetadata -> b
+    java.lang.Object getResult() -> a
+    void setResult(java.lang.Object) -> a
+    void setResponseMetadata(com.amazonaws.ResponseMetadata) -> a
+    java.lang.String getRequestId() -> b
+com.amazonaws.ClientConfiguration -> com.amazonaws.h:
+    java.lang.String DEFAULT_USER_AGENT -> a
+    com.amazonaws.retry.RetryPolicy DEFAULT_RETRY_POLICY -> b
+    java.lang.String userAgent -> c
+    int maxErrorRetry -> d
+    com.amazonaws.retry.RetryPolicy retryPolicy -> e
+    com.amazonaws.Protocol protocol -> f
+    java.lang.String proxyHost -> g
+    int proxyPort -> h
+    java.lang.String proxyUsername -> i
+    java.lang.String proxyPassword -> j
+    java.lang.String proxyDomain -> k
+    java.lang.String proxyWorkstation -> l
+    int maxConnections -> m
+    int socketTimeout -> n
+    int connectionTimeout -> o
+    int socketSendBufferSizeHint -> p
+    int socketReceiveBufferSizeHint -> q
+    boolean useReaper -> r
+    java.lang.String signerOverride -> s
+    com.amazonaws.Protocol getProtocol() -> a
+    java.lang.String getUserAgent() -> b
+    com.amazonaws.retry.RetryPolicy getRetryPolicy() -> c
+    int getMaxErrorRetry() -> d
+    int getSocketTimeout() -> e
+    int getConnectionTimeout() -> f
+    java.lang.String getSignerOverride() -> g
+com.amazonaws.DefaultRequest -> com.amazonaws.i:
+    java.lang.String resourcePath -> a
+    java.util.Map parameters -> b
+    java.util.Map headers -> c
+    java.net.URI endpoint -> d
+    java.lang.String serviceName -> e
+    com.amazonaws.AmazonWebServiceRequest originalRequest -> f
+    com.amazonaws.http.HttpMethodName httpMethod -> g
+    java.io.InputStream content -> h
+    int timeOffset -> i
+    com.amazonaws.util.AWSRequestMetrics metrics -> j
+    com.amazonaws.AmazonWebServiceRequest getOriginalRequest() -> a
+    void addHeader(java.lang.String,java.lang.String) -> a
+    java.util.Map getHeaders() -> b
+    void setResourcePath(java.lang.String) -> a
+    java.lang.String getResourcePath() -> c
+    void addParameter(java.lang.String,java.lang.String) -> b
+    java.util.Map getParameters() -> d
+    com.amazonaws.http.HttpMethodName getHttpMethod() -> e
+    void setHttpMethod(com.amazonaws.http.HttpMethodName) -> a
+    void setEndpoint(java.net.URI) -> a
+    java.net.URI getEndpoint() -> f
+    java.lang.String getServiceName() -> g
+    java.io.InputStream getContent() -> h
+    void setContent(java.io.InputStream) -> a
+    void setHeaders(java.util.Map) -> a
+    void setParameters(java.util.Map) -> b
+    int getTimeOffset() -> i
+    void setTimeOffset(int) -> a
+    java.lang.String toString() -> toString
+    com.amazonaws.util.AWSRequestMetrics getAWSRequestMetrics() -> j
+    void setAWSRequestMetrics(com.amazonaws.util.AWSRequestMetrics) -> a
+com.amazonaws.Protocol -> com.amazonaws.j:
+    com.amazonaws.Protocol HTTP -> a
+    com.amazonaws.Protocol HTTPS -> b
+    java.lang.String protocol -> c
+    com.amazonaws.Protocol[] $VALUES -> d
+    com.amazonaws.Protocol[] values() -> values
+    com.amazonaws.Protocol valueOf(java.lang.String) -> valueOf
+    java.lang.String toString() -> toString
+com.amazonaws.Request -> com.amazonaws.k:
+    void addHeader(java.lang.String,java.lang.String) -> a
+    java.util.Map getHeaders() -> b
+    void setHeaders(java.util.Map) -> a
+    void setResourcePath(java.lang.String) -> a
+    java.lang.String getResourcePath() -> c
+    void addParameter(java.lang.String,java.lang.String) -> b
+    java.util.Map getParameters() -> d
+    void setParameters(java.util.Map) -> b
+    java.net.URI getEndpoint() -> f
+    void setEndpoint(java.net.URI) -> a
+    com.amazonaws.http.HttpMethodName getHttpMethod() -> e
+    void setHttpMethod(com.amazonaws.http.HttpMethodName) -> a
+    java.io.InputStream getContent() -> h
+    void setContent(java.io.InputStream) -> a
+    java.lang.String getServiceName() -> g
+    com.amazonaws.AmazonWebServiceRequest getOriginalRequest() -> a
+    int getTimeOffset() -> i
+    void setTimeOffset(int) -> a
+    com.amazonaws.util.AWSRequestMetrics getAWSRequestMetrics() -> j
+    void setAWSRequestMetrics(com.amazonaws.util.AWSRequestMetrics) -> a
+com.amazonaws.RequestClientOptions -> com.amazonaws.l:
+    java.util.Map markers -> a
+    java.lang.String getClientMarker(com.amazonaws.RequestClientOptions$Marker) -> a
+com.amazonaws.RequestClientOptions$Marker -> com.amazonaws.m:
+    com.amazonaws.RequestClientOptions$Marker USER_AGENT -> a
+    com.amazonaws.RequestClientOptions$Marker[] $VALUES -> b
+    com.amazonaws.RequestClientOptions$Marker[] values() -> values
+    com.amazonaws.RequestClientOptions$Marker valueOf(java.lang.String) -> valueOf
+com.amazonaws.Response -> com.amazonaws.n:
+    java.lang.Object response -> a
+    com.amazonaws.http.HttpResponse httpResponse -> b
+    java.lang.Object getAwsResponse() -> a
+com.amazonaws.ResponseMetadata -> com.amazonaws.o:
+    java.util.Map metadata -> a
+    java.lang.String getRequestId() -> a
+    java.lang.String toString() -> toString
+com.amazonaws.SDKGlobalConfiguration -> com.amazonaws.p:
+    java.util.concurrent.atomic.AtomicInteger globalTimeOffset -> a
+    void setGlobalTimeOffset(int) -> a
+    int getGlobalTimeOffset() -> a
+com.amazonaws.ServiceNameFactory -> com.amazonaws.q:
+    com.amazonaws.ServiceNameFactory[] $VALUES -> a
+    com.amazonaws.ServiceNameFactory[] values() -> values
+    com.amazonaws.ServiceNameFactory valueOf(java.lang.String) -> valueOf
+    java.lang.String getServiceName(java.lang.String) -> a
+com.amazonaws.auth.AWS3Signer -> com.amazonaws.a.a:
+    java.lang.String overriddenDate -> a
+    com.amazonaws.org.apache.commons.logging.Log log -> b
+    void sign(com.amazonaws.Request,com.amazonaws.auth.AWSCredentials) -> a
+    java.lang.String getSignedHeadersComponent(com.amazonaws.Request) -> c
+    java.util.List getHeadersForStringToSign(com.amazonaws.Request) -> a
+    java.lang.String getCanonicalizedHeadersForStringToSign(com.amazonaws.Request) -> b
+    void addSessionCredentials(com.amazonaws.Request,com.amazonaws.auth.AWSSessionCredentials) -> a
+com.amazonaws.auth.AWS4Signer -> com.amazonaws.a.b:
+    java.lang.String serviceName -> a
+    java.lang.String regionName -> b
+    java.util.Date overriddenDate -> c
+    boolean doubleUrlEncode -> d
+    com.amazonaws.org.apache.commons.logging.Log log -> e
+    void sign(com.amazonaws.Request,com.amazonaws.auth.AWSCredentials) -> a
+    void setServiceName(java.lang.String) -> a
+    void setRegionName(java.lang.String) -> b
+    void addSessionCredentials(com.amazonaws.Request,com.amazonaws.auth.AWSSessionCredentials) -> a
+    java.lang.String extractRegionName(java.net.URI) -> a
+    java.lang.String extractServiceName(java.net.URI) -> b
+    java.lang.String getCanonicalizedHeaderString(com.amazonaws.Request) -> a
+    java.lang.String getSignedHeadersString(com.amazonaws.Request) -> b
+    boolean needsSign(java.lang.String) -> e
+    java.lang.String getCanonicalRequest(com.amazonaws.Request,java.lang.String) -> a
+    java.lang.String getStringToSign(java.lang.String,java.lang.String,java.lang.String,java.lang.String) -> a
+    com.amazonaws.auth.AWS4Signer$HeaderSigningResult computeSignature(com.amazonaws.Request,java.lang.String,java.lang.String,java.lang.String,java.lang.String,com.amazonaws.auth.AWSCredentials) -> a
+    java.lang.String getTimeStamp(long) -> a
+    java.lang.String getDateStamp(long) -> b
+    long getDateFromRequest(com.amazonaws.Request) -> c
+    void addHostHeader(com.amazonaws.Request) -> d
+    java.lang.String getScope(com.amazonaws.Request,java.lang.String) -> b
+    java.lang.String calculateContentHash(com.amazonaws.Request) -> e
+    void processRequestPayload(com.amazonaws.Request,com.amazonaws.auth.AWS4Signer$HeaderSigningResult) -> a
+com.amazonaws.auth.AWS4Signer$HeaderSigningResult -> com.amazonaws.a.c:
+    java.lang.String dateTime -> a
+    java.lang.String scope -> b
+    byte[] kSigning -> c
+    byte[] signature -> d
+    java.lang.String getDateTime() -> a
+    java.lang.String getScope() -> b
+    byte[] getKSigning() -> c
+    byte[] getSignature() -> d
+com.amazonaws.auth.AWSCredentials -> com.amazonaws.a.d:
+    java.lang.String getAWSAccessKeyId() -> a
+    java.lang.String getAWSSecretKey() -> b
+com.amazonaws.auth.AWSCredentialsProvider -> com.amazonaws.a.e:
+    com.amazonaws.auth.AWSCredentials getCredentials() -> a
+com.amazonaws.auth.AWSCredentialsProviderChain -> com.amazonaws.a.f:
+    com.amazonaws.org.apache.commons.logging.Log log -> a
+    java.util.List credentialsProviders -> b
+    boolean reuseLastProvider -> c
+    com.amazonaws.auth.AWSCredentialsProvider lastUsedProvider -> d
+    com.amazonaws.auth.AWSCredentials getCredentials() -> a
+com.amazonaws.auth.AWSSessionCredentials -> com.amazonaws.a.g:
+    java.lang.String getSessionToken() -> c
+com.amazonaws.auth.AbstractAWSSigner -> com.amazonaws.a.h:
+    java.lang.String signAndBase64Encode(java.lang.String,java.lang.String,com.amazonaws.auth.SigningAlgorithm) -> a
+    java.lang.String signAndBase64Encode(byte[],java.lang.String,com.amazonaws.auth.SigningAlgorithm) -> a
+    byte[] sign(java.lang.String,byte[],com.amazonaws.auth.SigningAlgorithm) -> a
+    byte[] sign(byte[],byte[],com.amazonaws.auth.SigningAlgorithm) -> a
+    byte[] hash(java.lang.String) -> c
+    byte[] hash(java.io.InputStream) -> a
+    byte[] hash(byte[]) -> a
+    java.lang.String getCanonicalizedQueryString(java.util.Map) -> a
+    java.lang.String getCanonicalizedQueryString(com.amazonaws.Request) -> f
+    java.lang.String getRequestPayloadWithoutQueryParams(com.amazonaws.Request) -> g
+    byte[] getBinaryRequestPayloadWithoutQueryParams(com.amazonaws.Request) -> h
+    java.io.InputStream getBinaryRequestPayloadStream(com.amazonaws.Request) -> i
+    java.io.InputStream getBinaryRequestPayloadStreamWithoutQueryParams(com.amazonaws.Request) -> j
+    java.lang.String getCanonicalizedResourcePath(java.lang.String) -> d
+    java.lang.String getCanonicalizedResourcePath(java.lang.String,boolean) -> a
+    java.lang.String getCanonicalizedEndpoint(java.net.URI) -> c
+    com.amazonaws.auth.AWSCredentials sanitizeCredentials(com.amazonaws.auth.AWSCredentials) -> a
+    java.lang.String newString(byte[]) -> b
+    java.util.Date getSignatureDate(int) -> a
+    int getTimeOffset(com.amazonaws.Request) -> k
+com.amazonaws.auth.AnonymousAWSCredentials -> com.amazonaws.a.i:
+    java.lang.String getAWSAccessKeyId() -> a
+    java.lang.String getAWSSecretKey() -> b
+com.amazonaws.auth.AwsChunkedEncodingInputStream -> com.amazonaws.a.j:
+    byte[] FINAL_CHUNK -> a
+    java.io.InputStream is -> b
+    int maxBufferSize -> c
+    byte[] kSigning -> d
+    java.lang.String dateTime -> e
+    java.lang.String keyPath -> f
+    java.lang.String headerSignature -> g
+    java.lang.String priorChunkSignature -> h
+    com.amazonaws.auth.AWS4Signer aws4Signer -> i
+    com.amazonaws.auth.ChunkContentIterator currentChunkIterator -> j
+    com.amazonaws.auth.DecodedStreamBuffer decodedStreamBuffer -> k
+    boolean isAtStart -> l
+    boolean isTerminating -> m
+    com.amazonaws.org.apache.commons.logging.Log log -> n
+    int read() -> read
+    int read(byte[],int,int) -> read
+    long skip(long) -> skip
+    boolean markSupported() -> markSupported
+    void mark(int) -> mark
+    void reset() -> reset
+    long calculateStreamContentLength(long) -> a
+    long calculateSignedChunkLength(long) -> b
+    boolean setUpNextChunk() -> e
+    byte[] createSignedChunk(byte[]) -> a
+    java.io.InputStream getWrappedInputStream() -> a
+com.amazonaws.auth.BasicAWSCredentials -> com.amazonaws.a.k:
+    java.lang.String accessKey -> a
+    java.lang.String secretKey -> b
+    java.lang.String getAWSAccessKeyId() -> a
+    java.lang.String getAWSSecretKey() -> b
+com.amazonaws.auth.BasicSessionCredentials -> com.amazonaws.a.l:
+    java.lang.String awsAccessKey -> a
+    java.lang.String awsSecretKey -> b
+    java.lang.String sessionToken -> c
+    java.lang.String getAWSAccessKeyId() -> a
+    java.lang.String getAWSSecretKey() -> b
+    java.lang.String getSessionToken() -> c
+com.amazonaws.auth.ChunkContentIterator -> com.amazonaws.a.m:
+    byte[] signedChunk -> a
+    int pos -> b
+    boolean hasNext() -> a
+    int read(byte[],int,int) -> a
+com.amazonaws.auth.ClasspathPropertiesFileCredentialsProvider -> com.amazonaws.a.n:
+    java.lang.String DEFAULT_PROPERTIES_FILE -> a
+    java.lang.String credentialsFilePath -> b
+    com.amazonaws.auth.AWSCredentials getCredentials() -> a
+    java.lang.String toString() -> toString
+com.amazonaws.auth.DecodedStreamBuffer -> com.amazonaws.a.o:
+    com.amazonaws.org.apache.commons.logging.Log log -> a
+    byte[] bufferArray -> b
+    int maxBufferSize -> c
+    int byteBuffered -> d
+    int pos -> e
+    boolean bufferSizeOverflow -> f
+    void buffer(byte[],int,int) -> a
+    boolean hasNext() -> a
+    byte next() -> b
+    void startReadBuffer() -> c
+com.amazonaws.auth.DefaultAWSCredentialsProviderChain -> com.amazonaws.a.p:
+com.amazonaws.auth.NoOpSigner -> com.amazonaws.a.q:
+    void sign(com.amazonaws.Request,com.amazonaws.auth.AWSCredentials) -> a
+com.amazonaws.auth.PropertiesCredentials -> com.amazonaws.a.r:
+    java.lang.String accessKey -> a
+    java.lang.String secretAccessKey -> b
+    java.lang.String getAWSAccessKeyId() -> a
+    java.lang.String getAWSSecretKey() -> b
+com.amazonaws.auth.QueryStringSigner -> com.amazonaws.a.s:
+    java.util.Date overriddenDate -> a
+    void sign(com.amazonaws.Request,com.amazonaws.auth.AWSCredentials) -> a
+    void sign(com.amazonaws.Request,com.amazonaws.auth.SignatureVersion,com.amazonaws.auth.SigningAlgorithm,com.amazonaws.auth.AWSCredentials) -> a
+    java.lang.String calculateStringToSignV1(java.util.Map) -> b
+    java.lang.String calculateStringToSignV2(com.amazonaws.Request) -> a
+    java.lang.String getCanonicalizedResourcePath(com.amazonaws.Request) -> b
+    java.lang.String getFormattedTimestamp(int) -> b
+    void addSessionCredentials(com.amazonaws.Request,com.amazonaws.auth.AWSSessionCredentials) -> a
+com.amazonaws.auth.RegionAwareSigner -> com.amazonaws.a.t:
+    void setRegionName(java.lang.String) -> b
+com.amazonaws.auth.ServiceAwareSigner -> com.amazonaws.a.u:
+    void setServiceName(java.lang.String) -> a
+com.amazonaws.auth.SignatureVersion -> com.amazonaws.a.v:
+    com.amazonaws.auth.SignatureVersion V1 -> a
+    com.amazonaws.auth.SignatureVersion V2 -> b
+    java.lang.String value -> c
+    com.amazonaws.auth.SignatureVersion[] $VALUES -> d
+    com.amazonaws.auth.SignatureVersion[] values() -> values
+    com.amazonaws.auth.SignatureVersion valueOf(java.lang.String) -> valueOf
+    java.lang.String toString() -> toString
+com.amazonaws.auth.Signer -> com.amazonaws.a.w:
+    void sign(com.amazonaws.Request,com.amazonaws.auth.AWSCredentials) -> a
+com.amazonaws.auth.SignerFactory -> com.amazonaws.a.x:
+    java.util.Map SIGNERS -> a
+    void registerSigner(java.lang.String,java.lang.Class) -> a
+    com.amazonaws.auth.Signer getSigner(java.lang.String,java.lang.String) -> a
+    com.amazonaws.auth.Signer getSignerByTypeAndService(java.lang.String,java.lang.String) -> b
+    com.amazonaws.auth.Signer lookupAndCreateSigner(java.lang.String,java.lang.String) -> c
+    com.amazonaws.auth.Signer createSigner(java.lang.String,java.lang.String) -> d
+com.amazonaws.auth.SigningAlgorithm -> com.amazonaws.a.y:
+    com.amazonaws.auth.SigningAlgorithm HmacSHA1 -> a
+    com.amazonaws.auth.SigningAlgorithm HmacSHA256 -> b
+    com.amazonaws.auth.SigningAlgorithm[] $VALUES -> c
+    com.amazonaws.auth.SigningAlgorithm[] values() -> values
+    com.amazonaws.auth.SigningAlgorithm valueOf(java.lang.String) -> valueOf
+com.amazonaws.auth.SystemPropertiesCredentialsProvider -> com.amazonaws.a.z:
+    com.amazonaws.auth.AWSCredentials getCredentials() -> a
+    java.lang.String toString() -> toString
+com.amazonaws.demo.personalfilestore.AlertActivity -> com.amazonaws.demo.personalfilestore.a:
+    org.apache.log4j.Logger log4j -> c
+    java.lang.String errorTrace -> d
+    android.os.Handler mHandler -> e
+    java.lang.Runnable displayError -> a
+    java.lang.Runnable refreshFailed -> b
+    void onCreate(android.os.Bundle) -> onCreate
+    void setStackTrace(java.lang.Throwable) -> a
+    void setStackAndPost(java.lang.Throwable) -> b
+    void putRefreshError() -> a
+    java.lang.String access$0(com.amazonaws.demo.personalfilestore.AlertActivity) -> a
+    org.apache.log4j.Logger access$1() -> b
+com.amazonaws.demo.personalfilestore.AlertActivity$1 -> com.amazonaws.demo.personalfilestore.b:
+    com.amazonaws.demo.personalfilestore.AlertActivity this$0 -> a
+    void run() -> run
+    com.amazonaws.demo.personalfilestore.AlertActivity access$0(com.amazonaws.demo.personalfilestore.AlertActivity$1) -> a
+com.amazonaws.demo.personalfilestore.AlertActivity$1$1 -> com.amazonaws.demo.personalfilestore.c:
+    com.amazonaws.demo.personalfilestore.AlertActivity$1 this$1 -> a
+    void onClick(android.content.DialogInterface,int) -> onClick
+com.amazonaws.demo.personalfilestore.AlertActivity$2 -> com.amazonaws.demo.personalfilestore.d:
+    com.amazonaws.demo.personalfilestore.AlertActivity this$0 -> a
+    void run() -> run
+    com.amazonaws.demo.personalfilestore.AlertActivity access$0(com.amazonaws.demo.personalfilestore.AlertActivity$2) -> a
+com.amazonaws.demo.personalfilestore.AlertActivity$2$1 -> com.amazonaws.demo.personalfilestore.e:
+    com.amazonaws.demo.personalfilestore.AlertActivity$2 this$1 -> a
+    void onClick(android.content.DialogInterface,int) -> onClick
+com.amazonaws.demo.personalfilestore.AmazonClientManager -> com.amazonaws.demo.personalfilestore.f:
+    org.apache.log4j.Logger log4j -> a
+    com.amazonaws.services.s3.AmazonS3Client s3Client -> b
+    android.content.SharedPreferences sharedPreferences -> c
+    com.amazonaws.services.s3.AmazonS3Client s3() -> a
+    boolean hasCredentials() -> b
+    boolean isLoggedIn() -> c
+    com.amazonaws.tvmclient.Response login(java.lang.String,java.lang.String) -> a
+    com.amazonaws.tvmclient.Response validateCredentials() -> d
+    java.lang.String getUsername() -> e
+    void clearCredentials() -> f
+    void wipe() -> g
+com.amazonaws.demo.personalfilestore.CustomListActivity -> com.amazonaws.demo.personalfilestore.g:
+    org.apache.log4j.Logger log4j -> i
+    android.os.Handler mHandler -> c
+    android.widget.ListView itemList -> d
+    android.widget.TextView loadingText -> e
+    android.widget.Button addText -> f
+    android.widget.Button selectImage -> g
+    android.widget.ArrayAdapter itemListAdapter -> h
+    void onCreate(android.os.Bundle) -> onCreate
+    void updateUi(java.util.List,java.lang.String) -> a
+    void updateUi(java.util.List,java.lang.String,int) -> a
+    void startPopulateList() -> c
+    void obtainListItems() -> d
+    android.os.Handler getHandler() -> e
+    android.widget.ListView getItemList() -> f
+    void wireOnListClick() -> g
+    void wireOnClick() -> h
+com.amazonaws.demo.personalfilestore.CustomListActivity$1 -> com.amazonaws.demo.personalfilestore.h:
+    com.amazonaws.demo.personalfilestore.CustomListActivity this$0 -> a
+    void run() -> run
+com.amazonaws.demo.personalfilestore.Login -> com.amazonaws.demo.personalfilestore.Login:
+    org.apache.log4j.Logger log4j -> j
+    android.widget.Button okButton -> c
+    android.widget.Button registerButton -> d
+    android.widget.EditText username -> e
+    android.widget.EditText password -> f
+    android.widget.TextView introText -> g
+    android.widget.TextView usernameHeader -> h
+    android.widget.TextView passwordHeader -> i
+    void onCreate(android.os.Bundle) -> onCreate
+    void wireButtons() -> c
+    void displayCredentialsIssueAndExit() -> d
+    void displayErrorAndExit(com.amazonaws.tvmclient.Response) -> a
+com.amazonaws.demo.personalfilestore.Login$1 -> com.amazonaws.demo.personalfilestore.i:
+    com.amazonaws.demo.personalfilestore.Login this$0 -> a
+    void onClick(android.view.View) -> onClick
+com.amazonaws.demo.personalfilestore.Login$2 -> com.amazonaws.demo.personalfilestore.j:
+    com.amazonaws.demo.personalfilestore.Login this$0 -> a
+    void onClick(android.view.View) -> onClick
+com.amazonaws.demo.personalfilestore.Login$3 -> com.amazonaws.demo.personalfilestore.k:
+    com.amazonaws.demo.personalfilestore.Login this$0 -> a
+    void onClick(android.content.DialogInterface,int) -> onClick
+com.amazonaws.demo.personalfilestore.Login$4 -> com.amazonaws.demo.personalfilestore.l:
+    com.amazonaws.demo.personalfilestore.Login this$0 -> a
+    void onClick(android.content.DialogInterface,int) -> onClick
+com.amazonaws.demo.personalfilestore.PropertyLoader -> com.amazonaws.demo.personalfilestore.m:
+    org.apache.log4j.Logger log4j -> a
+    boolean hasCredentials -> b
+    java.lang.String tokenVendingMachineURL -> c
+    java.lang.String appName -> d
+    java.lang.String bucketName -> e
+    boolean useSSL -> f
+    com.amazonaws.demo.personalfilestore.PropertyLoader instance -> g
+    com.amazonaws.demo.personalfilestore.PropertyLoader getInstance() -> a
+    boolean hasCredentials() -> b
+    java.lang.String getTokenVendingMachineURL() -> c
+    java.lang.String getBucketName() -> d
+    java.lang.String getAppName() -> e
+    boolean useSSL() -> f
+    java.lang.String toString() -> toString
+com.amazonaws.demo.personalfilestore.S3PersonalFileStore -> com.amazonaws.demo.personalfilestore.S3PersonalFileStore:
+    org.apache.log4j.Logger log4j -> f
+    android.widget.Button s3Button -> a
+    android.widget.Button loginButton -> b
+    android.widget.Button logoutButton -> c
+    android.widget.TextView welcomeText -> d
+    com.amazonaws.demo.personalfilestore.AmazonClientManager clientManager -> e
+    void onCreate(android.os.Bundle) -> onCreate
+    void onResume() -> onResume
+    void wireButtons() -> c
+    void displayCredentialsIssueAndExit() -> a
+    void displayErrorAndExit(com.amazonaws.tvmclient.Response) -> a
+    void displayLogoutSuccess() -> b
+com.amazonaws.demo.personalfilestore.S3PersonalFileStore$1 -> com.amazonaws.demo.personalfilestore.n:
+    com.amazonaws.demo.personalfilestore.S3PersonalFileStore this$0 -> a
+    void onClick(android.view.View) -> onClick
+com.amazonaws.demo.personalfilestore.S3PersonalFileStore$2 -> com.amazonaws.demo.personalfilestore.o:
+    com.amazonaws.demo.personalfilestore.S3PersonalFileStore this$0 -> a
+    void onClick(android.view.View) -> onClick
+com.amazonaws.demo.personalfilestore.S3PersonalFileStore$3 -> com.amazonaws.demo.personalfilestore.p:
+    com.amazonaws.demo.personalfilestore.S3PersonalFileStore this$0 -> a
+    void onClick(android.view.View) -> onClick
+com.amazonaws.demo.personalfilestore.S3PersonalFileStore$4 -> com.amazonaws.demo.personalfilestore.q:
+    com.amazonaws.demo.personalfilestore.S3PersonalFileStore this$0 -> a
+    void onClick(android.content.DialogInterface,int) -> onClick
+com.amazonaws.demo.personalfilestore.S3PersonalFileStore$5 -> com.amazonaws.demo.personalfilestore.r:
+    com.amazonaws.demo.personalfilestore.S3PersonalFileStore this$0 -> a
+    void onClick(android.content.DialogInterface,int) -> onClick
+com.amazonaws.demo.personalfilestore.S3PersonalFileStore$6 -> com.amazonaws.demo.personalfilestore.s:
+    com.amazonaws.demo.personalfilestore.S3PersonalFileStore this$0 -> a
+    void onClick(android.content.DialogInterface,int) -> onClick
+com.amazonaws.demo.personalfilestore.S3PersonalFileStoreApplication -> com.amazonaws.demo.personalfilestore.S3PersonalFileStoreApplication:
+    org.apache.log4j.Logger log4j -> a
+    java.util.Map context -> b
+    java.util.Map imageCache -> c
+    java.lang.ref.ReferenceQueue queue -> d
+    java.lang.String baseDir -> e
+    java.lang.String logDir -> f
+    java.lang.String imageDir -> g
+    com.amazonaws.demo.personalfilestore.S3PersonalFileStoreApplication instance -> h
+    void onCreate() -> onCreate
+    java.lang.String getImageDir() -> a
+    com.amazonaws.demo.personalfilestore.S3PersonalFileStoreApplication getInstance() -> b
+    void putImage(java.lang.String,android.graphics.Bitmap) -> a
+    android.graphics.Bitmap getImage(java.lang.String) -> a
+    void logDirCreationResult(java.io.File,boolean) -> a
+    void cleanCache() -> c
+com.amazonaws.demo.personalfilestore.S3PersonalFileStoreApplication$MySoftRef -> com.amazonaws.demo.personalfilestore.t:
+    java.lang.String _key -> b
+    com.amazonaws.demo.personalfilestore.S3PersonalFileStoreApplication this$0 -> a
+    java.lang.String access$0(com.amazonaws.demo.personalfilestore.S3PersonalFileStoreApplication$MySoftRef) -> a
+com.amazonaws.demo.personalfilestore.filebrowser.FileActivityHelper -> com.amazonaws.demo.personalfilestore.filebrowser.a:
+    org.apache.log4j.Logger log -> a
+    java.util.ArrayList getFiles(java.lang.String) -> a
+    boolean checkFile(java.io.File) -> a
+    java.lang.String getSDPhotoPath() -> a
+com.amazonaws.demo.personalfilestore.filebrowser.FileAdapter -> com.amazonaws.demo.personalfilestore.filebrowser.b:
+    android.view.LayoutInflater inflater -> a
+    java.util.List fileInfos -> b
+    int getCount() -> getCount
+    java.lang.Object getItem(int) -> getItem
+    long getItemId(int) -> getItemId
+    android.view.View getView(int,android.view.View,android.view.ViewGroup) -> getView
+com.amazonaws.demo.personalfilestore.filebrowser.FileAdapter$ViewHolder -> com.amazonaws.demo.personalfilestore.filebrowser.c:
+    android.widget.TextView name -> a
+    android.widget.ImageView icon -> b
+    com.amazonaws.demo.personalfilestore.filebrowser.FileAdapter this$0 -> c
+com.amazonaws.demo.personalfilestore.filebrowser.FileBrowserActivity -> com.amazonaws.demo.personalfilestore.filebrowser.FileBrowserActivity:
+    org.apache.log4j.Logger log -> c
+    android.widget.ListView fileListView -> d
+    java.util.List fileInfos -> e
+    java.lang.String rootPath -> f
+    java.lang.String currentPath -> g
+    android.widget.BaseAdapter adapter -> h
+    java.lang.String bucketName -> a
+    java.lang.String prefix -> b
+    void onCreate(android.os.Bundle) -> onCreate
+    void onActivityResult(int,int,android.content.Intent) -> onActivityResult
+    boolean onKeyDown(int,android.view.KeyEvent) -> onKeyDown
+    void setEventListener() -> b
+    void viewFiles(java.lang.String) -> a
+    void openFile(java.lang.String) -> b
+    org.apache.log4j.Logger access$0() -> a
+    java.util.List access$1(com.amazonaws.demo.personalfilestore.filebrowser.FileBrowserActivity) -> a
+    void access$2(com.amazonaws.demo.personalfilestore.filebrowser.FileBrowserActivity,java.lang.String) -> a
+    void access$3(com.amazonaws.demo.personalfilestore.filebrowser.FileBrowserActivity,java.lang.String) -> b
+com.amazonaws.demo.personalfilestore.filebrowser.FileBrowserActivity$1 -> com.amazonaws.demo.personalfilestore.filebrowser.d:
+    com.amazonaws.demo.personalfilestore.filebrowser.FileBrowserActivity this$0 -> a
+    void onItemClick(android.widget.AdapterView,android.view.View,int,long) -> onItemClick
+com.amazonaws.demo.personalfilestore.filebrowser.FileComparator -> com.amazonaws.demo.personalfilestore.filebrowser.e:
+    int compare(com.amazonaws.demo.personalfilestore.filebrowser.FileInfo,com.amazonaws.demo.personalfilestore.filebrowser.FileInfo) -> a
+    int compare(java.lang.Object,java.lang.Object) -> compare
+com.amazonaws.demo.personalfilestore.filebrowser.FileInfo -> com.amazonaws.demo.personalfilestore.filebrowser.f:
+    java.lang.String name -> a
+    java.lang.String path -> b
+    long size -> c
+    boolean directory -> d
+    int fileCount -> e
+    int folderCount -> f
+    java.lang.String getName() -> a
+    void setName(java.lang.String) -> a
+    java.lang.String getPath() -> b
+    void setPath(java.lang.String) -> b
+    void setSize(long) -> a
+    boolean isDirectory() -> c
+    void setDirectory(boolean) -> a
+    int getIconResourceId() -> d
+    java.lang.String toString() -> toString
+com.amazonaws.demo.personalfilestore.filebrowser.FileSingleImageActivity -> com.amazonaws.demo.personalfilestore.filebrowser.FileSingleImageActivity:
+    org.apache.log4j.Logger log -> c
+    android.view.GestureDetector mGestureDetector -> d
+    int displayIndex -> e
+    java.io.File[] files -> f
+    android.util.DisplayMetrics dm -> g
+    android.widget.ImageView singleimage -> h
+    android.widget.Button selectButton -> i
+    android.widget.Button returnButton -> j
+    android.graphics.Bitmap lastBitmap -> k
+    java.lang.String bucketName -> a
+    java.lang.String prefix -> b
+    com.amazonaws.demo.personalfilestore.S3PersonalFileStoreApplication application -> l
+    void onCreate(android.os.Bundle) -> onCreate
+    void onGesture(android.gesture.GestureOverlayView,android.view.MotionEvent) -> onGesture
+    void onGestureCancelled(android.gesture.GestureOverlayView,android.view.MotionEvent) -> onGestureCancelled
+    void onGestureEnded(android.gesture.GestureOverlayView,android.view.MotionEvent) -> onGestureEnded
+    void onGestureStarted(android.gesture.GestureOverlayView,android.view.MotionEvent) -> onGestureStarted
+    void onShowPress(android.view.MotionEvent) -> onShowPress
+    void onLongPress(android.view.MotionEvent) -> onLongPress
+    boolean onDown(android.view.MotionEvent) -> onDown
+    boolean onScroll(android.view.MotionEvent,android.view.MotionEvent,float,float) -> onScroll
+    boolean onSingleTapUp(android.view.MotionEvent) -> onSingleTapUp
+    boolean onTouchEvent(android.view.MotionEvent) -> onTouchEvent
+    boolean onFling(android.view.MotionEvent,android.view.MotionEvent,float,float) -> onFling
+    void setEventListener() -> a
+    void displayImage(java.lang.String) -> a
+    java.io.File[] access$0(com.amazonaws.demo.personalfilestore.filebrowser.FileSingleImageActivity) -> a
+    int access$1(com.amazonaws.demo.personalfilestore.filebrowser.FileSingleImageActivity) -> b
+com.amazonaws.demo.personalfilestore.filebrowser.FileSingleImageActivity$1 -> com.amazonaws.demo.personalfilestore.filebrowser.g:
+    com.amazonaws.demo.personalfilestore.filebrowser.FileSingleImageActivity this$0 -> a
+    void onClick(android.view.View) -> onClick
+com.amazonaws.demo.personalfilestore.filebrowser.FileSingleImageActivity$2 -> com.amazonaws.demo.personalfilestore.filebrowser.h:
+    com.amazonaws.demo.personalfilestore.filebrowser.FileSingleImageActivity this$0 -> a
+    void onClick(android.view.View) -> onClick
+com.amazonaws.demo.personalfilestore.filebrowser.FileUtil -> com.amazonaws.demo.personalfilestore.filebrowser.i:
+    org.apache.log4j.Logger log -> a
+    android.graphics.Bitmap rotateBitmap(android.graphics.Bitmap,int) -> a
+    int readPictureDegree(java.lang.String) -> a
+    android.graphics.Bitmap safeDecodeStream(boolean,android.net.Uri,int,int,android.app.Activity) -> a
+com.amazonaws.demo.personalfilestore.s3.S3 -> com.amazonaws.demo.personalfilestore.s3.a:
+    org.apache.log4j.Logger log4j -> a
+    com.amazonaws.services.s3.AmazonS3 getInstance() -> a
+    java.util.List getObjectNamesForBucket(java.lang.String,java.lang.String,int) -> a
+    void createObjectForBucket(java.lang.String,java.lang.String,java.lang.String) -> a
+    void createFileObjectForBucket(java.lang.String,java.io.File) -> a
+    void deleteObject(java.lang.String,java.lang.String) -> a
+    java.lang.String getDataForObject(java.lang.String,java.lang.String) -> b
+    java.io.File getFileForObject(java.lang.String,java.lang.String) -> c
+    java.lang.String read(java.io.InputStream) -> a
+com.amazonaws.demo.personalfilestore.s3.S3AddObjectView -> com.amazonaws.demo.personalfilestore.s3.S3AddObjectView:
+    java.lang.String bucketName -> a
+    java.lang.String prefix -> b
+    android.widget.EditText objectName -> c
+    android.widget.EditText objectData -> d
+    android.widget.Button okButton -> e
+    android.widget.Button cancelButton -> f
+    void onCreate(android.os.Bundle) -> onCreate
+    void wireButtons() -> a
+com.amazonaws.demo.personalfilestore.s3.S3AddObjectView$1 -> com.amazonaws.demo.personalfilestore.s3.b:
+    com.amazonaws.demo.personalfilestore.s3.S3AddObjectView this$0 -> a
+    void onClick(android.view.View) -> onClick
+com.amazonaws.demo.personalfilestore.s3.S3AddObjectView$2 -> com.amazonaws.demo.personalfilestore.s3.c:
+    com.amazonaws.demo.personalfilestore.s3.S3AddObjectView this$0 -> a
+    void onClick(android.view.View) -> onClick
+com.amazonaws.demo.personalfilestore.s3.S3BucketView -> com.amazonaws.demo.personalfilestore.s3.S3BucketView:
+    org.apache.log4j.Logger log4j -> l
+    java.util.List objectNameList -> i
+    java.lang.String bucketName -> j
+    java.lang.String prefix -> k
+    java.lang.Runnable postResults -> m
+    void onCreate(android.os.Bundle) -> onCreate
+    void onResume() -> onResume
+    void obtainListItems() -> d
+    void wireOnListClick() -> g
+    void wireOnClick() -> h
+    void access$0(com.amazonaws.demo.personalfilestore.s3.S3BucketView,java.util.List,java.lang.String) -> a
+    org.apache.log4j.Logger access$1() -> i
+com.amazonaws.demo.personalfilestore.s3.S3BucketView$1 -> com.amazonaws.demo.personalfilestore.s3.d:
+    com.amazonaws.demo.personalfilestore.s3.S3BucketView this$0 -> a
+    void run() -> run
+com.amazonaws.demo.personalfilestore.s3.S3BucketView$2 -> com.amazonaws.demo.personalfilestore.s3.e:
+    com.amazonaws.demo.personalfilestore.s3.S3BucketView this$0 -> a
+    void onItemClick(android.widget.AdapterView,android.view.View,int,long) -> onItemClick
+com.amazonaws.demo.personalfilestore.s3.S3BucketView$3 -> com.amazonaws.demo.personalfilestore.s3.f:
+    com.amazonaws.demo.personalfilestore.s3.S3BucketView this$0 -> a
+    void onClick(android.view.View) -> onClick
+com.amazonaws.demo.personalfilestore.s3.S3BucketView$4 -> com.amazonaws.demo.personalfilestore.s3.g:
+    com.amazonaws.demo.personalfilestore.s3.S3BucketView this$0 -> a
+    void onClick(android.view.View) -> onClick
+com.amazonaws.demo.personalfilestore.s3.S3ObjectView -> com.amazonaws.demo.personalfilestore.s3.S3ObjectView:
+    org.apache.log4j.Logger log -> i
+    android.os.Handler mHandler -> a
+    android.widget.TextView loadingText -> b
+    android.widget.TextView bodyText -> c
+    android.widget.ImageView imageView -> j
+    android.util.DisplayMetrics dm -> k
+    android.graphics.Bitmap lastBitmap -> l
+    java.lang.String bucketName -> d
+    java.lang.String objectName -> e
+    java.lang.String objectData -> f
+    java.io.File imageFile -> g
+    android.widget.Button delete -> h
+    java.lang.Runnable postResults -> m
+    void onCreate(android.os.Bundle) -> onCreate
+    void startPopulateText() -> b
+    void updateUi() -> c
+    void displayImage(java.lang.String) -> a
+    void wireOnClick() -> a
+    void access$0(com.amazonaws.demo.personalfilestore.s3.S3ObjectView) -> a
+    java.lang.Runnable access$1(com.amazonaws.demo.personalfilestore.s3.S3ObjectView) -> b
+com.amazonaws.demo.personalfilestore.s3.S3ObjectView$1 -> com.amazonaws.demo.personalfilestore.s3.h:
+    com.amazonaws.demo.personalfilestore.s3.S3ObjectView this$0 -> a
+    void run() -> run
+com.amazonaws.demo.personalfilestore.s3.S3ObjectView$2 -> com.amazonaws.demo.personalfilestore.s3.i:
+    com.amazonaws.demo.personalfilestore.s3.S3ObjectView this$0 -> a
+    void run() -> run
+com.amazonaws.demo.personalfilestore.s3.S3ObjectView$3 -> com.amazonaws.demo.personalfilestore.s3.j:
+    com.amazonaws.demo.personalfilestore.s3.S3ObjectView this$0 -> a
+    void onClick(android.view.View) -> onClick
+com.amazonaws.event.ProgressEvent -> com.amazonaws.b.a:
+    long bytesTransferred -> a
+    int eventCode -> b
+    void setEventCode(int) -> a
+com.amazonaws.event.ProgressListener -> com.amazonaws.b.b:
+    void progressChanged(com.amazonaws.event.ProgressEvent) -> a
+com.amazonaws.event.ProgressListenerCallbackExecutor -> com.amazonaws.b.c:
+    com.amazonaws.event.ProgressListener listener -> a
+    java.util.concurrent.ExecutorService executor -> b
+    void progressChanged(com.amazonaws.event.ProgressEvent) -> a
+    com.amazonaws.event.ProgressListenerCallbackExecutor wrapListener(com.amazonaws.event.ProgressListener) -> a
+    java.util.concurrent.ExecutorService createNewExecutorService() -> a
+    com.amazonaws.event.ProgressListener access$000(com.amazonaws.event.ProgressListenerCallbackExecutor) -> a
+com.amazonaws.event.ProgressListenerCallbackExecutor$2 -> com.amazonaws.b.d:
+    com.amazonaws.event.ProgressEvent val$progressEvent -> a
+    com.amazonaws.event.ProgressListenerCallbackExecutor this$0 -> b
+    void run() -> run
+com.amazonaws.event.ProgressListenerCallbackExecutor$3 -> com.amazonaws.b.e:
+    java.lang.Thread newThread(java.lang.Runnable) -> newThread
+com.amazonaws.event.ProgressReportingInputStream -> com.amazonaws.b.f:
+    com.amazonaws.event.ProgressListenerCallbackExecutor listenerCallbackExecutor -> a
+    int unnotifiedByteCount -> b
+    boolean fireCompletedEvent -> c
+    void setFireCompletedEvent(boolean) -> a
+    int read() -> read
+    void reset() -> reset
+    int read(byte[],int,int) -> read
+    void close() -> close
+    void notifyCompleted() -> d
+    void notify(int) -> a
+com.amazonaws.handlers.AbstractRequestHandler -> com.amazonaws.c.a:
+    void beforeRequest(com.amazonaws.Request) -> beforeRequest
+    void afterResponse(com.amazonaws.Request,java.lang.Object,com.amazonaws.util.TimingInfo) -> afterResponse
+    void afterError(com.amazonaws.Request,java.lang.Exception) -> afterError
+com.amazonaws.handlers.CredentialsRequestHandler -> com.amazonaws.c.b:
+    com.amazonaws.auth.AWSCredentials awsCredentials -> a
+    void setCredentials(com.amazonaws.auth.AWSCredentials) -> a
+com.amazonaws.handlers.HandlerChainFactory -> com.amazonaws.c.c:
+    java.util.List newRequestHandlerChain(java.lang.String) -> a
+    java.util.List newRequestHandler2Chain(java.lang.String) -> b
+    java.util.List createRequestHandlerChain(java.lang.String,java.lang.Class) -> a
+com.amazonaws.handlers.RequestHandler -> com.amazonaws.c.d:
+    void beforeRequest(com.amazonaws.Request) -> beforeRequest
+    void afterResponse(com.amazonaws.Request,java.lang.Object,com.amazonaws.util.TimingInfo) -> afterResponse
+    void afterError(com.amazonaws.Request,java.lang.Exception) -> afterError
+com.amazonaws.handlers.RequestHandler2 -> com.amazonaws.c.e:
+    void beforeRequest(com.amazonaws.Request) -> a
+    void afterResponse(com.amazonaws.Request,com.amazonaws.Response) -> a
+    void afterError(com.amazonaws.Request,com.amazonaws.Response,java.lang.Exception) -> a
+    com.amazonaws.handlers.RequestHandler2 adapt(com.amazonaws.handlers.RequestHandler) -> a
+com.amazonaws.handlers.RequestHandler2Adaptor -> com.amazonaws.c.f:
+    com.amazonaws.handlers.RequestHandler old -> a
+    void beforeRequest(com.amazonaws.Request) -> a
+    void afterResponse(com.amazonaws.Request,com.amazonaws.Response) -> a
+    void afterError(com.amazonaws.Request,com.amazonaws.Response,java.lang.Exception) -> a
+    int hashCode() -> hashCode
+    boolean equals(java.lang.Object) -> equals
+com.amazonaws.http.AmazonHttpClient -> com.amazonaws.d.a:
+    com.amazonaws.org.apache.commons.logging.Log requestLog -> b
+    com.amazonaws.org.apache.commons.logging.Log log -> a
+    com.amazonaws.http.HttpClient httpClient -> c
+    com.amazonaws.ClientConfiguration config -> d
+    com.amazonaws.metrics.RequestMetricCollector requestMetricCollector -> e
+    com.amazonaws.http.HttpRequestFactory requestFactory -> f
+    com.amazonaws.Response execute(com.amazonaws.Request,com.amazonaws.http.HttpResponseHandler,com.amazonaws.http.HttpResponseHandler,com.amazonaws.http.ExecutionContext) -> a
+    void afterError(com.amazonaws.Request,com.amazonaws.Response,java.util.List,com.amazonaws.AmazonClientException) -> a
+    void afterResponse(com.amazonaws.Request,java.util.List,com.amazonaws.Response,com.amazonaws.util.TimingInfo) -> a
+    java.util.List requestHandler2s(com.amazonaws.Request,com.amazonaws.http.ExecutionContext) -> a
+    com.amazonaws.Response executeHelper(com.amazonaws.Request,com.amazonaws.http.HttpResponseHandler,com.amazonaws.http.HttpResponseHandler,com.amazonaws.http.ExecutionContext) -> b
+    java.lang.Throwable handleUnexpectedFailure(java.lang.Throwable,com.amazonaws.util.AWSRequestMetrics) -> a
+    void resetRequestAfterError(com.amazonaws.Request,java.lang.Exception) -> a
+    void setUserAgent(com.amazonaws.Request) -> a
+    java.lang.String createUserAgentString(java.lang.String,java.lang.String) -> a
+    void shutdown() -> a
+    boolean shouldRetry(com.amazonaws.AmazonWebServiceRequest,java.io.InputStream,com.amazonaws.AmazonClientException,int,com.amazonaws.retry.RetryPolicy) -> a
+    boolean isTemporaryRedirect(com.amazonaws.http.HttpResponse) -> a
+    boolean isRequestSuccessful(com.amazonaws.http.HttpResponse) -> b
+    java.lang.Object handleResponse(com.amazonaws.Request,com.amazonaws.http.HttpResponseHandler,com.amazonaws.http.HttpResponse,com.amazonaws.http.ExecutionContext) -> a
+    com.amazonaws.AmazonServiceException handleErrorResponse(com.amazonaws.Request,com.amazonaws.http.HttpResponseHandler,com.amazonaws.http.HttpResponse) -> a
+    void pauseBeforeNextRetry(com.amazonaws.AmazonWebServiceRequest,com.amazonaws.AmazonClientException,int,com.amazonaws.retry.RetryPolicy) -> a
+    java.lang.String getServerDateFromException(java.lang.String) -> a
+    int parseClockSkewOffset(com.amazonaws.http.HttpResponse,com.amazonaws.AmazonServiceException) -> a
+    void finalize() -> finalize
+    com.amazonaws.metrics.RequestMetricCollector getRequestMetricCollector() -> b
+com.amazonaws.http.ExecutionContext -> com.amazonaws.d.b:
+    com.amazonaws.util.AWSRequestMetrics awsRequestMetrics -> a
+    java.util.List requestHandler2s -> b
+    java.lang.String contextUserAgent -> c
+    com.amazonaws.AmazonWebServiceClient awsClient -> d
+    com.amazonaws.auth.AWSCredentials credentials -> e
+    java.lang.String getContextUserAgent() -> a
+    java.util.List getRequestHandler2s() -> b
+    com.amazonaws.util.AWSRequestMetrics getAwsRequestMetrics() -> c
+    void setSigner(com.amazonaws.auth.Signer) -> a
+    com.amazonaws.auth.Signer getSignerByURI(java.net.URI) -> a
+    com.amazonaws.auth.AWSCredentials getCredentials() -> d
+    void setCredentials(com.amazonaws.auth.AWSCredentials) -> a
+com.amazonaws.http.HttpClient -> com.amazonaws.d.c:
+    com.amazonaws.http.HttpResponse execute(com.amazonaws.http.HttpRequest) -> a
+    void shutdown() -> a
+com.amazonaws.http.HttpMethodName -> com.amazonaws.d.d:
+    com.amazonaws.http.HttpMethodName GET -> a
+    com.amazonaws.http.HttpMethodName POST -> b
+    com.amazonaws.http.HttpMethodName PUT -> c
+    com.amazonaws.http.HttpMethodName DELETE -> d
+    com.amazonaws.http.HttpMethodName HEAD -> e
+    com.amazonaws.http.HttpMethodName[] $VALUES -> f
+    com.amazonaws.http.HttpMethodName[] values() -> values
+    com.amazonaws.http.HttpMethodName valueOf(java.lang.String) -> valueOf
+com.amazonaws.http.HttpRequest -> com.amazonaws.d.e:
+    java.lang.String method -> a
+    java.net.URI uri -> b
+    java.util.Map headers -> c
+    java.io.InputStream content -> d
+    java.lang.String getMethod() -> a
+    java.net.URI getUri() -> b
+    void setUri(java.net.URI) -> a
+    java.util.Map getHeaders() -> c
+    java.io.InputStream getContent() -> d
+    long getContentLength() -> e
+com.amazonaws.http.HttpRequestFactory -> com.amazonaws.d.f:
+    com.amazonaws.http.HttpRequest createHttpRequest(com.amazonaws.Request,com.amazonaws.ClientConfiguration,com.amazonaws.http.ExecutionContext) -> a
+    void configureHeaders(java.util.Map,com.amazonaws.Request,com.amazonaws.http.ExecutionContext,com.amazonaws.ClientConfiguration) -> a
+    java.lang.String createUserAgentString(com.amazonaws.ClientConfiguration,java.lang.String) -> a
+com.amazonaws.http.HttpResponse -> com.amazonaws.d.g:
+    java.lang.String statusText -> a
+    int statusCode -> b
+    java.io.InputStream content -> c
+    java.util.Map headers -> d
+    java.util.Map getHeaders() -> a
+    java.io.InputStream getContent() -> b
+    java.lang.String getStatusText() -> c
+    int getStatusCode() -> d
+    com.amazonaws.http.HttpResponse$Builder builder() -> e
+com.amazonaws.http.HttpResponse$1 -> com.amazonaws.d.h:
+com.amazonaws.http.HttpResponse$Builder -> com.amazonaws.d.i:
+    java.lang.String statusText -> a
+    int statusCode -> b
+    java.io.InputStream content -> c
+    java.util.Map headers -> d
+    com.amazonaws.http.HttpResponse$Builder statusText(java.lang.String) -> a
+    com.amazonaws.http.HttpResponse$Builder statusCode(int) -> a
+    com.amazonaws.http.HttpResponse$Builder content(java.io.InputStream) -> a
+    com.amazonaws.http.HttpResponse$Builder header(java.lang.String,java.lang.String) -> a
+    com.amazonaws.http.HttpResponse build() -> a
+com.amazonaws.http.HttpResponseHandler -> com.amazonaws.d.j:
+    java.lang.Object handle(com.amazonaws.http.HttpResponse) -> a
+    boolean needsConnectionLeftOpen() -> a
+com.amazonaws.http.UrlHttpClient -> com.amazonaws.d.k:
+    com.amazonaws.ClientConfiguration config -> a
+    javax.net.ssl.SSLContext sc -> b
+    com.amazonaws.http.HttpResponse execute(com.amazonaws.http.HttpRequest) -> a
+    void shutdown() -> a
+    java.net.HttpURLConnection createConnection(com.amazonaws.http.HttpRequest) -> b
+    void write(java.io.InputStream,java.io.OutputStream) -> a
+    void configureConnection(java.net.HttpURLConnection) -> a
+    void disableCertificateValidation(javax.net.ssl.HttpsURLConnection) -> a
+com.amazonaws.http.UrlHttpClient$TrustAllManager -> com.amazonaws.d.l:
+    java.security.cert.X509Certificate[] getAcceptedIssuers() -> getAcceptedIssuers
+    void checkClientTrusted(java.security.cert.X509Certificate[],java.lang.String) -> checkClientTrusted
+    void checkServerTrusted(java.security.cert.X509Certificate[],java.lang.String) -> checkServerTrusted
+com.amazonaws.internal.CRC32MismatchException -> com.amazonaws.e.a:
+com.amazonaws.internal.MetricAware -> com.amazonaws.e.b:
+    boolean isMetricActivated() -> b
+com.amazonaws.internal.SdkDigestInputStream -> com.amazonaws.e.c:
+    boolean $assertionsDisabled -> a
+    boolean isMetricActivated() -> b
+    long skip(long) -> skip
+com.amazonaws.internal.SdkFilterInputStream -> com.amazonaws.e.d:
+    boolean isMetricActivated() -> b
+    void abortIfNeeded() -> a
+    void abort() -> c
+    int read() -> read
+    int read(byte[],int,int) -> read
+    long skip(long) -> skip
+    int available() -> available
+    void close() -> close
+    void mark(int) -> mark
+    void reset() -> reset
+    boolean markSupported() -> markSupported
+com.amazonaws.internal.SdkInputStream -> com.amazonaws.e.e:
+    java.io.InputStream getWrappedInputStream() -> a
+    boolean isMetricActivated() -> b
+    void abortIfNeeded() -> c
+    void abort() -> d
+com.amazonaws.internal.StaticCredentialsProvider -> com.amazonaws.e.f:
+    com.amazonaws.auth.AWSCredentials credentials -> a
+    com.amazonaws.auth.AWSCredentials getCredentials() -> a
+com.amazonaws.internal.config.HttpClientConfig -> com.amazonaws.e.a.a:
+    java.lang.String serviceName -> a
+    java.lang.String toString() -> toString
+    java.lang.String getServiceName() -> a
+com.amazonaws.internal.config.InternalConfig -> com.amazonaws.e.a.b:
+    com.amazonaws.org.apache.commons.logging.Log log -> a
+    com.amazonaws.internal.config.SignerConfig defaultSignerConfig -> b
+    java.util.Map serviceRegionSigners -> c
+    java.util.Map regionSigners -> d
+    java.util.Map serviceSigners -> e
+    java.util.Map httpClients -> f
+    com.amazonaws.internal.config.HttpClientConfig getHttpClientConfig(java.lang.String) -> a
+    com.amazonaws.internal.config.SignerConfig getSignerConfig(java.lang.String,java.lang.String) -> a
+    java.util.Map getDefaultHttpClients() -> a
+    java.util.Map getDefaultRegionSigners() -> b
+    java.util.Map getDefaultServiceRegionSigners() -> c
+    java.util.Map getDefaultServiceSigners() -> d
+    com.amazonaws.internal.config.SignerConfig getDefaultSigner() -> e
+    java.util.Map getOverrideHttpClients() -> f
+    java.util.Map getOverrideRegionSigners() -> g
+    java.util.Map getOverrideServiceRegionSigners() -> h
+    java.util.Map getOverrideServiceSigners() -> i
+com.amazonaws.internal.config.InternalConfig$Factory -> com.amazonaws.e.a.c:
+    com.amazonaws.internal.config.InternalConfig SINGELTON -> a
+    com.amazonaws.internal.config.InternalConfig getInternalConfig() -> a
+com.amazonaws.internal.config.SignerConfig -> com.amazonaws.e.a.d:
+    java.lang.String signerType -> a
+    java.lang.String getSignerType() -> a
+    java.lang.String toString() -> toString
+com.amazonaws.metrics.AwsSdkMetrics -> com.amazonaws.f.a:
+    java.lang.String MBEAN_OBJECT_NAME -> a
+    boolean defaultMetricsEnabled -> b
+    com.amazonaws.auth.AWSCredentialsProvider credentialProvider -> c
+    boolean machineMetricsExcluded -> d
+    boolean perHostMetricsIncluded -> e
+    com.amazonaws.regions.Regions region -> f
+    java.lang.Integer metricQueueSize -> g
+    java.lang.Long queuePollTimeoutMilli -> h
+    java.lang.String metricNameSpace -> i
+    java.lang.String credentialFile -> j
+    java.lang.String jvmMetricName -> k
+    java.lang.String hostMetricName -> l
+    boolean singleMetricNamespace -> m
+    com.amazonaws.metrics.AwsSdkMetrics$MetricRegistry registry -> n
+    com.amazonaws.metrics.MetricCollector mc -> o
+    boolean dirtyEnabling -> p
+    com.amazonaws.metrics.AwsSdkMetrics[] $VALUES -> q
+    com.amazonaws.metrics.AwsSdkMetrics[] values() -> values
+    com.amazonaws.metrics.AwsSdkMetrics valueOf(java.lang.String) -> valueOf
+    com.amazonaws.metrics.RequestMetricCollector getRequestMetricCollector() -> a
+    com.amazonaws.metrics.ServiceMetricCollector getServiceMetricCollector() -> b
+    void setMetricCollector(com.amazonaws.metrics.MetricCollector) -> a
+    boolean isDefaultMetricsEnabled() -> c
+    boolean isMetricsEnabled() -> d
+    boolean enableDefaultMetrics() -> e
+    boolean addAll(java.util.Collection) -> a
+    void setCredentialFile0(java.lang.String) -> a
+com.amazonaws.metrics.AwsSdkMetrics$1 -> com.amazonaws.f.b:
+    com.amazonaws.auth.PropertiesCredentials val$cred -> a
+    com.amazonaws.auth.AWSCredentials getCredentials() -> a
+com.amazonaws.metrics.AwsSdkMetrics$MetricRegistry -> com.amazonaws.f.c:
+    java.util.Set metricTypes -> a
+    java.util.Set readOnly -> b
+    void syncReadOnly() -> a
+    boolean addMetricTypes(java.util.Collection) -> a
+com.amazonaws.metrics.ByteThroughputHelper -> com.amazonaws.f.d:
+    long startTiming() -> a
+    void reportMetrics() -> b
+    void increment(int,long) -> a
+com.amazonaws.metrics.ByteThroughputProvider -> com.amazonaws.f.e:
+    long duration -> a
+    int byteCount -> b
+    com.amazonaws.metrics.ThroughputMetricType throughputType -> c
+    int getByteCount() -> c
+    long getDurationNano() -> d
+    java.lang.String getProviderId() -> e
+    void increment(int,long) -> a
+    void reset() -> f
+    java.lang.String toString() -> toString
+com.amazonaws.metrics.MetricCollector -> com.amazonaws.f.f:
+    com.amazonaws.metrics.MetricCollector NONE -> a
+    boolean stop() -> a
+    boolean isEnabled() -> b
+    com.amazonaws.metrics.RequestMetricCollector getRequestMetricCollector() -> c
+    com.amazonaws.metrics.ServiceMetricCollector getServiceMetricCollector() -> d
+com.amazonaws.metrics.MetricCollector$1 -> com.amazonaws.f.g:
+    boolean stop() -> a
+    boolean isEnabled() -> b
+    com.amazonaws.metrics.RequestMetricCollector getRequestMetricCollector() -> c
+    com.amazonaws.metrics.ServiceMetricCollector getServiceMetricCollector() -> d
+com.amazonaws.metrics.MetricCollector$Factory -> com.amazonaws.f.h:
+    com.amazonaws.metrics.MetricCollector getInstance() -> a
+com.amazonaws.metrics.MetricFilterInputStream -> com.amazonaws.f.i:
+    com.amazonaws.metrics.ByteThroughputHelper helper -> a
+    int read(byte[],int,int) -> read
+    void close() -> close
+    boolean isMetricActivated() -> b
+com.amazonaws.metrics.MetricType -> com.amazonaws.f.j:
+    java.lang.String name() -> name
+com.amazonaws.metrics.RequestMetricCollector -> com.amazonaws.f.k:
+    com.amazonaws.metrics.RequestMetricCollector NONE -> a
+    void collectMetrics(com.amazonaws.Request,com.amazonaws.Response) -> a
+    boolean isEnabled() -> a
+com.amazonaws.metrics.RequestMetricCollector$1 -> com.amazonaws.f.l:
+    void collectMetrics(com.amazonaws.Request,com.amazonaws.Response) -> a
+    boolean isEnabled() -> a
+com.amazonaws.metrics.RequestMetricType -> com.amazonaws.f.m:
+com.amazonaws.metrics.ServiceMetricCollector -> com.amazonaws.f.n:
+    com.amazonaws.metrics.ServiceMetricCollector NONE -> a
+    void collectByteThroughput(com.amazonaws.metrics.ByteThroughputProvider) -> a
+com.amazonaws.metrics.ServiceMetricCollector$1 -> com.amazonaws.f.o:
+    void collectByteThroughput(com.amazonaws.metrics.ByteThroughputProvider) -> a
+com.amazonaws.metrics.ServiceMetricType -> com.amazonaws.f.p:
+com.amazonaws.metrics.SimpleMetricType -> com.amazonaws.f.q:
+    java.lang.String name() -> name
+    int hashCode() -> hashCode
+    boolean equals(java.lang.Object) -> equals
+    java.lang.String toString() -> toString
+com.amazonaws.metrics.ThroughputMetricType -> com.amazonaws.f.r:
+com.amazonaws.org.apache.commons.logging.Log -> com.amazonaws.g.a.a.a.a:
+    boolean isDebugEnabled() -> a
+    boolean isErrorEnabled() -> b
+    boolean isInfoEnabled() -> c
+    void trace(java.lang.Object) -> a
+    void debug(java.lang.Object) -> b
+    void debug(java.lang.Object,java.lang.Throwable) -> a
+    void info(java.lang.Object) -> c
+    void info(java.lang.Object,java.lang.Throwable) -> b
+    void warn(java.lang.Object) -> d
+    void warn(java.lang.Object,java.lang.Throwable) -> c
+    void error(java.lang.Object) -> e
+    void error(java.lang.Object,java.lang.Throwable) -> d
+com.amazonaws.org.apache.commons.logging.LogConfigurationException -> com.amazonaws.g.a.a.a.b:
+    java.lang.Throwable cause -> a
+    java.lang.Throwable getCause() -> getCause
+com.amazonaws.org.apache.commons.logging.LogFactory -> com.amazonaws.g.a.a.a.c:
+    java.io.PrintStream diagnosticsStream -> e
+    java.lang.String diagnosticPrefix -> f
+    java.lang.ClassLoader thisClassLoader -> g
+    java.util.Hashtable factories -> a
+    com.amazonaws.org.apache.commons.logging.LogFactory nullClassLoaderFactory -> b
+    java.lang.Class class$java$lang$Thread -> c
+    java.lang.Class class$org$apache$commons$logging$LogFactory -> d
+    com.amazonaws.org.apache.commons.logging.Log getInstance(java.lang.Class) -> a
+    com.amazonaws.org.apache.commons.logging.Log getInstance(java.lang.String) -> a
+    void setAttribute(java.lang.String,java.lang.Object) -> a
+    java.util.Hashtable createFactoryStore() -> d
+    java.lang.String trim(java.lang.String) -> e
+    com.amazonaws.org.apache.commons.logging.LogFactory getFactory() -> a
+    com.amazonaws.org.apache.commons.logging.Log getLog(java.lang.Class) -> b
+    com.amazonaws.org.apache.commons.logging.Log getLog(java.lang.String) -> b
+    java.lang.ClassLoader getClassLoader(java.lang.Class) -> c
+    java.lang.ClassLoader getContextClassLoaderInternal() -> e
+    java.lang.ClassLoader directGetContextClassLoader() -> b
+    com.amazonaws.org.apache.commons.logging.LogFactory getCachedFactory(java.lang.ClassLoader) -> a
+    void cacheFactory(java.lang.ClassLoader,com.amazonaws.org.apache.commons.logging.LogFactory) -> a
+    com.amazonaws.org.apache.commons.logging.LogFactory newFactory(java.lang.String,java.lang.ClassLoader,java.lang.ClassLoader) -> a
+    java.lang.Object createFactory(java.lang.String,java.lang.ClassLoader) -> a
+    boolean implementsLogFactory(java.lang.Class) -> d
+    java.io.InputStream getResourceAsStream(java.lang.ClassLoader,java.lang.String) -> a
+    java.util.Enumeration getResources(java.lang.ClassLoader,java.lang.String) -> b
+    java.util.Properties getProperties(java.net.URL) -> a
+    java.util.Properties getConfigurationFile(java.lang.ClassLoader,java.lang.String) -> c
+    java.lang.String getSystemProperty(java.lang.String,java.lang.String) -> a
+    void initDiagnostics() -> f
+    boolean isDiagnosticsEnabled() -> c
+    void logDiagnostic(java.lang.String) -> f
+    void logClassLoaderEnvironment(java.lang.Class) -> e
+    void logHierarchy(java.lang.String,java.lang.ClassLoader) -> b
+    java.lang.String objectId(java.lang.Object) -> a
+    java.lang.Class class$(java.lang.String) -> c
+    void access$000(java.lang.String) -> d
+com.amazonaws.org.apache.commons.logging.LogFactory$1 -> com.amazonaws.g.a.a.a.d:
+    java.lang.Object run() -> run
+com.amazonaws.org.apache.commons.logging.LogFactory$2 -> com.amazonaws.g.a.a.a.e:
+    java.lang.String val$factoryClass -> a
+    java.lang.ClassLoader val$classLoader -> b
+    java.lang.Object run() -> run
+com.amazonaws.org.apache.commons.logging.LogFactory$3 -> com.amazonaws.g.a.a.a.f:
+    java.lang.ClassLoader val$loader -> a
+    java.lang.String val$name -> b
+    java.lang.Object run() -> run
+com.amazonaws.org.apache.commons.logging.LogFactory$4 -> com.amazonaws.g.a.a.a.g:
+    java.lang.ClassLoader val$loader -> a
+    java.lang.String val$name -> b
+    java.lang.Object run() -> run
+com.amazonaws.org.apache.commons.logging.LogFactory$5 -> com.amazonaws.g.a.a.a.h:
+    java.net.URL val$url -> a
+    java.lang.Object run() -> run
+com.amazonaws.org.apache.commons.logging.LogFactory$6 -> com.amazonaws.g.a.a.a.i:
+    java.lang.String val$key -> a
+    java.lang.String val$def -> b
+    java.lang.Object run() -> run
+com.amazonaws.regions.Region -> com.amazonaws.h.a:
+    java.lang.String name -> a
+    java.lang.String domain -> b
+    java.util.Map serviceEndpoints -> c
+    java.util.Map httpSupport -> d
+    java.util.Map httpsSupport -> e
+    com.amazonaws.regions.Region getRegion(com.amazonaws.regions.Regions) -> a
+    java.lang.String getName() -> a
+    java.lang.String getDomain() -> b
+    java.util.Map getServiceEndpoints() -> c
+    java.util.Map getHttpSupport() -> d
+    java.util.Map getHttpsSupport() -> e
+    java.lang.String getServiceEndpoint(java.lang.String) -> a
+    boolean isServiceSupported(java.lang.String) -> b
+    boolean equals(java.lang.Object) -> equals
+    int hashCode() -> hashCode
+    java.lang.String toString() -> toString
+com.amazonaws.regions.RegionDefaults -> com.amazonaws.h.b:
+    java.util.List getRegions() -> a
+    void updateRegion(com.amazonaws.regions.Region,java.lang.String,java.lang.String,boolean,boolean) -> a
+com.amazonaws.regions.RegionMetadataParser -> com.amazonaws.h.c:
+    java.util.List parseRegionMetadata(java.io.InputStream) -> a
+    java.util.List internalParse(java.io.InputStream,boolean) -> a
+    com.amazonaws.regions.Region parseRegionElement(org.w3c.dom.Element,boolean) -> a
+    void addRegionEndpoint(com.amazonaws.regions.Region,org.w3c.dom.Element,boolean) -> a
+    java.lang.String getChildElementValue(java.lang.String,org.w3c.dom.Element) -> a
+    boolean verifyLegacyEndpoint(java.lang.String) -> a
+com.amazonaws.regions.RegionUtils -> com.amazonaws.h.d:
+    java.util.List regions -> a
+    com.amazonaws.org.apache.commons.logging.Log log -> b
+    java.util.List getRegions() -> a
+    com.amazonaws.regions.Region getRegion(java.lang.String) -> a
+    void init() -> b
+    void loadRegionsFromOverrideFile() -> c
+    void initRegions(java.io.InputStream) -> a
+    void initSDKRegions() -> d
+com.amazonaws.regions.Regions -> com.amazonaws.h.e:
+    com.amazonaws.regions.Regions GovCloud -> a
+    com.amazonaws.regions.Regions US_EAST_1 -> b
+    com.amazonaws.regions.Regions US_WEST_1 -> c
+    com.amazonaws.regions.Regions US_WEST_2 -> d
+    com.amazonaws.regions.Regions EU_WEST_1 -> e
+    com.amazonaws.regions.Regions EU_CENTRAL_1 -> f
+    com.amazonaws.regions.Regions AP_SOUTHEAST_1 -> g
+    com.amazonaws.regions.Regions AP_SOUTHEAST_2 -> h
+    com.amazonaws.regions.Regions AP_NORTHEAST_1 -> i
+    com.amazonaws.regions.Regions SA_EAST_1 -> j
+    com.amazonaws.regions.Regions CN_NORTH_1 -> k
+    com.amazonaws.regions.Regions DEFAULT_REGION -> l
+    java.lang.String name -> m
+    com.amazonaws.regions.Regions[] $VALUES -> n
+    com.amazonaws.regions.Regions[] values() -> values
+    com.amazonaws.regions.Regions valueOf(java.lang.String) -> valueOf
+    java.lang.String getName() -> a
+    com.amazonaws.regions.Regions fromName(java.lang.String) -> a
+com.amazonaws.retry.PredefinedRetryPolicies -> com.amazonaws.i.a:
+    com.amazonaws.retry.RetryPolicy DEFAULT -> a
+    com.amazonaws.retry.RetryPolicy DYNAMODB_DEFAULT -> b
+    com.amazonaws.retry.RetryPolicy$RetryCondition DEFAULT_RETRY_CONDITION -> c
+    com.amazonaws.retry.RetryPolicy$BackoffStrategy DEFAULT_BACKOFF_STRATEGY -> d
+    com.amazonaws.retry.RetryPolicy$BackoffStrategy DYNAMODB_DEFAULT_BACKOFF_STRATEGY -> e
+    com.amazonaws.retry.RetryPolicy getDefaultRetryPolicy() -> a
+    com.amazonaws.retry.RetryPolicy getDynamoDBDefaultRetryPolicy() -> b
+com.amazonaws.retry.PredefinedRetryPolicies$1 -> com.amazonaws.i.b:
+com.amazonaws.retry.PredefinedRetryPolicies$DynamoDBDefaultBackoffStrategy -> com.amazonaws.i.c:
+    long delayBeforeNextRetry(com.amazonaws.AmazonWebServiceRequest,com.amazonaws.AmazonClientException,int) -> a
+com.amazonaws.retry.PredefinedRetryPolicies$SDKDefaultBackoffStrategy -> com.amazonaws.i.d:
+    java.util.Random random -> a
+    long delayBeforeNextRetry(com.amazonaws.AmazonWebServiceRequest,com.amazonaws.AmazonClientException,int) -> a
+com.amazonaws.retry.PredefinedRetryPolicies$SDKDefaultRetryCondition -> com.amazonaws.i.e:
+    boolean shouldRetry(com.amazonaws.AmazonWebServiceRequest,com.amazonaws.AmazonClientException,int) -> a
+com.amazonaws.retry.RetryPolicy -> com.amazonaws.i.f:
+    com.amazonaws.retry.RetryPolicy$RetryCondition retryCondition -> a
+    com.amazonaws.retry.RetryPolicy$BackoffStrategy backoffStrategy -> b
+    int maxErrorRetry -> c
+    boolean honorMaxErrorRetryInClientConfig -> d
+    com.amazonaws.retry.RetryPolicy$RetryCondition getRetryCondition() -> a
+    com.amazonaws.retry.RetryPolicy$BackoffStrategy getBackoffStrategy() -> b
+    int getMaxErrorRetry() -> c
+    boolean isMaxErrorRetryInClientConfigHonored() -> d
+com.amazonaws.retry.RetryPolicy$BackoffStrategy -> com.amazonaws.i.g:
+    long delayBeforeNextRetry(com.amazonaws.AmazonWebServiceRequest,com.amazonaws.AmazonClientException,int) -> a
+com.amazonaws.retry.RetryPolicy$RetryCondition -> com.amazonaws.i.h:
+    boolean shouldRetry(com.amazonaws.AmazonWebServiceRequest,com.amazonaws.AmazonClientException,int) -> a
+com.amazonaws.retry.RetryUtils -> com.amazonaws.i.i:
+    boolean isThrottlingException(com.amazonaws.AmazonServiceException) -> a
+    boolean isClockSkewError(com.amazonaws.AmazonServiceException) -> b
+com.amazonaws.services.autoscaling.model.AlreadyExistsException -> com.amazonaws.services.autoscaling.model.AlreadyExistsException:
+    long serialVersionUID -> serialVersionUID
+com.amazonaws.services.autoscaling.model.InvalidNextTokenException -> com.amazonaws.services.autoscaling.model.InvalidNextTokenException:
+    long serialVersionUID -> serialVersionUID
+com.amazonaws.services.autoscaling.model.LimitExceededException -> com.amazonaws.services.autoscaling.model.LimitExceededException:
+    long serialVersionUID -> serialVersionUID
+com.amazonaws.services.autoscaling.model.ResourceInUseException -> com.amazonaws.services.autoscaling.model.ResourceInUseException:
+    long serialVersionUID -> serialVersionUID
+com.amazonaws.services.autoscaling.model.ScalingActivityInProgressException -> com.amazonaws.services.autoscaling.model.ScalingActivityInProgressException:
+    long serialVersionUID -> serialVersionUID
+com.amazonaws.services.cloudwatch.model.InternalServiceException -> com.amazonaws.services.cloudwatch.model.InternalServiceException:
+    long serialVersionUID -> serialVersionUID
+com.amazonaws.services.cloudwatch.model.InvalidFormatException -> com.amazonaws.services.cloudwatch.model.InvalidFormatException:
+    long serialVersionUID -> serialVersionUID
+com.amazonaws.services.cloudwatch.model.InvalidNextTokenException -> com.amazonaws.services.cloudwatch.model.InvalidNextTokenException:
+    long serialVersionUID -> serialVersionUID
+com.amazonaws.services.cloudwatch.model.InvalidParameterCombinationException -> com.amazonaws.services.cloudwatch.model.InvalidParameterCombinationException:
+    long serialVersionUID -> serialVersionUID
+com.amazonaws.services.cloudwatch.model.InvalidParameterValueException -> com.amazonaws.services.cloudwatch.model.InvalidParameterValueException:
+    long serialVersionUID -> serialVersionUID
+com.amazonaws.services.cloudwatch.model.LimitExceededException -> com.amazonaws.services.cloudwatch.model.LimitExceededException:
+    long serialVersionUID -> serialVersionUID
+com.amazonaws.services.cloudwatch.model.MissingRequiredParameterException -> com.amazonaws.services.cloudwatch.model.MissingRequiredParameterException:
+    long serialVersionUID -> serialVersionUID
+com.amazonaws.services.cloudwatch.model.ResourceNotFoundException -> com.amazonaws.services.cloudwatch.model.ResourceNotFoundException:
+    long serialVersionUID -> serialVersionUID
+com.amazonaws.services.cognitoidentity.model.InternalErrorException -> com.amazonaws.services.cognitoidentity.model.InternalErrorException:
+    long serialVersionUID -> serialVersionUID
+com.amazonaws.services.cognitoidentity.model.InvalidIdentityPoolConfigurationException -> com.amazonaws.services.cognitoidentity.model.InvalidIdentityPoolConfigurationException:
+    long serialVersionUID -> serialVersionUID
+com.amazonaws.services.cognitoidentity.model.InvalidParameterException -> com.amazonaws.services.cognitoidentity.model.InvalidParameterException:
+    long serialVersionUID -> serialVersionUID
+com.amazonaws.services.cognitoidentity.model.LimitExceededException -> com.amazonaws.services.cognitoidentity.model.LimitExceededException:
+    long serialVersionUID -> serialVersionUID
+com.amazonaws.services.cognitoidentity.model.NotAuthorizedException -> com.amazonaws.services.cognitoidentity.model.NotAuthorizedException:
+    long serialVersionUID -> serialVersionUID
+com.amazonaws.services.cognitoidentity.model.ResourceConflictException -> com.amazonaws.services.cognitoidentity.model.ResourceConflictException:
+    long serialVersionUID -> serialVersionUID
+com.amazonaws.services.cognitoidentity.model.ResourceNotFoundException -> com.amazonaws.services.cognitoidentity.model.ResourceNotFoundException:
+    long serialVersionUID -> serialVersionUID
+com.amazonaws.services.cognitoidentity.model.TooManyRequestsException -> com.amazonaws.services.cognitoidentity.model.TooManyRequestsException:
+    long serialVersionUID -> serialVersionUID
+com.amazonaws.services.dynamodbv2.model.ConditionalCheckFailedException -> com.amazonaws.services.dynamodbv2.model.ConditionalCheckFailedException:
+    long serialVersionUID -> serialVersionUID
+com.amazonaws.services.dynamodbv2.model.InternalServerErrorException -> com.amazonaws.services.dynamodbv2.model.InternalServerErrorException:
+    long serialVersionUID -> serialVersionUID
+com.amazonaws.services.dynamodbv2.model.ItemCollectionSizeLimitExceededException -> com.amazonaws.services.dynamodbv2.model.ItemCollectionSizeLimitExceededException:
+    long serialVersionUID -> serialVersionUID
+com.amazonaws.services.dynamodbv2.model.LimitExceededException -> com.amazonaws.services.dynamodbv2.model.LimitExceededException:
+    long serialVersionUID -> serialVersionUID
+com.amazonaws.services.dynamodbv2.model.ProvisionedThroughputExceededException -> com.amazonaws.services.dynamodbv2.model.ProvisionedThroughputExceededException:
+    long serialVersionUID -> serialVersionUID
+com.amazonaws.services.dynamodbv2.model.ResourceInUseException -> com.amazonaws.services.dynamodbv2.model.ResourceInUseException:
+    long serialVersionUID -> serialVersionUID
+com.amazonaws.services.dynamodbv2.model.ResourceNotFoundException -> com.amazonaws.services.dynamodbv2.model.ResourceNotFoundException:
+    long serialVersionUID -> serialVersionUID
+com.amazonaws.services.elasticloadbalancing.model.CertificateNotFoundException -> com.amazonaws.services.elasticloadbalancing.model.CertificateNotFoundException:
+    long serialVersionUID -> serialVersionUID
+com.amazonaws.services.elasticloadbalancing.model.DuplicateListenerException -> com.amazonaws.services.elasticloadbalancing.model.DuplicateListenerException:
+    long serialVersionUID -> serialVersionUID
+com.amazonaws.services.elasticloadbalancing.model.DuplicateLoadBalancerNameException -> com.amazonaws.services.elasticloadbalancing.model.DuplicateLoadBalancerNameException:
+    long serialVersionUID -> serialVersionUID
+com.amazonaws.services.elasticloadbalancing.model.DuplicatePolicyNameException -> com.amazonaws.services.elasticloadbalancing.model.DuplicatePolicyNameException:
+    long serialVersionUID -> serialVersionUID
+com.amazonaws.services.elasticloadbalancing.model.InvalidConfigurationRequestException -> com.amazonaws.services.elasticloadbalancing.model.InvalidConfigurationRequestException:
+    long serialVersionUID -> serialVersionUID
+com.amazonaws.services.elasticloadbalancing.model.InvalidInstanceException -> com.amazonaws.services.elasticloadbalancing.model.InvalidInstanceException:
+    long serialVersionUID -> serialVersionUID
+com.amazonaws.services.elasticloadbalancing.model.InvalidSchemeException -> com.amazonaws.services.elasticloadbalancing.model.InvalidSchemeException:
+    long serialVersionUID -> serialVersionUID
+com.amazonaws.services.elasticloadbalancing.model.InvalidSecurityGroupException -> com.amazonaws.services.elasticloadbalancing.model.InvalidSecurityGroupException:
+    long serialVersionUID -> serialVersionUID
+com.amazonaws.services.elasticloadbalancing.model.InvalidSubnetException -> com.amazonaws.services.elasticloadbalancing.model.InvalidSubnetException:
+    long serialVersionUID -> serialVersionUID
+com.amazonaws.services.elasticloadbalancing.model.ListenerNotFoundException -> com.amazonaws.services.elasticloadbalancing.model.ListenerNotFoundException:
+    long serialVersionUID -> serialVersionUID
+com.amazonaws.services.elasticloadbalancing.model.LoadBalancerAttributeNotFoundException -> com.amazonaws.services.elasticloadbalancing.model.LoadBalancerAttributeNotFoundException:
+    long serialVersionUID -> serialVersionUID
+com.amazonaws.services.elasticloadbalancing.model.LoadBalancerNotFoundException -> com.amazonaws.services.elasticloadbalancing.model.LoadBalancerNotFoundException:
+    long serialVersionUID -> serialVersionUID
+com.amazonaws.services.elasticloadbalancing.model.PolicyNotFoundException -> com.amazonaws.services.elasticloadbalancing.model.PolicyNotFoundException:
+    long serialVersionUID -> serialVersionUID
+com.amazonaws.services.elasticloadbalancing.model.PolicyTypeNotFoundException -> com.amazonaws.services.elasticloadbalancing.model.PolicyTypeNotFoundException:
+    long serialVersionUID -> serialVersionUID
+com.amazonaws.services.elasticloadbalancing.model.SubnetNotFoundException -> com.amazonaws.services.elasticloadbalancing.model.SubnetNotFoundException:
+    long serialVersionUID -> serialVersionUID
+com.amazonaws.services.elasticloadbalancing.model.TooManyLoadBalancersException -> com.amazonaws.services.elasticloadbalancing.model.TooManyLoadBalancersException:
+    long serialVersionUID -> serialVersionUID
+com.amazonaws.services.elasticloadbalancing.model.TooManyPoliciesException -> com.amazonaws.services.elasticloadbalancing.model.TooManyPoliciesException:
+    long serialVersionUID -> serialVersionUID
+com.amazonaws.services.kinesis.model.ExpiredIteratorException -> com.amazonaws.services.kinesis.model.ExpiredIteratorException:
+    long serialVersionUID -> serialVersionUID
+com.amazonaws.services.kinesis.model.InvalidArgumentException -> com.amazonaws.services.kinesis.model.InvalidArgumentException:
+    long serialVersionUID -> serialVersionUID
+com.amazonaws.services.kinesis.model.LimitExceededException -> com.amazonaws.services.kinesis.model.LimitExceededException:
+    long serialVersionUID -> serialVersionUID
+com.amazonaws.services.kinesis.model.ProvisionedThroughputExceededException -> com.amazonaws.services.kinesis.model.ProvisionedThroughputExceededException:
+    long serialVersionUID -> serialVersionUID
+com.amazonaws.services.kinesis.model.ResourceInUseException -> com.amazonaws.services.kinesis.model.ResourceInUseException:
+    long serialVersionUID -> serialVersionUID
+com.amazonaws.services.kinesis.model.ResourceNotFoundException -> com.amazonaws.services.kinesis.model.ResourceNotFoundException:
+    long serialVersionUID -> serialVersionUID
+com.amazonaws.services.lambda.model.InvalidRequestContentException -> com.amazonaws.services.lambda.model.InvalidRequestContentException:
+    long serialVersionUID -> serialVersionUID
+    java.lang.String type -> type
+    java.lang.String getType() -> getType
+    void setType(java.lang.String) -> setType
+com.amazonaws.services.lambda.model.RequestTooLargeException -> com.amazonaws.services.lambda.model.RequestTooLargeException:
+    long serialVersionUID -> serialVersionUID
+    java.lang.String type -> type
+    java.lang.String getType() -> getType
+    void setType(java.lang.String) -> setType
+com.amazonaws.services.lambda.model.ResourceNotFoundException -> com.amazonaws.services.lambda.model.ResourceNotFoundException:
+    long serialVersionUID -> serialVersionUID
+    java.lang.String type -> type
+    java.lang.String getType() -> getType
+    void setType(java.lang.String) -> setType
+com.amazonaws.services.lambda.model.ServiceException -> com.amazonaws.services.lambda.model.ServiceException:
+    long serialVersionUID -> serialVersionUID
+    java.lang.String type -> type
+    java.lang.String getType() -> getType
+    void setType(java.lang.String) -> setType
+com.amazonaws.services.lambda.model.TooManyRequestsException -> com.amazonaws.services.lambda.model.TooManyRequestsException:
+    long serialVersionUID -> serialVersionUID
+    java.lang.String retryAfterSeconds -> retryAfterSeconds
+    java.lang.String type -> type
+    java.lang.String getRetryAfterSeconds() -> getRetryAfterSeconds
+    void setRetryAfterSeconds(java.lang.String) -> setRetryAfterSeconds
+    java.lang.String getType() -> getType
+    void setType(java.lang.String) -> setType
+com.amazonaws.services.lambda.model.UnsupportedMediaTypeException -> com.amazonaws.services.lambda.model.UnsupportedMediaTypeException:
+    long serialVersionUID -> serialVersionUID
+    java.lang.String type -> type
+    java.lang.String getType() -> getType
+    void setType(java.lang.String) -> setType
+com.amazonaws.services.machinelearning.model.InternalServerException -> com.amazonaws.services.machinelearning.model.InternalServerException:
+    long serialVersionUID -> serialVersionUID
+    java.lang.Integer code -> code
+    java.lang.Integer getCode() -> getCode
+    void setCode(java.lang.Integer) -> setCode
+com.amazonaws.services.machinelearning.model.InvalidInputException -> com.amazonaws.services.machinelearning.model.InvalidInputException:
+    long serialVersionUID -> serialVersionUID
+    java.lang.Integer code -> code
+    java.lang.Integer getCode() -> getCode
+    void setCode(java.lang.Integer) -> setCode
+com.amazonaws.services.machinelearning.model.LimitExceededException -> com.amazonaws.services.machinelearning.model.LimitExceededException:
+    long serialVersionUID -> serialVersionUID
+    java.lang.Integer code -> code
+    java.lang.Integer getCode() -> getCode
+    void setCode(java.lang.Integer) -> setCode
+com.amazonaws.services.machinelearning.model.PredictorNotMountedException -> com.amazonaws.services.machinelearning.model.PredictorNotMountedException:
+    long serialVersionUID -> serialVersionUID
+com.amazonaws.services.machinelearning.model.ResourceNotFoundException -> com.amazonaws.services.machinelearning.model.ResourceNotFoundException:
+    long serialVersionUID -> serialVersionUID
+    java.lang.Integer code -> code
+    java.lang.Integer getCode() -> getCode
+    void setCode(java.lang.Integer) -> setCode
+com.amazonaws.services.mobileanalytics.model.BadRequestException -> com.amazonaws.services.mobileanalytics.model.BadRequestException:
+    long serialVersionUID -> serialVersionUID
+com.amazonaws.services.s3.AmazonS3 -> com.amazonaws.services.s3.a:
+    com.amazonaws.services.s3.model.ObjectListing listObjects(com.amazonaws.services.s3.model.ListObjectsRequest) -> a
+    com.amazonaws.services.s3.model.S3Object getObject(java.lang.String,java.lang.String) -> a
+    com.amazonaws.services.s3.model.PutObjectResult putObject(java.lang.String,java.lang.String,java.io.InputStream,com.amazonaws.services.s3.model.ObjectMetadata) -> a
+    void deleteObject(java.lang.String,java.lang.String) -> b
+com.amazonaws.services.s3.AmazonS3Client -> com.amazonaws.services.s3.b:
+    com.amazonaws.org.apache.commons.logging.Log log -> f
+    com.amazonaws.services.s3.internal.S3ErrorResponseHandler errorResponseHandler -> g
+    com.amazonaws.services.s3.internal.S3XmlResponseHandler voidResponseHandler -> h
+    com.amazonaws.services.s3.model.transform.BucketConfigurationXmlFactory bucketConfigurationXmlFactory -> i
+    com.amazonaws.services.s3.model.transform.RequestPaymentConfigurationXmlFactory requestPaymentConfigurationXmlFactory -> j
+    com.amazonaws.services.s3.S3ClientOptions clientOptions -> k
+    com.amazonaws.auth.AWSCredentialsProvider awsCredentialsProvider -> l
+    boolean hasExplicitRegion -> m
+    void init() -> g
+    void setEndpoint(java.lang.String) -> a
+    void setRegion(com.amazonaws.regions.Region) -> a
+    com.amazonaws.services.s3.model.ObjectListing listObjects(com.amazonaws.services.s3.model.ListObjectsRequest) -> a
+    com.amazonaws.services.s3.model.S3Object getObject(java.lang.String,java.lang.String) -> a
+    com.amazonaws.services.s3.model.S3Object getObject(com.amazonaws.services.s3.model.GetObjectRequest) -> a
+    boolean skipContentMd5IntegrityCheck(com.amazonaws.AmazonWebServiceRequest) -> c
+    com.amazonaws.services.s3.model.PutObjectResult putObject(java.lang.String,java.lang.String,java.io.InputStream,com.amazonaws.services.s3.model.ObjectMetadata) -> a
+    com.amazonaws.services.s3.model.PutObjectResult putObject(com.amazonaws.services.s3.model.PutObjectRequest) -> a
+    long calculateContentLength(java.io.InputStream) -> a
+    void addAclHeaders(com.amazonaws.Request,com.amazonaws.services.s3.model.AccessControlList) -> a
+    void deleteObject(java.lang.String,java.lang.String) -> b
+    void deleteObject(com.amazonaws.services.s3.model.DeleteObjectRequest) -> a
+    void assertParameterNotNull(java.lang.Object,java.lang.String) -> a
+    void fireProgressEvent(com.amazonaws.event.ProgressListenerCallbackExecutor,int) -> a
+    com.amazonaws.auth.Signer createSigner(com.amazonaws.Request,java.lang.String,java.lang.String) -> a
+    boolean upgradeToSigV4() -> h
+    java.net.URI convertToVirtualHostEndpoint(java.lang.String) -> b
+    void populateRequestMetadata(com.amazonaws.Request,com.amazonaws.services.s3.model.ObjectMetadata) -> a
+    void populateSseCpkRequestParameters(com.amazonaws.Request,com.amazonaws.services.s3.model.SSECustomerKey) -> a
+    void addHeaderIfNotNull(com.amazonaws.Request,java.lang.String,java.lang.String) -> b
+    void addDateHeader(com.amazonaws.Request,java.lang.String,java.util.Date) -> a
+    void addStringListHeader(com.amazonaws.Request,java.lang.String,java.util.List) -> a
+    void addResponseHeaderParameters(com.amazonaws.Request,com.amazonaws.services.s3.model.ResponseHeaderOverrides) -> a
+    com.amazonaws.Request createRequest(java.lang.String,java.lang.String,com.amazonaws.AmazonWebServiceRequest,com.amazonaws.http.HttpMethodName) -> a
+    void configRequest(com.amazonaws.Request,java.lang.String,java.lang.String) -> c
+    boolean validIP(java.lang.String) -> c
+    java.lang.Object invoke(com.amazonaws.Request,com.amazonaws.transform.Unmarshaller,java.lang.String,java.lang.String) -> a
+    com.amazonaws.http.ExecutionContext createExecutionContext(com.amazonaws.AmazonWebServiceRequest) -> a
+    java.lang.Object invoke(com.amazonaws.Request,com.amazonaws.http.HttpResponseHandler,java.lang.String,java.lang.String) -> a
+    void setZeroContentLength(com.amazonaws.Request) -> b
+    java.io.ByteArrayInputStream toByteArray(java.io.InputStream) -> b
+com.amazonaws.services.s3.S3ClientOptions -> com.amazonaws.services.s3.c:
+    boolean pathStyleAccess -> a
+    boolean isPathStyleAccess() -> a
+com.amazonaws.services.s3.S3ResponseMetadata -> com.amazonaws.services.s3.d:
+com.amazonaws.services.s3.internal.AWSS3V4Signer -> com.amazonaws.services.s3.a.a:
+    void processRequestPayload(com.amazonaws.Request,com.amazonaws.auth.AWS4Signer$HeaderSigningResult) -> a
+    java.lang.String calculateContentHash(com.amazonaws.Request) -> e
+    boolean useChunkEncoding(com.amazonaws.Request) -> m
+    long getContentLength(com.amazonaws.Request) -> l
+com.amazonaws.services.s3.internal.AbstractS3ResponseHandler -> com.amazonaws.services.s3.a.b:
+    com.amazonaws.org.apache.commons.logging.Log log -> a
+    java.util.Set ignoredHeaders -> b
+    boolean needsConnectionLeftOpen() -> a
+    com.amazonaws.AmazonWebServiceResponse parseResponseMetadata(com.amazonaws.http.HttpResponse) -> b
+    void populateObjectMetadata(com.amazonaws.http.HttpResponse,com.amazonaws.services.s3.model.ObjectMetadata) -> a
+com.amazonaws.services.s3.internal.BucketNameUtils -> com.amazonaws.services.s3.a.c:
+    com.amazonaws.services.s3.internal.BucketNameUtils[] $VALUES -> a
+    com.amazonaws.services.s3.internal.BucketNameUtils[] values() -> values
+    com.amazonaws.services.s3.internal.BucketNameUtils valueOf(java.lang.String) -> valueOf
+    boolean isValidV2BucketName(java.lang.String) -> a
+    boolean isDNSBucketName(java.lang.String) -> b
+    boolean isValidV2BucketName(java.lang.String,boolean) -> a
+    boolean exception(boolean,java.lang.String) -> a
+com.amazonaws.services.s3.internal.Constants -> com.amazonaws.services.s3.a.d:
+    java.lang.String S3_HOSTNAME -> a
+    java.lang.String S3_SERVICE_NAME -> b
+    java.lang.String DEFAULT_ENCODING -> c
+    com.amazonaws.org.apache.commons.logging.Log log -> d
+com.amazonaws.services.s3.internal.DigestValidationInputStream -> com.amazonaws.services.s3.a.e:
+    byte[] expectedHash -> b
+    boolean digestValidated -> c
+    int read() -> read
+    int read(byte[],int,int) -> read
+    void validateMD5Digest() -> a
+com.amazonaws.services.s3.internal.MD5DigestCalculatingInputStream -> com.amazonaws.services.s3.a.f:
+    java.security.MessageDigest digest -> a
+    java.security.MessageDigest digestLastMarked -> b
+    byte[] getMd5Digest() -> d
+    void mark(int) -> mark
+    void reset() -> reset
+    int read() -> read
+    int read(byte[],int,int) -> read
+com.amazonaws.services.s3.internal.Mimetypes -> com.amazonaws.services.s3.a.g:
+    com.amazonaws.org.apache.commons.logging.Log log -> a
+    com.amazonaws.services.s3.internal.Mimetypes mimetypes -> b
+    java.util.HashMap extensionToMimetypeMap -> c
+    com.amazonaws.services.s3.internal.Mimetypes getInstance() -> a
+    java.lang.String getMimetype(java.lang.String) -> a
+    java.lang.String getMimetype(java.io.File) -> a
+com.amazonaws.services.s3.internal.ObjectExpirationHeaderHandler -> com.amazonaws.services.s3.a.h:
+    java.util.regex.Pattern datePattern -> a
+    java.util.regex.Pattern rulePattern -> b
+    com.amazonaws.org.apache.commons.logging.Log log -> c
+    void handle(com.amazonaws.services.s3.internal.ObjectExpirationResult,com.amazonaws.http.HttpResponse) -> a
+    java.lang.String parseRuleId(java.lang.String) -> a
+    java.util.Date parseDate(java.lang.String) -> b
+com.amazonaws.services.s3.internal.ObjectExpirationResult -> com.amazonaws.services.s3.a.i:
+    void setExpirationTime(java.util.Date) -> a
+    void setExpirationTimeRuleId(java.lang.String) -> a
+com.amazonaws.services.s3.internal.ObjectRestoreHeaderHandler -> com.amazonaws.services.s3.a.j:
+    java.util.regex.Pattern datePattern -> a
+    java.util.regex.Pattern ongoingPattern -> b
+    com.amazonaws.org.apache.commons.logging.Log log -> c
+    void handle(com.amazonaws.services.s3.internal.ObjectRestoreResult,com.amazonaws.http.HttpResponse) -> a
+    java.util.Date parseDate(java.lang.String) -> a
+    java.lang.Boolean parseBoolean(java.lang.String) -> b
+com.amazonaws.services.s3.internal.ObjectRestoreResult -> com.amazonaws.services.s3.a.k:
+    void setRestoreExpirationTime(java.util.Date) -> b
+    void setOngoingRestore(boolean) -> a
+com.amazonaws.services.s3.internal.RepeatableFileInputStream -> com.amazonaws.services.s3.a.l:
+    com.amazonaws.org.apache.commons.logging.Log log -> a
+    java.io.File file -> b
+    java.io.FileInputStream fis -> c
+    long bytesReadPastMarkPoint -> d
+    long markPoint -> e
+    void reset() -> reset
+    boolean markSupported() -> markSupported
+    void mark(int) -> mark
+    int available() -> available
+    void close() -> close
+    int read() -> read
+    long skip(long) -> skip
+    int read(byte[],int,int) -> read
+    java.io.InputStream getWrappedInputStream() -> a
+com.amazonaws.services.s3.internal.RestUtils -> com.amazonaws.services.s3.a.m:
+    java.util.List SIGNED_PARAMETERS -> a
+    java.lang.String makeS3CanonicalString(java.lang.String,java.lang.String,com.amazonaws.Request,java.lang.String) -> a
+com.amazonaws.services.s3.internal.S3ErrorResponseHandler -> com.amazonaws.services.s3.a.n:
+    com.amazonaws.org.apache.commons.logging.Log log -> a
+    com.amazonaws.AmazonServiceException handle(com.amazonaws.http.HttpResponse) -> b
+    com.amazonaws.services.s3.model.AmazonS3Exception newAmazonS3Exception(java.lang.String,com.amazonaws.http.HttpResponse) -> a
+    com.amazonaws.AmazonServiceException$ErrorType errorTypeOf(int) -> a
+    boolean needsConnectionLeftOpen() -> a
+    java.lang.Object handle(com.amazonaws.http.HttpResponse) -> a
+com.amazonaws.services.s3.internal.S3ExecutionContext -> com.amazonaws.services.s3.a.o:
+    com.amazonaws.auth.Signer signer -> a
+    void setSigner(com.amazonaws.auth.Signer) -> a
+    com.amazonaws.auth.Signer getSignerByURI(java.net.URI) -> a
+com.amazonaws.services.s3.internal.S3MetadataResponseHandler -> com.amazonaws.services.s3.a.p:
+    com.amazonaws.AmazonWebServiceResponse handle(com.amazonaws.http.HttpResponse) -> c
+    java.lang.Object handle(com.amazonaws.http.HttpResponse) -> a
+com.amazonaws.services.s3.internal.S3ObjectResponseHandler -> com.amazonaws.services.s3.a.q:
+    com.amazonaws.AmazonWebServiceResponse handle(com.amazonaws.http.HttpResponse) -> c
+    boolean needsConnectionLeftOpen() -> a
+    java.lang.Object handle(com.amazonaws.http.HttpResponse) -> a
+com.amazonaws.services.s3.internal.S3Signer -> com.amazonaws.services.s3.a.r:
+    com.amazonaws.org.apache.commons.logging.Log log -> a
+    java.lang.String httpVerb -> b
+    java.lang.String resourcePath -> c
+    void sign(com.amazonaws.Request,com.amazonaws.auth.AWSCredentials) -> a
+    void addSessionCredentials(com.amazonaws.Request,com.amazonaws.auth.AWSSessionCredentials) -> a
+com.amazonaws.services.s3.internal.S3XmlResponseHandler -> com.amazonaws.services.s3.a.s:
+    com.amazonaws.transform.Unmarshaller responseUnmarshaller -> a
+    com.amazonaws.org.apache.commons.logging.Log log -> b
+    java.util.Map responseHeaders -> c
+    com.amazonaws.AmazonWebServiceResponse handle(com.amazonaws.http.HttpResponse) -> c
+    java.lang.Object handle(com.amazonaws.http.HttpResponse) -> a
+com.amazonaws.services.s3.internal.SSEResultBase -> com.amazonaws.services.s3.a.t:
+    java.lang.String sseAlgorithm -> a
+    java.lang.String sseCustomerAlgorithm -> b
+    java.lang.String sseCustomerKeyMD5 -> c
+    void setSSEAlgorithm(java.lang.String) -> b
+    void setSSECustomerAlgorithm(java.lang.String) -> c
+    void setSSECustomerKeyMd5(java.lang.String) -> d
+com.amazonaws.services.s3.internal.ServiceUtils -> com.amazonaws.services.s3.a.u:
+    com.amazonaws.org.apache.commons.logging.Log log -> b
+    com.amazonaws.util.DateUtils dateUtils -> a
+    java.util.Date parseIso8601Date(java.lang.String) -> a
+    java.util.Date parseRfc822Date(java.lang.String) -> b
+    java.lang.String formatRfc822Date(java.util.Date) -> a
+    boolean isMultipartUploadETag(java.lang.String) -> c
+    java.lang.String removeQuotes(java.lang.String) -> d
+    java.lang.String join(java.util.List) -> a
+com.amazonaws.services.s3.metrics.S3ServiceMetric -> com.amazonaws.services.s3.b.a:
+    com.amazonaws.services.s3.metrics.S3ServiceMetric$S3ThroughputMetric S3DownloadThroughput -> a
+    com.amazonaws.services.s3.metrics.S3ServiceMetric S3DownloadByteCount -> b
+    com.amazonaws.services.s3.metrics.S3ServiceMetric$S3ThroughputMetric S3UploadThroughput -> c
+    com.amazonaws.services.s3.metrics.S3ServiceMetric S3UploadByteCount -> d
+    com.amazonaws.services.s3.metrics.S3ServiceMetric[] values -> e
+    java.lang.String name -> f
+    java.lang.String metricName(java.lang.String) -> a
+    java.lang.String name() -> name
+    com.amazonaws.services.s3.metrics.S3ServiceMetric[] values() -> a
+com.amazonaws.services.s3.metrics.S3ServiceMetric$1 -> com.amazonaws.services.s3.b.b:
+com.amazonaws.services.s3.metrics.S3ServiceMetric$2 -> com.amazonaws.services.s3.b.c:
+com.amazonaws.services.s3.metrics.S3ServiceMetric$S3ThroughputMetric -> com.amazonaws.services.s3.b.d:
+com.amazonaws.services.s3.model.AccessControlList -> com.amazonaws.services.s3.model.a:
+    java.util.HashSet grants -> a
+    com.amazonaws.services.s3.model.Owner owner -> b
+    java.util.Set getGrants() -> a
+    java.lang.String toString() -> toString
+com.amazonaws.services.s3.model.AmazonS3Exception -> com.amazonaws.services.s3.model.AmazonS3Exception:
+    long serialVersionUID -> serialVersionUID
+    java.lang.String extendedRequestId -> extendedRequestId
+    java.lang.String getExtendedRequestId() -> getExtendedRequestId
+    void setExtendedRequestId(java.lang.String) -> setExtendedRequestId
+    java.lang.String toString() -> toString
+com.amazonaws.services.s3.model.CannedAccessControlList -> com.amazonaws.services.s3.model.b:
+    com.amazonaws.services.s3.model.CannedAccessControlList Private -> a
+    com.amazonaws.services.s3.model.CannedAccessControlList PublicRead -> b
+    com.amazonaws.services.s3.model.CannedAccessControlList PublicReadWrite -> c
+    com.amazonaws.services.s3.model.CannedAccessControlList AuthenticatedRead -> d
+    com.amazonaws.services.s3.model.CannedAccessControlList LogDeliveryWrite -> e
+    com.amazonaws.services.s3.model.CannedAccessControlList BucketOwnerRead -> f
+    com.amazonaws.services.s3.model.CannedAccessControlList BucketOwnerFullControl -> g
+    java.lang.String cannedAclHeader -> h
+    com.amazonaws.services.s3.model.CannedAccessControlList[] $VALUES -> i
+    com.amazonaws.services.s3.model.CannedAccessControlList[] values() -> values
+    com.amazonaws.services.s3.model.CannedAccessControlList valueOf(java.lang.String) -> valueOf
+    java.lang.String toString() -> toString
+com.amazonaws.services.s3.model.DeleteObjectRequest -> com.amazonaws.services.s3.model.c:
+    java.lang.String bucketName -> a
+    java.lang.String key -> b
+    java.lang.String getBucketName() -> e
+    void setBucketName(java.lang.String) -> a
+    java.lang.String getKey() -> f
+    void setKey(java.lang.String) -> b
+com.amazonaws.services.s3.model.GetObjectRequest -> com.amazonaws.services.s3.model.d:
+    java.lang.String bucketName -> a
+    java.lang.String key -> b
+    java.lang.String versionId -> c
+    long[] range -> d
+    java.util.List matchingETagConstraints -> e
+    java.util.List nonmatchingEtagConstraints -> f
+    java.util.Date unmodifiedSinceConstraint -> g
+    java.util.Date modifiedSinceConstraint -> h
+    com.amazonaws.services.s3.model.ResponseHeaderOverrides responseHeaders -> i
+    com.amazonaws.event.ProgressListener generalProgressListener -> j
+    boolean isRequesterPays -> k
+    com.amazonaws.services.s3.model.SSECustomerKey sseCustomerKey -> l
+    java.lang.String getBucketName() -> e
+    void setBucketName(java.lang.String) -> a
+    java.lang.String getKey() -> f
+    void setKey(java.lang.String) -> b
+    java.lang.String getVersionId() -> g
+    void setVersionId(java.lang.String) -> c
+    long[] getRange() -> h
+    java.util.List getMatchingETagConstraints() -> i
+    java.util.List getNonmatchingETagConstraints() -> j
+    java.util.Date getUnmodifiedSinceConstraint() -> k
+    java.util.Date getModifiedSinceConstraint() -> l
+    com.amazonaws.services.s3.model.ResponseHeaderOverrides getResponseHeaders() -> m
+    com.amazonaws.event.ProgressListener getGeneralProgressListener() -> n
+    boolean isRequesterPays() -> o
+    void setRequesterPays(boolean) -> a
+    com.amazonaws.services.s3.model.SSECustomerKey getSSECustomerKey() -> p
+com.amazonaws.services.s3.model.Grant -> com.amazonaws.services.s3.model.e:
+    com.amazonaws.services.s3.model.Grantee grantee -> a
+    com.amazonaws.services.s3.model.Permission permission -> b
+    com.amazonaws.services.s3.model.Grantee getGrantee() -> a
+    com.amazonaws.services.s3.model.Permission getPermission() -> b
+    int hashCode() -> hashCode
+    boolean equals(java.lang.Object) -> equals
+    java.lang.String toString() -> toString
+com.amazonaws.services.s3.model.Grantee -> com.amazonaws.services.s3.model.f:
+    java.lang.String getTypeIdentifier() -> a
+    java.lang.String getIdentifier() -> b
+com.amazonaws.services.s3.model.ListObjectsRequest -> com.amazonaws.services.s3.model.g:
+    java.lang.String bucketName -> a
+    java.lang.String prefix -> b
+    java.lang.String marker -> c
+    java.lang.String delimiter -> d
+    java.lang.Integer maxKeys -> e
+    java.lang.String encodingType -> f
+    java.lang.String getBucketName() -> e
+    void setBucketName(java.lang.String) -> a
+    java.lang.String getPrefix() -> f
+    void setPrefix(java.lang.String) -> b
+    java.lang.String getMarker() -> g
+    java.lang.String getDelimiter() -> h
+    java.lang.Integer getMaxKeys() -> i
+    void setMaxKeys(java.lang.Integer) -> a
+    java.lang.String getEncodingType() -> j
+com.amazonaws.services.s3.model.MultiObjectDeleteException -> com.amazonaws.services.s3.model.MultiObjectDeleteException:
+    long serialVersionUID -> serialVersionUID
+    java.util.List errors -> errors
+    java.util.List deletedObjects -> deletedObjects
+    java.util.List getDeletedObjects() -> getDeletedObjects
+    java.util.List getErrors() -> getErrors
+com.amazonaws.services.s3.model.MultiObjectDeleteException$DeleteError -> com.amazonaws.services.s3.model.MultiObjectDeleteException$DeleteError:
+    java.lang.String key -> key
+    java.lang.String versionId -> versionId
+    java.lang.String code -> code
+    java.lang.String message -> message
+    java.lang.String getKey() -> getKey
+    void setKey(java.lang.String) -> setKey
+    java.lang.String getVersionId() -> getVersionId
+    void setVersionId(java.lang.String) -> setVersionId
+    java.lang.String getCode() -> getCode
+    void setCode(java.lang.String) -> setCode
+    java.lang.String getMessage() -> getMessage
+    void setMessage(java.lang.String) -> setMessage
+com.amazonaws.services.s3.model.ObjectListing -> com.amazonaws.services.s3.model.h:
+    java.util.List objectSummaries -> a
+    java.util.List commonPrefixes -> b
+    java.lang.String bucketName -> c
+    java.lang.String nextMarker -> d
+    boolean isTruncated -> e
+    java.lang.String prefix -> f
+    java.lang.String marker -> g
+    int maxKeys -> h
+    java.lang.String delimiter -> i
+    java.lang.String encodingType -> j
+    java.util.List getObjectSummaries() -> a
+    java.util.List getCommonPrefixes() -> b
+    java.lang.String getNextMarker() -> c
+    void setNextMarker(java.lang.String) -> a
+    java.lang.String getBucketName() -> d
+    void setBucketName(java.lang.String) -> b
+    void setPrefix(java.lang.String) -> c
+    void setMarker(java.lang.String) -> d
+    void setMaxKeys(int) -> a
+    void setDelimiter(java.lang.String) -> e
+    boolean isTruncated() -> e
+    void setTruncated(boolean) -> a
+    void setEncodingType(java.lang.String) -> f
+com.amazonaws.services.s3.model.ObjectMetadata -> com.amazonaws.services.s3.model.i:
+    java.util.Map userMetadata -> a
+    java.util.Map metadata -> b
+    java.util.Date httpExpiresDate -> c
+    java.util.Date expirationTime -> d
+    java.lang.String expirationTimeRuleId -> e
+    java.lang.Boolean ongoingRestore -> f
+    java.util.Date restoreExpirationTime -> g
+    java.util.Map getUserMetadata() -> a
+    void setHeader(java.lang.String,java.lang.Object) -> a
+    void addUserMetadata(java.lang.String,java.lang.String) -> a
+    java.util.Map getRawMetadata() -> b
+    java.lang.Object getRawMetadataValue(java.lang.String) -> b
+    long getContentLength() -> c
+    void setContentLength(long) -> a
+    java.lang.String getContentType() -> d
+    void setContentType(java.lang.String) -> c
+    void setContentMD5(java.lang.String) -> d
+    java.lang.String getContentMD5() -> e
+    java.lang.String getETag() -> f
+    java.lang.String getVersionId() -> g
+    java.lang.String getSSEAlgorithm() -> h
+    java.lang.String getSSECustomerAlgorithm() -> i
+    java.lang.String getSSECustomerKeyMd5() -> j
+    java.util.Date getExpirationTime() -> k
+    void setExpirationTime(java.util.Date) -> a
+    java.lang.String getExpirationTimeRuleId() -> l
+    void setExpirationTimeRuleId(java.lang.String) -> a
+    void setRestoreExpirationTime(java.util.Date) -> b
+    void setOngoingRestore(boolean) -> a
+    void setHttpExpiresDate(java.util.Date) -> c
+    java.util.Date getHttpExpiresDate() -> m
+    com.amazonaws.services.s3.model.ObjectMetadata clone() -> n
+    java.lang.Object clone() -> clone
+com.amazonaws.services.s3.model.Owner -> com.amazonaws.services.s3.model.j:
+    java.lang.String displayName -> a
+    java.lang.String id -> b
+    java.lang.String toString() -> toString
+    java.lang.String getId() -> a
+    void setId(java.lang.String) -> a
+    java.lang.String getDisplayName() -> b
+    void setDisplayName(java.lang.String) -> b
+    boolean equals(java.lang.Object) -> equals
+    int hashCode() -> hashCode
+com.amazonaws.services.s3.model.Permission -> com.amazonaws.services.s3.model.k:
+    com.amazonaws.services.s3.model.Permission FullControl -> a
+    com.amazonaws.services.s3.model.Permission Read -> b
+    com.amazonaws.services.s3.model.Permission Write -> c
+    com.amazonaws.services.s3.model.Permission ReadAcp -> d
+    com.amazonaws.services.s3.model.Permission WriteAcp -> e
+    java.lang.String permissionString -> f
+    java.lang.String headerName -> g
+    com.amazonaws.services.s3.model.Permission[] $VALUES -> h
+    com.amazonaws.services.s3.model.Permission[] values() -> values
+    com.amazonaws.services.s3.model.Permission valueOf(java.lang.String) -> valueOf
+    java.lang.String getHeaderName() -> a
+    java.lang.String toString() -> toString
+com.amazonaws.services.s3.model.PutObjectRequest -> com.amazonaws.services.s3.model.l:
+    java.lang.String bucketName -> a
+    java.lang.String key -> b
+    java.io.File file -> c
+    java.io.InputStream inputStream -> d
+    com.amazonaws.services.s3.model.ObjectMetadata metadata -> e
+    com.amazonaws.services.s3.model.CannedAccessControlList cannedAcl -> f
+    com.amazonaws.services.s3.model.AccessControlList accessControlList -> g
+    java.lang.String storageClass -> h
+    com.amazonaws.event.ProgressListener generalProgressListener -> i
+    java.lang.String redirectLocation -> j
+    com.amazonaws.services.s3.model.SSECustomerKey sseCustomerKey -> k
+    java.lang.String getBucketName() -> e
+    java.lang.String getKey() -> f
+    java.lang.String getStorageClass() -> g
+    void setStorageClass(java.lang.String) -> a
+    com.amazonaws.services.s3.model.PutObjectRequest withStorageClass(java.lang.String) -> b
+    java.io.File getFile() -> h
+    void setFile(java.io.File) -> a
+    com.amazonaws.services.s3.model.PutObjectRequest withFile(java.io.File) -> b
+    com.amazonaws.services.s3.model.ObjectMetadata getMetadata() -> i
+    void setMetadata(com.amazonaws.services.s3.model.ObjectMetadata) -> a
+    com.amazonaws.services.s3.model.PutObjectRequest withMetadata(com.amazonaws.services.s3.model.ObjectMetadata) -> b
+    com.amazonaws.services.s3.model.CannedAccessControlList getCannedAcl() -> j
+    void setCannedAcl(com.amazonaws.services.s3.model.CannedAccessControlList) -> a
+    com.amazonaws.services.s3.model.PutObjectRequest withCannedAcl(com.amazonaws.services.s3.model.CannedAccessControlList) -> b
+    com.amazonaws.services.s3.model.AccessControlList getAccessControlList() -> k
+    void setAccessControlList(com.amazonaws.services.s3.model.AccessControlList) -> a
+    com.amazonaws.services.s3.model.PutObjectRequest withAccessControlList(com.amazonaws.services.s3.model.AccessControlList) -> b
+    java.io.InputStream getInputStream() -> l
+    void setInputStream(java.io.InputStream) -> a
+    com.amazonaws.services.s3.model.PutObjectRequest withInputStream(java.io.InputStream) -> b
+    java.lang.String getRedirectLocation() -> m
+    com.amazonaws.services.s3.model.SSECustomerKey getSSECustomerKey() -> n
+    void setGeneralProgressListener(com.amazonaws.event.ProgressListener) -> a
+    com.amazonaws.event.ProgressListener getGeneralProgressListener() -> o
+    com.amazonaws.services.s3.model.PutObjectRequest withGeneralProgressListener(com.amazonaws.event.ProgressListener) -> b
+    com.amazonaws.services.s3.model.PutObjectRequest clone() -> p
+    java.lang.Object clone() -> clone
+com.amazonaws.services.s3.model.PutObjectResult -> com.amazonaws.services.s3.model.m:
+    java.lang.String versionId -> a
+    java.lang.String eTag -> b
+    java.util.Date expirationTime -> c
+    java.lang.String expirationTimeRuleId -> d
+    java.lang.String contentMd5 -> e
+    void setVersionId(java.lang.String) -> e
+    void setETag(java.lang.String) -> f
+    void setExpirationTime(java.util.Date) -> a
+    void setExpirationTimeRuleId(java.lang.String) -> a
+    void setContentMd5(java.lang.String) -> g
+com.amazonaws.services.s3.model.ResponseHeaderOverrides -> com.amazonaws.services.s3.model.n:
+    java.lang.String contentType -> a
+    java.lang.String contentLanguage -> b
+    java.lang.String expires -> c
+    java.lang.String cacheControl -> d
+    java.lang.String contentDisposition -> e
+    java.lang.String contentEncoding -> f
+    java.lang.String[] PARAMETER_ORDER -> g
+    java.lang.String getContentType() -> e
+    java.lang.String getContentLanguage() -> f
+    java.lang.String getExpires() -> g
+    java.lang.String getCacheControl() -> h
+    java.lang.String getContentDisposition() -> i
+    java.lang.String getContentEncoding() -> j
+com.amazonaws.services.s3.model.S3Object -> com.amazonaws.services.s3.model.o:
+    java.lang.String key -> a
+    java.lang.String bucketName -> b
+    com.amazonaws.services.s3.model.ObjectMetadata metadata -> c
+    com.amazonaws.services.s3.model.S3ObjectInputStream objectContent -> d
+    java.lang.String redirectLocation -> e
+    boolean isRequesterCharged -> f
+    com.amazonaws.services.s3.model.ObjectMetadata getObjectMetadata() -> a
+    com.amazonaws.services.s3.model.S3ObjectInputStream getObjectContent() -> b
+    void setObjectContent(com.amazonaws.services.s3.model.S3ObjectInputStream) -> a
+    void setBucketName(java.lang.String) -> a
+    java.lang.String getKey() -> c
+    void setKey(java.lang.String) -> b
+    void setRedirectLocation(java.lang.String) -> c
+    java.lang.String toString() -> toString
+    void close() -> close
+    void setRequesterCharged(boolean) -> a
+com.amazonaws.services.s3.model.S3ObjectInputStream -> com.amazonaws.services.s3.model.p:
+    org.apache.http.client.methods.HttpRequestBase httpRequest -> a
+    boolean wrapWithByteCounting(java.io.InputStream) -> a
+    void abort() -> c
+com.amazonaws.services.s3.model.S3ObjectSummary -> com.amazonaws.services.s3.model.q:
+    java.lang.String bucketName -> a
+    java.lang.String key -> b
+    java.lang.String eTag -> c
+    long size -> d
+    java.util.Date lastModified -> e
+    java.lang.String storageClass -> f
+    com.amazonaws.services.s3.model.Owner owner -> g
+    void setBucketName(java.lang.String) -> a
+    java.lang.String getKey() -> a
+    void setKey(java.lang.String) -> b
+    void setETag(java.lang.String) -> c
+    void setSize(long) -> a
+    void setLastModified(java.util.Date) -> a
+    void setOwner(com.amazonaws.services.s3.model.Owner) -> a
+    void setStorageClass(java.lang.String) -> d
+com.amazonaws.services.s3.model.SSECustomerKey -> com.amazonaws.services.s3.model.r:
+    java.lang.String base64EncodedKey -> a
+    java.lang.String base64EncodedMd5 -> b
+    java.lang.String algorithm -> c
+    java.lang.String getKey() -> a
+    java.lang.String getAlgorithm() -> b
+    java.lang.String getMd5() -> c
+com.amazonaws.services.s3.model.UploadPartRequest -> com.amazonaws.services.s3.model.s:
+    com.amazonaws.services.s3.model.SSECustomerKey sseCustomerKey -> a
+    com.amazonaws.services.s3.model.SSECustomerKey getSSECustomerKey() -> e
+com.amazonaws.services.s3.model.transform.AbstractHandler -> com.amazonaws.services.s3.model.a.a:
+    java.lang.StringBuilder text -> a
+    java.util.LinkedList context -> b
+    void startElement(java.lang.String,java.lang.String,java.lang.String,org.xml.sax.Attributes) -> startElement
+    void doStartElement(java.lang.String,java.lang.String,java.lang.String,org.xml.sax.Attributes) -> a
+    void endElement(java.lang.String,java.lang.String,java.lang.String) -> endElement
+    void doEndElement(java.lang.String,java.lang.String,java.lang.String) -> a
+    void characters(char[],int,int) -> characters
+    java.lang.String getText() -> a
+    boolean atTopLevel() -> b
+    boolean in(java.lang.String[]) -> a
+com.amazonaws.services.s3.model.transform.BucketConfigurationXmlFactory -> com.amazonaws.services.s3.model.a.b:
+com.amazonaws.services.s3.model.transform.RequestPaymentConfigurationXmlFactory -> com.amazonaws.services.s3.model.a.c:
+com.amazonaws.services.s3.model.transform.Unmarshallers -> com.amazonaws.services.s3.model.a.d:
+com.amazonaws.services.s3.model.transform.Unmarshallers$ListObjectsUnmarshaller -> com.amazonaws.services.s3.model.a.e:
+    com.amazonaws.services.s3.model.ObjectListing unmarshall(java.io.InputStream) -> a
+    java.lang.Object unmarshall(java.lang.Object) -> a
+com.amazonaws.services.s3.model.transform.XmlResponsesSaxParser -> com.amazonaws.services.s3.model.a.f:
+    com.amazonaws.org.apache.commons.logging.Log log -> a
+    org.xml.sax.XMLReader xr -> b
+    boolean sanitizeXmlDocument -> c
+    void parseXmlInputStream(org.xml.sax.helpers.DefaultHandler,java.io.InputStream) -> a
+    java.io.InputStream sanitizeXmlDocument(org.xml.sax.helpers.DefaultHandler,java.io.InputStream) -> b
+    java.lang.String checkForEmptyString(java.lang.String) -> d
+    int parseInt(java.lang.String) -> e
+    long parseLong(java.lang.String) -> f
+    com.amazonaws.services.s3.model.transform.XmlResponsesSaxParser$ListBucketHandler parseListBucketObjectsResponse(java.io.InputStream) -> a
+    com.amazonaws.org.apache.commons.logging.Log access$000() -> a
+    java.lang.String access$100(java.lang.String) -> a
+    int access$200(java.lang.String) -> b
+    long access$300(java.lang.String) -> c
+com.amazonaws.services.s3.model.transform.XmlResponsesSaxParser$ListBucketHandler -> com.amazonaws.services.s3.model.a.g:
+    com.amazonaws.services.s3.model.ObjectListing objectListing -> a
+    com.amazonaws.services.s3.model.S3ObjectSummary currentObject -> b
+    com.amazonaws.services.s3.model.Owner currentOwner -> c
+    java.lang.String lastKey -> d
+    com.amazonaws.services.s3.model.ObjectListing getObjectListing() -> c
+    void doStartElement(java.lang.String,java.lang.String,java.lang.String,org.xml.sax.Attributes) -> a
+    void doEndElement(java.lang.String,java.lang.String,java.lang.String) -> a
+com.amazonaws.services.securitytoken.model.ExpiredTokenException -> com.amazonaws.services.securitytoken.model.ExpiredTokenException:
+    long serialVersionUID -> serialVersionUID
+com.amazonaws.services.securitytoken.model.IDPCommunicationErrorException -> com.amazonaws.services.securitytoken.model.IDPCommunicationErrorException:
+    long serialVersionUID -> serialVersionUID
+com.amazonaws.services.securitytoken.model.IDPRejectedClaimException -> com.amazonaws.services.securitytoken.model.IDPRejectedClaimException:
+    long serialVersionUID -> serialVersionUID
+com.amazonaws.services.securitytoken.model.InvalidIdentityTokenException -> com.amazonaws.services.securitytoken.model.InvalidIdentityTokenException:
+    long serialVersionUID -> serialVersionUID
+com.amazonaws.services.securitytoken.model.MalformedPolicyDocumentException -> com.amazonaws.services.securitytoken.model.MalformedPolicyDocumentException:
+    long serialVersionUID -> serialVersionUID
+com.amazonaws.services.securitytoken.model.PackedPolicyTooLargeException -> com.amazonaws.services.securitytoken.model.PackedPolicyTooLargeException:
+    long serialVersionUID -> serialVersionUID
+com.amazonaws.services.simpledb.model.AttributeDoesNotExistException -> com.amazonaws.services.simpledb.model.AttributeDoesNotExistException:
+    long serialVersionUID -> serialVersionUID
+    java.lang.Float boxUsage -> boxUsage
+    java.lang.Float getBoxUsage() -> getBoxUsage
+    void setBoxUsage(java.lang.Float) -> setBoxUsage
+com.amazonaws.services.simpledb.model.DuplicateItemNameException -> com.amazonaws.services.simpledb.model.DuplicateItemNameException:
+    long serialVersionUID -> serialVersionUID
+    java.lang.Float boxUsage -> boxUsage
+    java.lang.Float getBoxUsage() -> getBoxUsage
+    void setBoxUsage(java.lang.Float) -> setBoxUsage
+com.amazonaws.services.simpledb.model.InvalidNextTokenException -> com.amazonaws.services.simpledb.model.InvalidNextTokenException:
+    long serialVersionUID -> serialVersionUID
+    java.lang.Float boxUsage -> boxUsage
+    java.lang.Float getBoxUsage() -> getBoxUsage
+    void setBoxUsage(java.lang.Float) -> setBoxUsage
+com.amazonaws.services.simpledb.model.InvalidNumberPredicatesException -> com.amazonaws.services.simpledb.model.InvalidNumberPredicatesException:
+    long serialVersionUID -> serialVersionUID
+    java.lang.Float boxUsage -> boxUsage
+    java.lang.Float getBoxUsage() -> getBoxUsage
+    void setBoxUsage(java.lang.Float) -> setBoxUsage
+com.amazonaws.services.simpledb.model.InvalidNumberValueTestsException -> com.amazonaws.services.simpledb.model.InvalidNumberValueTestsException:
+    long serialVersionUID -> serialVersionUID
+    java.lang.Float boxUsage -> boxUsage
+    java.lang.Float getBoxUsage() -> getBoxUsage
+    void setBoxUsage(java.lang.Float) -> setBoxUsage
+com.amazonaws.services.simpledb.model.InvalidParameterValueException -> com.amazonaws.services.simpledb.model.InvalidParameterValueException:
+    long serialVersionUID -> serialVersionUID
+    java.lang.Float boxUsage -> boxUsage
+    java.lang.Float getBoxUsage() -> getBoxUsage
+    void setBoxUsage(java.lang.Float) -> setBoxUsage
+com.amazonaws.services.simpledb.model.InvalidQueryExpressionException -> com.amazonaws.services.simpledb.model.InvalidQueryExpressionException:
+    long serialVersionUID -> serialVersionUID
+    java.lang.Float boxUsage -> boxUsage
+    java.lang.Float getBoxUsage() -> getBoxUsage
+    void setBoxUsage(java.lang.Float) -> setBoxUsage
+com.amazonaws.services.simpledb.model.MissingParameterException -> com.amazonaws.services.simpledb.model.MissingParameterException:
+    long serialVersionUID -> serialVersionUID
+    java.lang.Float boxUsage -> boxUsage
+    java.lang.Float getBoxUsage() -> getBoxUsage
+    void setBoxUsage(java.lang.Float) -> setBoxUsage
+com.amazonaws.services.simpledb.model.NoSuchDomainException -> com.amazonaws.services.simpledb.model.NoSuchDomainException:
+    long serialVersionUID -> serialVersionUID
+    java.lang.Float boxUsage -> boxUsage
+    java.lang.Float getBoxUsage() -> getBoxUsage
+    void setBoxUsage(java.lang.Float) -> setBoxUsage
+com.amazonaws.services.simpledb.model.NumberDomainAttributesExceededException -> com.amazonaws.services.simpledb.model.NumberDomainAttributesExceededException:
+    long serialVersionUID -> serialVersionUID
+    java.lang.Float boxUsage -> boxUsage
+    java.lang.Float getBoxUsage() -> getBoxUsage
+    void setBoxUsage(java.lang.Float) -> setBoxUsage
+com.amazonaws.services.simpledb.model.NumberDomainBytesExceededException -> com.amazonaws.services.simpledb.model.NumberDomainBytesExceededException:
+    long serialVersionUID -> serialVersionUID
+    java.lang.Float boxUsage -> boxUsage
+    java.lang.Float getBoxUsage() -> getBoxUsage
+    void setBoxUsage(java.lang.Float) -> setBoxUsage
+com.amazonaws.services.simpledb.model.NumberDomainsExceededException -> com.amazonaws.services.simpledb.model.NumberDomainsExceededException:
+    long serialVersionUID -> serialVersionUID
+    java.lang.Float boxUsage -> boxUsage
+    java.lang.Float getBoxUsage() -> getBoxUsage
+    void setBoxUsage(java.lang.Float) -> setBoxUsage
+com.amazonaws.services.simpledb.model.NumberItemAttributesExceededException -> com.amazonaws.services.simpledb.model.NumberItemAttributesExceededException:
+    long serialVersionUID -> serialVersionUID
+    java.lang.Float boxUsage -> boxUsage
+    java.lang.Float getBoxUsage() -> getBoxUsage
+    void setBoxUsage(java.lang.Float) -> setBoxUsage
+com.amazonaws.services.simpledb.model.NumberSubmittedAttributesExceededException -> com.amazonaws.services.simpledb.model.NumberSubmittedAttributesExceededException:
+    long serialVersionUID -> serialVersionUID
+    java.lang.Float boxUsage -> boxUsage
+    java.lang.Float getBoxUsage() -> getBoxUsage
+    void setBoxUsage(java.lang.Float) -> setBoxUsage
+com.amazonaws.services.simpledb.model.NumberSubmittedItemsExceededException -> com.amazonaws.services.simpledb.model.NumberSubmittedItemsExceededException:
+    long serialVersionUID -> serialVersionUID
+    java.lang.Float boxUsage -> boxUsage
+    java.lang.Float getBoxUsage() -> getBoxUsage
+    void setBoxUsage(java.lang.Float) -> setBoxUsage
+com.amazonaws.services.simpledb.model.RequestTimeoutException -> com.amazonaws.services.simpledb.model.RequestTimeoutException:
+    long serialVersionUID -> serialVersionUID
+    java.lang.Float boxUsage -> boxUsage
+    java.lang.Float getBoxUsage() -> getBoxUsage
+    void setBoxUsage(java.lang.Float) -> setBoxUsage
+com.amazonaws.services.simpledb.model.TooManyRequestedAttributesException -> com.amazonaws.services.simpledb.model.TooManyRequestedAttributesException:
+    long serialVersionUID -> serialVersionUID
+    java.lang.Float boxUsage -> boxUsage
+    java.lang.Float getBoxUsage() -> getBoxUsage
+    void setBoxUsage(java.lang.Float) -> setBoxUsage
+com.amazonaws.services.simpleemail.model.MessageRejectedException -> com.amazonaws.services.simpleemail.model.MessageRejectedException:
+    long serialVersionUID -> serialVersionUID
+com.amazonaws.services.sns.model.AuthorizationErrorException -> com.amazonaws.services.sns.model.AuthorizationErrorException:
+    long serialVersionUID -> serialVersionUID
+com.amazonaws.services.sns.model.EndpointDisabledException -> com.amazonaws.services.sns.model.EndpointDisabledException:
+    long serialVersionUID -> serialVersionUID
+com.amazonaws.services.sns.model.InternalErrorException -> com.amazonaws.services.sns.model.InternalErrorException:
+    long serialVersionUID -> serialVersionUID
+com.amazonaws.services.sns.model.InvalidParameterException -> com.amazonaws.services.sns.model.InvalidParameterException:
+    long serialVersionUID -> serialVersionUID
+com.amazonaws.services.sns.model.InvalidParameterValueException -> com.amazonaws.services.sns.model.InvalidParameterValueException:
+    long serialVersionUID -> serialVersionUID
+com.amazonaws.services.sns.model.NotFoundException -> com.amazonaws.services.sns.model.NotFoundException:
+    long serialVersionUID -> serialVersionUID
+com.amazonaws.services.sns.model.PlatformApplicationDisabledException -> com.amazonaws.services.sns.model.PlatformApplicationDisabledException:
+    long serialVersionUID -> serialVersionUID
+com.amazonaws.services.sns.model.SubscriptionLimitExceededException -> com.amazonaws.services.sns.model.SubscriptionLimitExceededException:
+    long serialVersionUID -> serialVersionUID
+com.amazonaws.services.sns.model.TopicLimitExceededException -> com.amazonaws.services.sns.model.TopicLimitExceededException:
+    long serialVersionUID -> serialVersionUID
+com.amazonaws.services.sqs.QueueUrlHandler -> com.amazonaws.services.sqs.QueueUrlHandler:
+    java.lang.String QUEUE_URL_PARAMETER -> QUEUE_URL_PARAMETER
+    void beforeRequest(com.amazonaws.Request) -> beforeRequest
+com.amazonaws.services.sqs.model.BatchEntryIdsNotDistinctException -> com.amazonaws.services.sqs.model.BatchEntryIdsNotDistinctException:
+    long serialVersionUID -> serialVersionUID
+com.amazonaws.services.sqs.model.BatchRequestTooLongException -> com.amazonaws.services.sqs.model.BatchRequestTooLongException:
+    long serialVersionUID -> serialVersionUID
+com.amazonaws.services.sqs.model.EmptyBatchRequestException -> com.amazonaws.services.sqs.model.EmptyBatchRequestException:
+    long serialVersionUID -> serialVersionUID
+com.amazonaws.services.sqs.model.InvalidAttributeNameException -> com.amazonaws.services.sqs.model.InvalidAttributeNameException:
+    long serialVersionUID -> serialVersionUID
+com.amazonaws.services.sqs.model.InvalidBatchEntryIdException -> com.amazonaws.services.sqs.model.InvalidBatchEntryIdException:
+    long serialVersionUID -> serialVersionUID
+com.amazonaws.services.sqs.model.InvalidIdFormatException -> com.amazonaws.services.sqs.model.InvalidIdFormatException:
+    long serialVersionUID -> serialVersionUID
+com.amazonaws.services.sqs.model.InvalidMessageContentsException -> com.amazonaws.services.sqs.model.InvalidMessageContentsException:
+    long serialVersionUID -> serialVersionUID
+com.amazonaws.services.sqs.model.MessageNotInflightException -> com.amazonaws.services.sqs.model.MessageNotInflightException:
+    long serialVersionUID -> serialVersionUID
+com.amazonaws.services.sqs.model.OverLimitException -> com.amazonaws.services.sqs.model.OverLimitException:
+    long serialVersionUID -> serialVersionUID
+com.amazonaws.services.sqs.model.QueueDeletedRecentlyException -> com.amazonaws.services.sqs.model.QueueDeletedRecentlyException:
+    long serialVersionUID -> serialVersionUID
+com.amazonaws.services.sqs.model.QueueDoesNotExistException -> com.amazonaws.services.sqs.model.QueueDoesNotExistException:
+    long serialVersionUID -> serialVersionUID
+com.amazonaws.services.sqs.model.QueueNameExistsException -> com.amazonaws.services.sqs.model.QueueNameExistsException:
+    long serialVersionUID -> serialVersionUID
+com.amazonaws.services.sqs.model.ReceiptHandleIsInvalidException -> com.amazonaws.services.sqs.model.ReceiptHandleIsInvalidException:
+    long serialVersionUID -> serialVersionUID
+com.amazonaws.services.sqs.model.TooManyEntriesInBatchRequestException -> com.amazonaws.services.sqs.model.TooManyEntriesInBatchRequestException:
+    long serialVersionUID -> serialVersionUID
+com.amazonaws.services.sqs.model.UnsupportedOperationException -> com.amazonaws.services.sqs.model.UnsupportedOperationException:
+    long serialVersionUID -> serialVersionUID
+com.amazonaws.transform.Unmarshaller -> com.amazonaws.j.a:
+    java.lang.Object unmarshall(java.lang.Object) -> a
+com.amazonaws.tvmclient.AESEncryption -> com.amazonaws.k.a:
+    java.lang.String unwrap(java.lang.String,java.lang.String) -> a
+    byte[] decrypt(byte[],java.lang.String,byte[]) -> a
+    javax.crypto.spec.SecretKeySpec getKey(java.lang.String) -> a
+com.amazonaws.tvmclient.AmazonSharedPreferencesWrapper -> com.amazonaws.k.b:
+    org.apache.log4j.Logger log4j -> a
+    void wipe(android.content.SharedPreferences) -> a
+    void storeUsername(android.content.SharedPreferences,java.lang.String) -> a
+    java.lang.String getUsername(android.content.SharedPreferences) -> b
+    void registerDeviceId(android.content.SharedPreferences,java.lang.String,java.lang.String) -> a
+    java.lang.String getUidForDevice(android.content.SharedPreferences) -> c
+    java.lang.String getKeyForDevice(android.content.SharedPreferences) -> d
+    com.amazonaws.auth.AWSCredentials getCredentialsFromSharedPreferences(android.content.SharedPreferences) -> e
+    boolean areCredentialsExpired(android.content.SharedPreferences) -> f
+    void storeCredentialsInSharedPreferences(android.content.SharedPreferences,java.lang.String,java.lang.String,java.lang.String,java.lang.String) -> a
+    void storeValueInSharedPreferences(android.content.SharedPreferences,java.lang.String,java.lang.String) -> b
+    java.lang.String getValueFromSharedPreferences(android.content.SharedPreferences,java.lang.String) -> b
+com.amazonaws.tvmclient.AmazonTVMClient -> com.amazonaws.k.c:
+    java.lang.String endpoint -> a
+    java.lang.String appName -> b
+    boolean useSSL -> c
+    android.content.SharedPreferences sharedPreferences -> d
+    org.apache.log4j.Logger log4j -> e
+    com.amazonaws.tvmclient.Response getToken() -> a
+    com.amazonaws.tvmclient.Response login(java.lang.String,java.lang.String) -> a
+    com.amazonaws.tvmclient.Response processRequest(com.amazonaws.tvmclient.Request,com.amazonaws.tvmclient.ResponseHandler) -> a
+    java.lang.String generateRandomString() -> b
+    java.lang.String getEndpointDomainName(java.lang.String) -> a
+com.amazonaws.tvmclient.GetTokenRequest -> com.amazonaws.k.d:
+    java.lang.String endpoint -> a
+    java.lang.String uid -> b
+    java.lang.String key -> c
+    boolean useSSL -> d
+    java.lang.String buildRequestUrl() -> a
+    java.lang.String toString() -> toString
+com.amazonaws.tvmclient.GetTokenResponse -> com.amazonaws.k.e:
+    java.lang.String accessKey -> b
+    java.lang.String secretKey -> c
+    java.lang.String securityToken -> d
+    java.lang.String expirationDate -> e
+    java.lang.String getAccessKey() -> a
+    java.lang.String getSecretKey() -> b
+    java.lang.String getSecurityToken() -> c
+    java.lang.String getExpirationDate() -> d
+    java.lang.String toString() -> toString
+com.amazonaws.tvmclient.GetTokenResponseHandler -> com.amazonaws.k.f:
+    java.lang.String key -> a
+    com.amazonaws.tvmclient.Response handleResponse(int,java.lang.String) -> a
+com.amazonaws.tvmclient.LoginRequest -> com.amazonaws.k.g:
+    java.lang.String endpoint -> a
+    java.lang.String uid -> b
+    java.lang.String username -> c
+    java.lang.String password -> d
+    java.lang.String appName -> e
+    boolean useSSL -> f
+    java.lang.String decryptionKey -> g
+    java.lang.String getDecryptionKey() -> b
+    java.lang.String buildRequestUrl() -> a
+    java.lang.String computeDecryptionKey() -> c
+    java.lang.String toString() -> toString
+com.amazonaws.tvmclient.LoginResponse -> com.amazonaws.k.h:
+    java.lang.String key -> b
+    java.lang.String getKey() -> a
+    java.lang.String toString() -> toString
+com.amazonaws.tvmclient.LoginResponseHandler -> com.amazonaws.k.i:
+    java.lang.String decryptionKey -> a
+    com.amazonaws.tvmclient.Response handleResponse(int,java.lang.String) -> a
+com.amazonaws.tvmclient.Request -> com.amazonaws.k.j:
+    java.lang.String buildRequestUrl() -> a
+com.amazonaws.tvmclient.Response -> com.amazonaws.k.k:
+    com.amazonaws.tvmclient.Response SUCCESSFUL -> a
+    int responseCode -> b
+    java.lang.String responseMessage -> c
+    boolean requestWasSuccessful() -> e
+    int getResponseCode() -> f
+    java.lang.String getResponseMessage() -> g
+    java.lang.String toString() -> toString
+com.amazonaws.tvmclient.ResponseHandler -> com.amazonaws.k.l:
+    com.amazonaws.tvmclient.Response handleResponse(int,java.lang.String) -> a
+com.amazonaws.tvmclient.TokenVendingMachineService -> com.amazonaws.k.m:
+    org.apache.log4j.Logger log4j -> a
+    com.amazonaws.tvmclient.Response sendRequest(com.amazonaws.tvmclient.Request,com.amazonaws.tvmclient.ResponseHandler) -> a
+    java.lang.String getResponse(java.net.HttpURLConnection) -> a
+com.amazonaws.tvmclient.Utilities -> com.amazonaws.k.n:
+    java.lang.String getTimestamp() -> a
+    java.lang.String extractElement(java.lang.String,java.lang.String) -> a
+    java.lang.String getSignature(java.lang.String,java.lang.String) -> b
+com.amazonaws.tvmclient.Utilities$Signer -> com.amazonaws.k.o:
+    void sign(com.amazonaws.Request,com.amazonaws.auth.AWSCredentials) -> a
+    java.lang.String getSignature(java.lang.String,java.lang.String) -> a
+com.amazonaws.util.AWSRequestMetrics -> com.amazonaws.l.a:
+    com.amazonaws.util.TimingInfo timingInfo -> a
+    com.amazonaws.util.TimingInfo getTimingInfo() -> a
+    void startEvent(java.lang.String) -> a
+    void startEvent(com.amazonaws.metrics.MetricType) -> a
+    void endEvent(java.lang.String) -> b
+    void endEvent(com.amazonaws.metrics.MetricType) -> b
+    void incrementCounter(java.lang.String) -> c
+    void incrementCounter(com.amazonaws.metrics.MetricType) -> c
+    void setCounter(java.lang.String,long) -> a
+    void setCounter(com.amazonaws.metrics.MetricType,long) -> a
+    void addProperty(java.lang.String,java.lang.Object) -> a
+    void addProperty(com.amazonaws.metrics.MetricType,java.lang.Object) -> a
+    void log() -> b
+com.amazonaws.util.AWSRequestMetrics$Field -> com.amazonaws.l.b:
+    com.amazonaws.util.AWSRequestMetrics$Field AWSErrorCode -> a
+    com.amazonaws.util.AWSRequestMetrics$Field AWSRequestID -> b
+    com.amazonaws.util.AWSRequestMetrics$Field BytesProcessed -> c
+    com.amazonaws.util.AWSRequestMetrics$Field ClientExecuteTime -> d
+    com.amazonaws.util.AWSRequestMetrics$Field CredentialsRequestTime -> e
+    com.amazonaws.util.AWSRequestMetrics$Field Exception -> f
+    com.amazonaws.util.AWSRequestMetrics$Field HttpRequestTime -> g
+    com.amazonaws.util.AWSRequestMetrics$Field RedirectLocation -> h
+    com.amazonaws.util.AWSRequestMetrics$Field RequestMarshallTime -> i
+    com.amazonaws.util.AWSRequestMetrics$Field RequestSigningTime -> j
+    com.amazonaws.util.AWSRequestMetrics$Field ResponseProcessingTime -> k
+    com.amazonaws.util.AWSRequestMetrics$Field RequestCount -> l
+    com.amazonaws.util.AWSRequestMetrics$Field RetryCount -> m
+    com.amazonaws.util.AWSRequestMetrics$Field HttpClientRetryCount -> n
+    com.amazonaws.util.AWSRequestMetrics$Field HttpClientSendRequestTime -> o
+    com.amazonaws.util.AWSRequestMetrics$Field HttpClientReceiveResponseTime -> p
+    com.amazonaws.util.AWSRequestMetrics$Field HttpClientPoolAvailableCount -> q
+    com.amazonaws.util.AWSRequestMetrics$Field HttpClientPoolLeasedCount -> r
+    com.amazonaws.util.AWSRequestMetrics$Field HttpClientPoolPendingCount -> s
+    com.amazonaws.util.AWSRequestMetrics$Field RetryPauseTime -> t
+    com.amazonaws.util.AWSRequestMetrics$Field ServiceEndpoint -> u
+    com.amazonaws.util.AWSRequestMetrics$Field ServiceName -> v
+    com.amazonaws.util.AWSRequestMetrics$Field StatusCode -> w
+    com.amazonaws.util.AWSRequestMetrics$Field[] $VALUES -> x
+    com.amazonaws.util.AWSRequestMetrics$Field[] values() -> values
+    com.amazonaws.util.AWSRequestMetrics$Field valueOf(java.lang.String) -> valueOf
+com.amazonaws.util.AWSRequestMetricsFullSupport -> com.amazonaws.l.c:
+    java.util.Map properties -> b
+    java.util.Map eventsBeingProfiled -> c
+    com.amazonaws.org.apache.commons.logging.Log latencyLogger -> d
+    java.lang.Object KEY_VALUE_SEPARATOR -> e
+    java.lang.Object COMMA_SEPARATOR -> f
+    void startEvent(java.lang.String) -> a
+    void startEvent(com.amazonaws.metrics.MetricType) -> a
+    void endEvent(java.lang.String) -> b
+    void endEvent(com.amazonaws.metrics.MetricType) -> b
+    void incrementCounter(java.lang.String) -> c
+    void incrementCounter(com.amazonaws.metrics.MetricType) -> c
+    void setCounter(java.lang.String,long) -> a
+    void setCounter(com.amazonaws.metrics.MetricType,long) -> a
+    void addProperty(java.lang.String,java.lang.Object) -> a
+    void addProperty(com.amazonaws.metrics.MetricType,java.lang.Object) -> a
+    void log() -> b
+    void keyValueFormat(java.lang.Object,java.lang.Object,java.lang.StringBuilder) -> a
+com.amazonaws.util.AWSServiceMetrics -> com.amazonaws.l.d:
+    com.amazonaws.util.AWSServiceMetrics HttpClientGetConnectionTime -> a
+    java.lang.String serviceName -> b
+    com.amazonaws.util.AWSServiceMetrics[] $VALUES -> c
+    com.amazonaws.util.AWSServiceMetrics[] values() -> values
+    com.amazonaws.util.AWSServiceMetrics valueOf(java.lang.String) -> valueOf
+com.amazonaws.util.AwsHostNameUtils -> com.amazonaws.l.e:
+    java.util.regex.Pattern S3_ENDPOINT_PATTERN -> a
+    java.lang.String parseRegionName(java.lang.String,java.lang.String) -> a
+    java.lang.String parseStandardRegionName(java.lang.String) -> a
+    java.lang.String parseServiceName(java.net.URI) -> a
+com.amazonaws.util.Base64 -> com.amazonaws.l.f:
+    com.amazonaws.util.Base64Codec codec -> a
+    com.amazonaws.util.Base64[] $VALUES -> b
+    com.amazonaws.util.Base64[] values() -> values
+    com.amazonaws.util.Base64 valueOf(java.lang.String) -> valueOf
+    java.lang.String encodeAsString(byte[]) -> a
+    byte[] decode(java.lang.String) -> a
+com.amazonaws.util.Base64Codec -> com.amazonaws.l.g:
+    byte[] ALPAHBETS -> a
+    byte[] encode(byte[]) -> a
+    void encode3bytes(byte[],int,byte[],int) -> a
+    void encode2bytes(byte[],int,byte[],int) -> b
+    void encode1byte(byte[],int,byte[],int) -> c
+    void decode4bytes(byte[],int,byte[],int) -> d
+    void decode1to3bytes(int,byte[],int,byte[],int) -> a
+    byte[] decode(byte[],int) -> a
+    int pos(byte) -> a
+com.amazonaws.util.Base64Codec$LazyHolder -> com.amazonaws.l.h:
+    byte[] DECODED -> a
+    byte[] decodeTable() -> b
+    byte[] access$000() -> a
+com.amazonaws.util.BinaryUtils -> com.amazonaws.l.i:
+    java.lang.String toHex(byte[]) -> a
+    byte[] fromHex(java.lang.String) -> a
+    java.lang.String toBase64(byte[]) -> b
+    byte[] fromBase64(java.lang.String) -> b
+com.amazonaws.util.ClassLoaderHelper -> com.amazonaws.l.j:
+    com.amazonaws.util.ClassLoaderHelper[] $VALUES -> a
+    com.amazonaws.util.ClassLoaderHelper[] values() -> values
+    com.amazonaws.util.ClassLoaderHelper valueOf(java.lang.String) -> valueOf
+    java.lang.Class loadClassViaClasses(java.lang.String,java.lang.Class[]) -> b
+    java.lang.Class loadClassViaContext(java.lang.String) -> a
+    java.lang.Class loadClass(java.lang.String,java.lang.Class[]) -> a
+    java.lang.Class loadClass(java.lang.String,boolean,java.lang.Class[]) -> a
+com.amazonaws.util.Classes -> com.amazonaws.l.k:
+    com.amazonaws.util.Classes[] $VALUES -> a
+    com.amazonaws.util.Classes[] values() -> values
+    com.amazonaws.util.Classes valueOf(java.lang.String) -> valueOf
+    java.lang.Class childClassOf(java.lang.Class,java.lang.Object) -> a
+com.amazonaws.util.CodecUtils -> com.amazonaws.l.l:
+    com.amazonaws.util.CodecUtils[] $VALUES -> a
+    com.amazonaws.util.CodecUtils[] values() -> values
+    com.amazonaws.util.CodecUtils valueOf(java.lang.String) -> valueOf
+    int sanitize(java.lang.String,byte[]) -> a
+    byte[] toBytesDirect(java.lang.String) -> a
+    java.lang.String toStringDirect(byte[]) -> a
+    void sanityCheckLastPos(int,int) -> a
+com.amazonaws.util.DateUtils -> com.amazonaws.l.m:
+    java.util.TimeZone GMT_TIMEZONE -> a
+    java.util.Map sdfMap -> b
+    java.lang.ThreadLocal getSimpleDateFormat(java.lang.String) -> d
+    java.util.Date parse(java.lang.String,java.lang.String) -> a
+    java.lang.String format(java.lang.String,java.util.Date) -> a
+    java.util.Date parseISO8601Date(java.lang.String) -> a
+    java.lang.String formatISO8601Date(java.util.Date) -> a
+    java.util.Date parseRFC822Date(java.lang.String) -> b
+    java.lang.String formatRFC822Date(java.util.Date) -> b
+    java.util.Date parseCompressedISO8601Date(java.lang.String) -> c
+    java.util.TimeZone access$000() -> a
+com.amazonaws.util.DateUtils$1 -> com.amazonaws.l.n:
+    java.lang.String val$pattern -> a
+    java.text.SimpleDateFormat initialValue() -> a
+    java.lang.Object initialValue() -> initialValue
+com.amazonaws.util.HttpUtils -> com.amazonaws.l.o:
+    java.util.regex.Pattern ENCODED_CHARACTERS_PATTERN -> a
+    java.lang.String urlEncode(java.lang.String,boolean) -> a
+    boolean isUsingNonDefaultPort(java.net.URI) -> a
+    boolean usePayloadForQueryParameters(com.amazonaws.Request) -> a
+    java.lang.String encodeParameters(com.amazonaws.Request) -> b
+    java.lang.String appendUri(java.lang.String,java.lang.String) -> a
+    java.lang.String appendUri(java.lang.String,java.lang.String,boolean) -> a
+com.amazonaws.util.IOUtils -> com.amazonaws.l.p:
+    com.amazonaws.util.IOUtils[] $VALUES -> a
+    com.amazonaws.util.IOUtils[] values() -> values
+    com.amazonaws.util.IOUtils valueOf(java.lang.String) -> valueOf
+    byte[] toByteArray(java.io.InputStream) -> a
+    java.lang.String toString(java.io.InputStream) -> b
+com.amazonaws.util.LengthCheckInputStream -> com.amazonaws.l.q:
+    long expectedLength -> a
+    boolean includeSkipped -> b
+    long dataLength -> c
+    long marked -> d
+    int read() -> read
+    int read(byte[],int,int) -> read
+    void mark(int) -> mark
+    void reset() -> reset
+    void checkLength(boolean) -> a
+    long skip(long) -> skip
+com.amazonaws.util.Md5Utils -> com.amazonaws.l.r:
+    byte[] computeMD5Hash(java.io.InputStream) -> a
+    byte[] computeMD5Hash(byte[]) -> a
+    java.lang.String md5AsBase64(byte[]) -> b
+    byte[] computeMD5Hash(java.io.File) -> a
+    java.lang.String md5AsBase64(java.io.File) -> b
+com.amazonaws.util.NamespaceRemovingInputStream -> com.amazonaws.l.s:
+    byte[] lookAheadData -> a
+    boolean hasRemovedNamespace -> b
+    int read() -> read
+    int read(byte[],int,int) -> read
+    int read(byte[]) -> read
+    int matchXmlNamespaceAttribute(java.lang.String) -> a
+com.amazonaws.util.NamespaceRemovingInputStream$StringPrefixSlicer -> com.amazonaws.l.t:
+    java.lang.String s -> a
+    java.lang.String getString() -> a
+    boolean removePrefix(java.lang.String) -> a
+    boolean removeRepeatingPrefix(java.lang.String) -> b
+    boolean removePrefixEndingWith(java.lang.String) -> c
+com.amazonaws.util.SdkRuntime -> com.amazonaws.l.u:
+    com.amazonaws.util.SdkRuntime[] $VALUES -> a
+    com.amazonaws.util.SdkRuntime[] values() -> values
+    com.amazonaws.util.SdkRuntime valueOf(java.lang.String) -> valueOf
+    boolean shouldAbort() -> a
+com.amazonaws.util.ServiceClientHolderInputStream -> com.amazonaws.l.v:
+    com.amazonaws.AmazonWebServiceClient client -> a
+com.amazonaws.util.StringInputStream -> com.amazonaws.l.w:
+com.amazonaws.util.StringUtils -> com.amazonaws.l.x:
+    java.nio.charset.Charset UTF8 -> a
+com.amazonaws.util.TimingInfo -> com.amazonaws.l.y:
+    java.lang.Long startEpochTimeMilli -> a
+    long startTimeNano -> b
+    java.lang.Long endTimeNano -> c
+    com.amazonaws.util.TimingInfo startTiming() -> a
+    com.amazonaws.util.TimingInfo startTimingFullSupport() -> b
+    com.amazonaws.util.TimingInfo startTimingFullSupport(long) -> a
+    com.amazonaws.util.TimingInfo unmodifiableTimingInfo(long,java.lang.Long) -> a
+    long getStartTimeNano() -> c
+    long getEndTimeNano() -> d
+    double getTimeTakenMillis() -> e
+    java.lang.Double getTimeTakenMillisIfKnown() -> f
+    double durationMilliOf(long,long) -> a
+    boolean isEndTimeKnown() -> g
+    java.lang.String toString() -> toString
+    com.amazonaws.util.TimingInfo endTiming() -> h
+    void addSubMeasurement(java.lang.String,com.amazonaws.util.TimingInfo) -> a
+    java.util.Map getSubMeasurementsByName() -> i
+    java.lang.Number getCounter(java.lang.String) -> a
+    java.util.Map getAllCounters() -> j
+    void setCounter(java.lang.String,long) -> a
+    void incrementCounter(java.lang.String) -> b
+com.amazonaws.util.TimingInfoFullSupport -> com.amazonaws.l.z:
+    java.util.Map subMeasurementsByName -> a
+    java.util.Map countersByName -> b
+    void addSubMeasurement(java.lang.String,com.amazonaws.util.TimingInfo) -> a
+    java.util.Map getSubMeasurementsByName() -> i
+    java.lang.Number getCounter(java.lang.String) -> a
+    java.util.Map getAllCounters() -> j
+    void setCounter(java.lang.String,long) -> a
+    void incrementCounter(java.lang.String) -> b
+com.amazonaws.util.TimingInfoUnmodifiable -> com.amazonaws.l.aa:
+    com.amazonaws.util.TimingInfo endTiming() -> h
+com.amazonaws.util.VersionInfoUtils -> com.amazonaws.l.ab:
+    java.lang.String version -> a
+    java.lang.String platform -> b
+    java.lang.String userAgent -> c
+    com.amazonaws.org.apache.commons.logging.Log log -> d
+    java.lang.String getVersion() -> a
+    java.lang.String getPlatform() -> b
+    java.lang.String getUserAgent() -> c
+    void initializeUserAgent() -> e
+    java.lang.String userAgent() -> d
+    java.lang.String replaceSpaces(java.lang.String) -> a
+com.amazonaws.util.XpathUtils -> com.amazonaws.l.ac:
+    com.amazonaws.org.apache.commons.logging.Log log -> a
+    javax.xml.parsers.DocumentBuilderFactory factory -> b
+    org.w3c.dom.Document documentFrom(java.io.InputStream) -> a
+    org.w3c.dom.Document documentFrom(java.lang.String) -> a
+    java.lang.String asString(java.lang.String,org.w3c.dom.Node) -> a
+    boolean isEmpty(org.w3c.dom.Node) -> a
+    java.lang.String evaluateAsString(java.lang.String,org.w3c.dom.Node) -> c
+    org.w3c.dom.Node asNode(java.lang.String,org.w3c.dom.Node) -> b
+    javax.xml.xpath.XPath xpath() -> a
+de.mindpipe.android.logging.log4j.LogCatAppender -> a.a.a.a.a.a:
+    org.apache.log4j.Layout tagLayout -> a
+    void append(org.apache.log4j.spi.LoggingEvent) -> a
+    void close() -> a
+    boolean requiresLayout() -> b
+    org.apache.log4j.Layout getTagLayout() -> c
+de.mindpipe.android.logging.log4j.LogConfigurator -> a.a.a.a.a.b:
+    org.apache.log4j.Level rootLevel -> a
+    java.lang.String filePattern -> b
+    java.lang.String logCatPattern -> c
+    java.lang.String fileName -> d
+    int maxBackupSize -> e
+    long maxFileSize -> f
+    boolean immediateFlush -> g
+    boolean useLogCatAppender -> h
+    boolean useFileAppender -> i
+    boolean resetConfiguration -> j
+    boolean internalDebugging -> k
+    void configure() -> a
+    void configureFileAppender() -> m
+    void configureLogCatAppender() -> n
+    org.apache.log4j.Level getRootLevel() -> b
+    void setRootLevel(org.apache.log4j.Level) -> a
+    java.lang.String getFilePattern() -> c
+    void setFilePattern(java.lang.String) -> a
+    java.lang.String getLogCatPattern() -> d
+    java.lang.String getFileName() -> e
+    void setFileName(java.lang.String) -> b
+    int getMaxBackupSize() -> f
+    long getMaxFileSize() -> g
+    void setMaxFileSize(long) -> a
+    boolean isImmediateFlush() -> h
+    void setImmediateFlush(boolean) -> a
+    boolean isUseFileAppender() -> i
+    boolean isUseLogCatAppender() -> j
+    boolean isResetConfiguration() -> k
+    boolean isInternalDebugging() -> l
+org.apache.commons.codec.Charsets -> b.a.a.a.a:
+    java.nio.charset.Charset ISO_8859_1 -> a
+    java.nio.charset.Charset US_ASCII -> b
+    java.nio.charset.Charset UTF_16 -> c
+    java.nio.charset.Charset UTF_16BE -> d
+    java.nio.charset.Charset UTF_16LE -> e
+    java.nio.charset.Charset UTF_8 -> f
+org.apache.commons.codec.DecoderException -> b.a.a.a.b:
+org.apache.commons.codec.binary.Base64 -> b.a.a.a.a.a:
+    byte[] CHUNK_SEPARATOR -> a
+    byte[] STANDARD_ENCODE_TABLE -> e
+    byte[] URL_SAFE_ENCODE_TABLE -> f
+    byte[] DECODE_TABLE -> g
+    byte[] encodeTable -> h
+    byte[] decodeTable -> i
+    byte[] lineSeparator -> j
+    int decodeSize -> k
+    int encodeSize -> l
+    void decode(byte[],int,int,org.apache.commons.codec.binary.BaseNCodec$Context) -> a
+    byte[] decodeBase64(byte[]) -> a
+    boolean isInAlphabet(byte) -> a
+org.apache.commons.codec.binary.BaseNCodec -> b.a.a.a.a.b:
+    byte PAD -> b
+    byte pad -> c
+    int unencodedBlockSize -> a
+    int encodedBlockSize -> e
+    int lineLength -> d
+    int chunkSeparatorLength -> f
+    int available(org.apache.commons.codec.binary.BaseNCodec$Context) -> a
+    int getDefaultBufferSize() -> a
+    byte[] resizeBuffer(org.apache.commons.codec.binary.BaseNCodec$Context) -> b
+    byte[] ensureBufferSize(int,org.apache.commons.codec.binary.BaseNCodec$Context) -> a
+    int readResults(byte[],int,int,org.apache.commons.codec.binary.BaseNCodec$Context) -> b
+    byte[] decode(byte[]) -> b
+    void decode(byte[],int,int,org.apache.commons.codec.binary.BaseNCodec$Context) -> a
+    boolean isInAlphabet(byte) -> a
+    boolean containsAlphabetOrPad(byte[]) -> c
+org.apache.commons.codec.binary.BaseNCodec$Context -> b.a.a.a.a.c:
+    int ibitWorkArea -> a
+    long lbitWorkArea -> b
+    byte[] buffer -> c
+    int pos -> d
+    int readPos -> e
+    boolean eof -> f
+    int currentLinePos -> g
+    int modulus -> h
+    java.lang.String toString() -> toString
+org.apache.commons.codec.binary.Hex -> b.a.a.a.a.d:
+    java.nio.charset.Charset DEFAULT_CHARSET -> a
+    char[] DIGITS_LOWER -> b
+    char[] DIGITS_UPPER -> c
+    java.nio.charset.Charset charset -> d
+    byte[] decodeHex(char[]) -> a
+    char[] encodeHex(byte[]) -> a
+    char[] encodeHex(byte[],boolean) -> a
+    char[] encodeHex(byte[],char[]) -> a
+    int toDigit(char,int) -> a
+    java.lang.String toString() -> toString
+org.apache.commons.codec.binary.StringUtils -> b.a.a.a.a.e:
+    java.lang.String newString(byte[],java.nio.charset.Charset) -> a
+    java.lang.String newStringUtf8(byte[]) -> a
+org.apache.log4j.Appender -> b.a.b.a:
+    void addFilter(org.apache.log4j.spi.Filter) -> a
+    void close() -> a
+    void doAppend(org.apache.log4j.spi.LoggingEvent) -> b
+    java.lang.String getName() -> d
+    void setErrorHandler(org.apache.log4j.spi.ErrorHandler) -> a
+    void setLayout(org.apache.log4j.Layout) -> a
+    void setName(java.lang.String) -> a
+    boolean requiresLayout() -> b
+org.apache.log4j.AppenderSkeleton -> b.a.b.b:
+    org.apache.log4j.Layout layout -> b
+    java.lang.String name -> c
+    org.apache.log4j.Priority threshold -> d
+    org.apache.log4j.spi.ErrorHandler errorHandler -> e
+    org.apache.log4j.spi.Filter headFilter -> f
+    org.apache.log4j.spi.Filter tailFilter -> g
+    boolean closed -> h
+    void activateOptions() -> e
+    void addFilter(org.apache.log4j.spi.Filter) -> a
+    void append(org.apache.log4j.spi.LoggingEvent) -> a
+    void finalize() -> finalize
+    org.apache.log4j.Layout getLayout() -> f
+    java.lang.String getName() -> d
+    boolean isAsSevereAsThreshold(org.apache.log4j.Priority) -> a
+    void doAppend(org.apache.log4j.spi.LoggingEvent) -> b
+    void setErrorHandler(org.apache.log4j.spi.ErrorHandler) -> a
+    void setLayout(org.apache.log4j.Layout) -> a
+    void setName(java.lang.String) -> a
+org.apache.log4j.Category -> b.a.b.c:
+    java.lang.String name -> a
+    org.apache.log4j.Level level -> b
+    org.apache.log4j.Category parent -> c
+    java.lang.String FQCN -> i
+    java.util.ResourceBundle resourceBundle -> d
+    org.apache.log4j.spi.LoggerRepository repository -> e
+    org.apache.log4j.helpers.AppenderAttachableImpl aai -> f
+    boolean additive -> g
+    java.lang.Class class$org$apache$log4j$Category -> h
+    void addAppender(org.apache.log4j.Appender) -> a
+    void callAppenders(org.apache.log4j.spi.LoggingEvent) -> a
+    void closeNestedAppenders() -> a
+    void debug(java.lang.Object) -> a
+    void error(java.lang.Object) -> b
+    void error(java.lang.Object,java.lang.Throwable) -> a
+    void forcedLog(java.lang.String,org.apache.log4j.Priority,java.lang.Object,java.lang.Throwable) -> a
+    java.util.Enumeration getAllAppenders() -> b
+    org.apache.log4j.Level getEffectiveLevel() -> c
+    org.apache.log4j.spi.LoggerRepository getLoggerRepository() -> d
+    java.lang.String getName() -> e
+    org.apache.log4j.Level getLevel() -> f
+    void info(java.lang.Object) -> c
+    void fireRemoveAppenderEvent(org.apache.log4j.Appender) -> b
+    void removeAllAppenders() -> g
+    void setAdditivity(boolean) -> a
+    void setHierarchy(org.apache.log4j.spi.LoggerRepository) -> a
+    void setLevel(org.apache.log4j.Level) -> a
+    void setResourceBundle(java.util.ResourceBundle) -> a
+    void warn(java.lang.Object) -> d
+    java.lang.Class class$(java.lang.String) -> a
+org.apache.log4j.CategoryKey -> b.a.b.d:
+    java.lang.String name -> a
+    int hashCache -> b
+    java.lang.Class class$org$apache$log4j$CategoryKey -> c
+    int hashCode() -> hashCode
+    boolean equals(java.lang.Object) -> equals
+    java.lang.Class class$(java.lang.String) -> a
+org.apache.log4j.DefaultCategoryFactory -> b.a.b.e:
+    org.apache.log4j.Logger makeNewLoggerInstance(java.lang.String) -> a
+org.apache.log4j.DefaultThrowableRenderer -> b.a.b.f:
+    java.lang.String[] doRender(java.lang.Throwable) -> a
+    java.lang.String[] render(java.lang.Throwable) -> b
+org.apache.log4j.FileAppender -> b.a.b.g:
+    boolean fileAppend -> a
+    java.lang.String fileName -> i
+    boolean bufferedIO -> j
+    int bufferSize -> k
+    void activateOptions() -> e
+    void closeFile() -> c
+    void setFile(java.lang.String,boolean,boolean,int) -> a
+    void setQWForFiles(java.io.Writer) -> a
+    void reset() -> g
+org.apache.log4j.Hierarchy -> b.a.b.h:
+    org.apache.log4j.spi.LoggerFactory defaultFactory -> h
+    java.util.Vector listeners -> i
+    java.util.Hashtable ht -> a
+    org.apache.log4j.Logger root -> b
+    org.apache.log4j.or.RendererMap rendererMap -> c
+    int thresholdInt -> d
+    org.apache.log4j.Level threshold -> e
+    boolean emittedNoAppenderWarning -> f
+    boolean emittedNoResourceBundleWarning -> g
+    org.apache.log4j.spi.ThrowableRenderer throwableRenderer -> j
+    void emitNoAppenderWarning(org.apache.log4j.Category) -> a
+    void setThreshold(org.apache.log4j.Level) -> a
+    void fireAddAppenderEvent(org.apache.log4j.Category,org.apache.log4j.Appender) -> a
+    void fireRemoveAppenderEvent(org.apache.log4j.Category,org.apache.log4j.Appender) -> b
+    org.apache.log4j.Level getThreshold() -> a
+    org.apache.log4j.Logger getLogger(java.lang.String) -> a
+    org.apache.log4j.Logger getLogger(java.lang.String,org.apache.log4j.spi.LoggerFactory) -> a
+    java.util.Enumeration getCurrentLoggers() -> b
+    org.apache.log4j.or.RendererMap getRendererMap() -> c
+    org.apache.log4j.Logger getRootLogger() -> d
+    boolean isDisabled(int) -> a
+    void resetConfiguration() -> e
+    void setRenderer(java.lang.Class,org.apache.log4j.or.ObjectRenderer) -> a
+    void setThrowableRenderer(org.apache.log4j.spi.ThrowableRenderer) -> a
+    org.apache.log4j.spi.ThrowableRenderer getThrowableRenderer() -> f
+    void shutdown() -> g
+    void updateParents(org.apache.log4j.Logger) -> a
+    void updateChildren(org.apache.log4j.ProvisionNode,org.apache.log4j.Logger) -> a
+org.apache.log4j.Layout -> b.a.b.i:
+    java.lang.String LINE_SEP -> a
+    int LINE_SEP_LEN -> b
+    java.lang.String format(org.apache.log4j.spi.LoggingEvent) -> a
+    java.lang.String getHeader() -> a
+    java.lang.String getFooter() -> b
+    boolean ignoresThrowable() -> c
+org.apache.log4j.Level -> b.a.b.j:
+    org.apache.log4j.Level OFF -> a
+    org.apache.log4j.Level FATAL -> b
+    org.apache.log4j.Level ERROR -> c
+    org.apache.log4j.Level WARN -> d
+    org.apache.log4j.Level INFO -> e
+    org.apache.log4j.Level DEBUG -> f
+    org.apache.log4j.Level TRACE -> g
+    org.apache.log4j.Level ALL -> h
+    org.apache.log4j.Level toLevel(java.lang.String,org.apache.log4j.Level) -> a
+org.apache.log4j.LogManager -> b.a.b.k:
+    java.lang.Object guard -> a
+    org.apache.log4j.spi.RepositorySelector repositorySelector -> b
+    boolean isLikelySafeScenario(java.lang.Exception) -> a
+    org.apache.log4j.spi.LoggerRepository getLoggerRepository() -> a
+    org.apache.log4j.Logger getRootLogger() -> b
+    org.apache.log4j.Logger getLogger(java.lang.String) -> a
+org.apache.log4j.Logger -> b.a.b.l:
+    java.lang.String FQCN -> j
+    java.lang.Class class$org$apache$log4j$Logger -> i
+    org.apache.log4j.Logger getLogger(java.lang.Class) -> a
+    org.apache.log4j.Logger getRootLogger() -> h
+    java.lang.Class class$(java.lang.String) -> b
+org.apache.log4j.MDC -> b.a.b.m:
+    org.apache.log4j.MDC mdc -> a
+    boolean java1 -> b
+    java.lang.Object tlm -> c
+    java.lang.reflect.Method removeMethod -> e
+    java.lang.Class class$java$lang$ThreadLocal -> d
+    java.lang.Object get(java.lang.String) -> a
+    java.util.Hashtable getContext() -> a
+    java.lang.Object get0(java.lang.String) -> c
+    java.util.Hashtable getContext0() -> b
+    java.lang.Class class$(java.lang.String) -> b
+org.apache.log4j.NDC -> b.a.b.n:
+    java.util.Hashtable ht -> a
+    int pushCounter -> b
+    java.util.Stack getCurrentStack() -> b
+    java.lang.String get() -> a
+org.apache.log4j.NDC$DiagnosticContext -> b.a.b.o:
+    java.lang.String fullMessage -> a
+org.apache.log4j.NameValue -> b.a.b.p:
+    java.lang.String key -> a
+    java.lang.String value -> b
+    java.lang.String toString() -> toString
+org.apache.log4j.PatternLayout -> b.a.b.q:
+    int BUF_SIZE -> c
+    int MAX_CAPACITY -> d
+    java.lang.StringBuffer sbuf -> e
+    java.lang.String pattern -> f
+    org.apache.log4j.helpers.PatternConverter head -> g
+    void activateOptions() -> e
+    boolean ignoresThrowable() -> c
+    org.apache.log4j.helpers.PatternParser createPatternParser(java.lang.String) -> a
+    java.lang.String format(org.apache.log4j.spi.LoggingEvent) -> a
+org.apache.log4j.Priority -> b.a.b.r:
+    int level -> i
+    java.lang.String levelStr -> j
+    int syslogEquivalent -> k
+    org.apache.log4j.Priority FATAL -> l
+    org.apache.log4j.Priority ERROR -> m
+    org.apache.log4j.Priority WARN -> n
+    org.apache.log4j.Priority INFO -> o
+    org.apache.log4j.Priority DEBUG -> p
+    boolean equals(java.lang.Object) -> equals
+    boolean isGreaterOrEqual(org.apache.log4j.Priority) -> a
+    java.lang.String toString() -> toString
+    int toInt() -> a
+org.apache.log4j.PropertyConfigurator -> b.a.b.s:
+    java.util.Hashtable registry -> a
+    org.apache.log4j.spi.LoggerRepository repository -> i
+    org.apache.log4j.spi.LoggerFactory loggerFactory -> b
+    java.lang.Class class$org$apache$log4j$spi$LoggerFactory -> c
+    java.lang.Class class$org$apache$log4j$spi$ThrowableRenderer -> d
+    java.lang.Class class$org$apache$log4j$Appender -> e
+    java.lang.Class class$org$apache$log4j$Layout -> f
+    java.lang.Class class$org$apache$log4j$spi$ErrorHandler -> g
+    java.lang.Class class$org$apache$log4j$spi$Filter -> h
+    void doConfigure(java.util.Properties,org.apache.log4j.spi.LoggerRepository) -> a
+    void doConfigure(java.net.URL,org.apache.log4j.spi.LoggerRepository) -> a
+    void configureLoggerFactory(java.util.Properties) -> a
+    void configureRootCategory(java.util.Properties,org.apache.log4j.spi.LoggerRepository) -> b
+    void parseCatsAndRenderers(java.util.Properties,org.apache.log4j.spi.LoggerRepository) -> c
+    void parseAdditivityForLogger(java.util.Properties,org.apache.log4j.Logger,java.lang.String) -> a
+    void parseCategory(java.util.Properties,org.apache.log4j.Logger,java.lang.String,java.lang.String,java.lang.String) -> a
+    org.apache.log4j.Appender parseAppender(java.util.Properties,java.lang.String) -> a
+    void parseErrorHandler(org.apache.log4j.spi.ErrorHandler,java.lang.String,java.util.Properties,org.apache.log4j.spi.LoggerRepository) -> a
+    void parseAppenderFilters(java.util.Properties,java.lang.String,org.apache.log4j.Appender) -> a
+    void registryPut(org.apache.log4j.Appender) -> a
+    org.apache.log4j.Appender registryGet(java.lang.String) -> a
+    java.lang.Class class$(java.lang.String) -> b
+org.apache.log4j.ProvisionNode -> b.a.b.t:
+org.apache.log4j.RollingFileAppender -> b.a.b.u:
+    long maxFileSize -> l
+    int maxBackupIndex -> m
+    long nextRollover -> q
+    void rollOver() -> h
+    void setFile(java.lang.String,boolean,boolean,int) -> a
+    void setMaxBackupIndex(int) -> a
+    void setMaximumFileSize(long) -> a
+    void setQWForFiles(java.io.Writer) -> a
+    void subAppend(org.apache.log4j.spi.LoggingEvent) -> c
+org.apache.log4j.SortedKeyEnumeration -> b.a.b.v:
+    java.util.Enumeration e -> a
+    boolean hasMoreElements() -> hasMoreElements
+    java.lang.Object nextElement() -> nextElement
+org.apache.log4j.WriterAppender -> b.a.b.w:
+    boolean immediateFlush -> n
+    java.lang.String encoding -> o
+    org.apache.log4j.helpers.QuietWriter qw -> p
+    void setImmediateFlush(boolean) -> a
+    void activateOptions() -> e
+    void append(org.apache.log4j.spi.LoggingEvent) -> a
+    boolean checkEntryConditions() -> i
+    void close() -> a
+    void closeWriter() -> j
+    java.io.OutputStreamWriter createWriter(java.io.OutputStream) -> a
+    java.lang.String getEncoding() -> k
+    void setErrorHandler(org.apache.log4j.spi.ErrorHandler) -> a
+    void subAppend(org.apache.log4j.spi.LoggingEvent) -> c
+    boolean requiresLayout() -> b
+    void reset() -> g
+    void writeFooter() -> l
+    void writeHeader() -> m
+    boolean shouldFlush(org.apache.log4j.spi.LoggingEvent) -> d
+org.apache.log4j.config.PropertySetter -> b.a.b.a.a:
+    java.lang.Object obj -> a
+    java.beans.PropertyDescriptor[] props -> b
+    java.lang.Class class$org$apache$log4j$spi$OptionHandler -> c
+    java.lang.Class class$java$lang$String -> d
+    java.lang.Class class$org$apache$log4j$Priority -> e
+    java.lang.Class class$org$apache$log4j$spi$ErrorHandler -> f
+    void introspect() -> a
+    void setProperties(java.lang.Object,java.util.Properties,java.lang.String) -> a
+    void setProperties(java.util.Properties,java.lang.String) -> a
+    void setProperty(java.lang.String,java.lang.String) -> a
+    void setProperty(java.beans.PropertyDescriptor,java.lang.String,java.lang.String) -> a
+    java.lang.Object convertArg(java.lang.String,java.lang.Class) -> a
+    java.beans.PropertyDescriptor getPropertyDescriptor(java.lang.String) -> a
+    void activate() -> b
+    java.lang.Class class$(java.lang.String) -> b
+org.apache.log4j.config.PropertySetterException -> b.a.b.a.b:
+    java.lang.Throwable rootCause -> a
+    java.lang.String getMessage() -> getMessage
+org.apache.log4j.helpers.AbsoluteTimeDateFormat -> b.a.b.b.a:
+    long previousTime -> a
+    char[] previousTimeWithoutMillis -> b
+    java.lang.StringBuffer format(java.util.Date,java.lang.StringBuffer,java.text.FieldPosition) -> format
+    java.util.Date parse(java.lang.String,java.text.ParsePosition) -> parse
+org.apache.log4j.helpers.AppenderAttachableImpl -> b.a.b.b.b:
+    java.util.Vector appenderList -> a
+    void addAppender(org.apache.log4j.Appender) -> a
+    int appendLoopOnAppenders(org.apache.log4j.spi.LoggingEvent) -> a
+    java.util.Enumeration getAllAppenders() -> a
+    void removeAllAppenders() -> b
+org.apache.log4j.helpers.CountingQuietWriter -> b.a.b.b.c:
+    long count -> a
+    void write(java.lang.String) -> write
+    long getCount() -> a
+    void setCount(long) -> a
+org.apache.log4j.helpers.DateTimeDateFormat -> b.a.b.b.d:
+    java.lang.String[] shortMonths -> a
+    java.lang.StringBuffer format(java.util.Date,java.lang.StringBuffer,java.text.FieldPosition) -> format
+    java.util.Date parse(java.lang.String,java.text.ParsePosition) -> parse
+org.apache.log4j.helpers.FormattingInfo -> b.a.b.b.e:
+    int min -> a
+    int max -> b
+    boolean leftAlign -> c
+    void reset() -> a
+org.apache.log4j.helpers.ISO8601DateFormat -> b.a.b.b.f:
+    long lastTime -> a
+    char[] lastTimeString -> b
+    java.lang.StringBuffer format(java.util.Date,java.lang.StringBuffer,java.text.FieldPosition) -> format
+    java.util.Date parse(java.lang.String,java.text.ParsePosition) -> parse
+org.apache.log4j.helpers.Loader -> b.a.b.b.g:
+    boolean java1 -> c
+    boolean ignoreTCL -> d
+    java.lang.Class class$org$apache$log4j$helpers$Loader -> a
+    java.lang.Class class$java$lang$Thread -> b
+    java.net.URL getResource(java.lang.String) -> a
+    boolean isJava1() -> a
+    java.lang.ClassLoader getTCL() -> b
+    java.lang.Class loadClass(java.lang.String) -> b
+    java.lang.Class class$(java.lang.String) -> c
+org.apache.log4j.helpers.LogLog -> b.a.b.b.h:
+    boolean debugEnabled -> a
+    boolean quietMode -> b
+    void setInternalDebugging(boolean) -> a
+    void debug(java.lang.String) -> a
+    void debug(java.lang.String,java.lang.Throwable) -> a
+    void error(java.lang.String) -> b
+    void error(java.lang.String,java.lang.Throwable) -> b
+    void warn(java.lang.String) -> c
+    void warn(java.lang.String,java.lang.Throwable) -> c
+org.apache.log4j.helpers.NullEnumeration -> b.a.b.b.i:
+    org.apache.log4j.helpers.NullEnumeration instance -> a
+    org.apache.log4j.helpers.NullEnumeration getInstance() -> a
+    boolean hasMoreElements() -> hasMoreElements
+    java.lang.Object nextElement() -> nextElement
+org.apache.log4j.helpers.OnlyOnceErrorHandler -> b.a.b.b.j:
+    java.lang.String WARN_PREFIX -> a
+    java.lang.String ERROR_PREFIX -> b
+    boolean firstTime -> c
+    void setLogger(org.apache.log4j.Logger) -> a
+    void activateOptions() -> e
+    void error(java.lang.String,java.lang.Exception,int) -> a
+    void error(java.lang.String,java.lang.Exception,int,org.apache.log4j.spi.LoggingEvent) -> a
+    void error(java.lang.String) -> a
+    void setBackupAppender(org.apache.log4j.Appender) -> a
+org.apache.log4j.helpers.OptionConverter -> b.a.b.b.k:
+    java.lang.String DELIM_START -> a
+    char DELIM_STOP -> b
+    int DELIM_START_LEN -> c
+    int DELIM_STOP_LEN -> d
+    java.lang.Class class$java$lang$String -> e
+    java.lang.Class class$org$apache$log4j$Level -> f
+    java.lang.Class class$org$apache$log4j$spi$Configurator -> g
+    java.lang.String getSystemProperty(java.lang.String,java.lang.String) -> a
+    java.lang.Object instantiateByKey(java.util.Properties,java.lang.String,java.lang.Class,java.lang.Object) -> a
+    boolean toBoolean(java.lang.String,boolean) -> a
+    org.apache.log4j.Level toLevel(java.lang.String,org.apache.log4j.Level) -> a
+    java.lang.String findAndSubst(java.lang.String,java.util.Properties) -> a
+    java.lang.Object instantiateByClassName(java.lang.String,java.lang.Class,java.lang.Object) -> a
+    java.lang.String substVars(java.lang.String,java.util.Properties) -> b
+    void selectAndConfigure(java.net.URL,java.lang.String,org.apache.log4j.spi.LoggerRepository) -> a
+    java.lang.Class class$(java.lang.String) -> a
+org.apache.log4j.helpers.PatternConverter -> b.a.b.b.l:
+    org.apache.log4j.helpers.PatternConverter next -> a
+    int min -> b
+    int max -> c
+    boolean leftAlign -> d
+    java.lang.String[] SPACES -> e
+    java.lang.String convert(org.apache.log4j.spi.LoggingEvent) -> a
+    void format(java.lang.StringBuffer,org.apache.log4j.spi.LoggingEvent) -> a
+    void spacePad(java.lang.StringBuffer,int) -> a
+org.apache.log4j.helpers.PatternParser -> b.a.b.b.m:
+    int state -> a
+    java.lang.StringBuffer currentLiteral -> b
+    int patternLength -> c
+    int i -> d
+    org.apache.log4j.helpers.PatternConverter head -> e
+    org.apache.log4j.helpers.PatternConverter tail -> f
+    org.apache.log4j.helpers.FormattingInfo formattingInfo -> g
+    java.lang.String pattern -> h
+    java.lang.Class class$java$text$DateFormat -> i
+    void addToList(org.apache.log4j.helpers.PatternConverter) -> b
+    java.lang.String extractOption() -> a
+    int extractPrecisionOption() -> b
+    org.apache.log4j.helpers.PatternConverter parse() -> c
+    void finalizeConverter(char) -> a
+    void addConverter(org.apache.log4j.helpers.PatternConverter) -> a
+    java.lang.Class class$(java.lang.String) -> a
+org.apache.log4j.helpers.PatternParser$BasicPatternConverter -> b.a.b.b.n:
+    int type -> f
+    java.lang.String convert(org.apache.log4j.spi.LoggingEvent) -> a
+org.apache.log4j.helpers.PatternParser$CategoryPatternConverter -> b.a.b.b.o:
+    org.apache.log4j.helpers.PatternParser this$0 -> g
+    java.lang.String getFullyQualifiedName(org.apache.log4j.spi.LoggingEvent) -> b
+org.apache.log4j.helpers.PatternParser$ClassNamePatternConverter -> b.a.b.b.p:
+    org.apache.log4j.helpers.PatternParser this$0 -> g
+    java.lang.String getFullyQualifiedName(org.apache.log4j.spi.LoggingEvent) -> b
+org.apache.log4j.helpers.PatternParser$DatePatternConverter -> b.a.b.b.q:
+    java.text.DateFormat df -> f
+    java.util.Date date -> g
+    java.lang.String convert(org.apache.log4j.spi.LoggingEvent) -> a
+org.apache.log4j.helpers.PatternParser$LiteralPatternConverter -> b.a.b.b.r:
+    java.lang.String literal -> f
+    void format(java.lang.StringBuffer,org.apache.log4j.spi.LoggingEvent) -> a
+    java.lang.String convert(org.apache.log4j.spi.LoggingEvent) -> a
+org.apache.log4j.helpers.PatternParser$LocationPatternConverter -> b.a.b.b.s:
+    int type -> f
+    org.apache.log4j.helpers.PatternParser this$0 -> g
+    java.lang.String convert(org.apache.log4j.spi.LoggingEvent) -> a
+org.apache.log4j.helpers.PatternParser$MDCPatternConverter -> b.a.b.b.t:
+    java.lang.String key -> f
+    java.lang.String convert(org.apache.log4j.spi.LoggingEvent) -> a
+org.apache.log4j.helpers.PatternParser$NamedPatternConverter -> b.a.b.b.u:
+    int precision -> f
+    java.lang.String getFullyQualifiedName(org.apache.log4j.spi.LoggingEvent) -> b
+    java.lang.String convert(org.apache.log4j.spi.LoggingEvent) -> a
+org.apache.log4j.helpers.QuietWriter -> b.a.b.b.v:
+    org.apache.log4j.spi.ErrorHandler errorHandler -> b
+    void write(java.lang.String) -> write
+    void flush() -> flush
+    void setErrorHandler(org.apache.log4j.spi.ErrorHandler) -> a
+org.apache.log4j.helpers.ThreadLocalMap -> b.a.b.b.w:
+    java.lang.Object childValue(java.lang.Object) -> childValue
+org.apache.log4j.or.DefaultRenderer -> b.a.b.c.a:
+    java.lang.String doRender(java.lang.Object) -> a
+org.apache.log4j.or.ObjectRenderer -> b.a.b.c.b:
+    java.lang.String doRender(java.lang.Object) -> a
+org.apache.log4j.or.RendererMap -> b.a.b.c.c:
+    java.util.Hashtable map -> a
+    org.apache.log4j.or.ObjectRenderer defaultRenderer -> b
+    java.lang.Class class$org$apache$log4j$or$ObjectRenderer -> c
+    void addRenderer(org.apache.log4j.spi.RendererSupport,java.lang.String,java.lang.String) -> a
+    java.lang.String findAndRender(java.lang.Object) -> a
+    org.apache.log4j.or.ObjectRenderer get(java.lang.Class) -> a
+    org.apache.log4j.or.ObjectRenderer searchInterfaces(java.lang.Class) -> b
+    void clear() -> a
+    void put(java.lang.Class,org.apache.log4j.or.ObjectRenderer) -> a
+    java.lang.Class class$(java.lang.String) -> a
+org.apache.log4j.spi.AppenderAttachable -> b.a.b.d.a:
+org.apache.log4j.spi.Configurator -> b.a.b.d.b:
+    void doConfigure(java.net.URL,org.apache.log4j.spi.LoggerRepository) -> a
+org.apache.log4j.spi.DefaultRepositorySelector -> b.a.b.d.c:
+    org.apache.log4j.spi.LoggerRepository repository -> a
+    org.apache.log4j.spi.LoggerRepository getLoggerRepository() -> a
+org.apache.log4j.spi.ErrorHandler -> b.a.b.d.d:
+    void setLogger(org.apache.log4j.Logger) -> a
+    void error(java.lang.String,java.lang.Exception,int) -> a
+    void error(java.lang.String) -> a
+    void setBackupAppender(org.apache.log4j.Appender) -> a
+org.apache.log4j.spi.Filter -> b.a.b.d.e:
+    org.apache.log4j.spi.Filter next -> a
+    void activateOptions() -> e
+    int decide(org.apache.log4j.spi.LoggingEvent) -> a
+    void setNext(org.apache.log4j.spi.Filter) -> a
+    org.apache.log4j.spi.Filter getNext() -> a
+org.apache.log4j.spi.HierarchyEventListener -> b.a.b.d.f:
+    void addAppenderEvent(org.apache.log4j.Category,org.apache.log4j.Appender) -> a
+    void removeAppenderEvent(org.apache.log4j.Category,org.apache.log4j.Appender) -> b
+org.apache.log4j.spi.LocationInfo -> b.a.b.d.g:
+    java.lang.String lineNumber -> a
+    java.lang.String fileName -> b
+    java.lang.String className -> c
+    java.lang.String methodName -> d
+    java.lang.String fullInfo -> e
+    java.io.StringWriter sw -> i
+    java.io.PrintWriter pw -> j
+    java.lang.reflect.Method getStackTraceMethod -> k
+    java.lang.reflect.Method getClassNameMethod -> l
+    java.lang.reflect.Method getMethodNameMethod -> m
+    java.lang.reflect.Method getFileNameMethod -> n
+    java.lang.reflect.Method getLineNumberMethod -> o
+    org.apache.log4j.spi.LocationInfo NA_LOCATION_INFO -> f
+    boolean inVisualAge -> g
+    java.lang.Class class$java$lang$Throwable -> h
+    void appendFragment(java.lang.StringBuffer,java.lang.String) -> a
+    java.lang.String getClassName() -> a
+    java.lang.String getFileName() -> b
+    java.lang.String getLineNumber() -> c
+    java.lang.String getMethodName() -> d
+    java.lang.Class class$(java.lang.String) -> a
+org.apache.log4j.spi.LoggerFactory -> b.a.b.d.h:
+    org.apache.log4j.Logger makeNewLoggerInstance(java.lang.String) -> a
+org.apache.log4j.spi.LoggerRepository -> b.a.b.d.i:
+    boolean isDisabled(int) -> a
+    void setThreshold(org.apache.log4j.Level) -> a
+    void emitNoAppenderWarning(org.apache.log4j.Category) -> a
+    org.apache.log4j.Level getThreshold() -> a
+    org.apache.log4j.Logger getLogger(java.lang.String) -> a
+    org.apache.log4j.Logger getLogger(java.lang.String,org.apache.log4j.spi.LoggerFactory) -> a
+    org.apache.log4j.Logger getRootLogger() -> d
+    void fireAddAppenderEvent(org.apache.log4j.Category,org.apache.log4j.Appender) -> a
+    void resetConfiguration() -> e
+org.apache.log4j.spi.LoggingEvent -> b.a.b.d.j:
+    long startTime -> h
+    java.lang.String fqnOfCategoryClass -> a
+    org.apache.log4j.Category logger -> i
+    java.lang.String categoryName -> b
+    org.apache.log4j.Priority level -> c
+    java.lang.String ndc -> j
+    java.util.Hashtable mdcCopy -> k
+    boolean ndcLookupRequired -> l
+    boolean mdcCopyLookupRequired -> m
+    java.lang.Object message -> n
+    java.lang.String renderedMessage -> o
+    java.lang.String threadName -> p
+    org.apache.log4j.spi.ThrowableInformation throwableInfo -> q
+    long timeStamp -> d
+    org.apache.log4j.spi.LocationInfo locationInfo -> r
+    java.lang.Integer[] PARAM_ARRAY -> e
+    java.lang.Class[] TO_LEVEL_PARAMS -> f
+    java.util.Hashtable methodCache -> g
+    org.apache.log4j.spi.LocationInfo getLocationInformation() -> a
+    org.apache.log4j.Level getLevel() -> b
+    java.lang.String getLoggerName() -> c
+    java.lang.String getNDC() -> d
+    java.lang.Object getMDC(java.lang.String) -> a
+    void getMDCCopy() -> e
+    java.lang.String getRenderedMessage() -> f
+    long getStartTime() -> g
+    java.lang.String getThreadName() -> h
+    org.apache.log4j.spi.ThrowableInformation getThrowableInformation() -> i
+    java.lang.String[] getThrowableStrRep() -> j
+    java.util.Map getProperties() -> k
+org.apache.log4j.spi.NOPLogger -> b.a.b.d.k:
+    void addAppender(org.apache.log4j.Appender) -> a
+    void callAppenders(org.apache.log4j.spi.LoggingEvent) -> a
+    void closeNestedAppenders() -> a
+    void debug(java.lang.Object) -> a
+    void error(java.lang.Object) -> b
+    void error(java.lang.Object,java.lang.Throwable) -> a
+    java.util.Enumeration getAllAppenders() -> b
+    org.apache.log4j.Level getEffectiveLevel() -> c
+    void info(java.lang.Object) -> c
+    void removeAllAppenders() -> g
+    void setLevel(org.apache.log4j.Level) -> a
+    void setResourceBundle(java.util.ResourceBundle) -> a
+    void warn(java.lang.Object) -> d
+org.apache.log4j.spi.NOPLoggerRepository -> b.a.b.d.l:
+    boolean isDisabled(int) -> a
+    void setThreshold(org.apache.log4j.Level) -> a
+    void emitNoAppenderWarning(org.apache.log4j.Category) -> a
+    org.apache.log4j.Level getThreshold() -> a
+    org.apache.log4j.Logger getLogger(java.lang.String) -> a
+    org.apache.log4j.Logger getLogger(java.lang.String,org.apache.log4j.spi.LoggerFactory) -> a
+    org.apache.log4j.Logger getRootLogger() -> d
+    void fireAddAppenderEvent(org.apache.log4j.Category,org.apache.log4j.Appender) -> a
+    void resetConfiguration() -> e
+org.apache.log4j.spi.OptionHandler -> b.a.b.d.m:
+    void activateOptions() -> e
+org.apache.log4j.spi.RendererSupport -> b.a.b.d.n:
+    org.apache.log4j.or.RendererMap getRendererMap() -> c
+    void setRenderer(java.lang.Class,org.apache.log4j.or.ObjectRenderer) -> a
+org.apache.log4j.spi.RepositorySelector -> b.a.b.d.o:
+    org.apache.log4j.spi.LoggerRepository getLoggerRepository() -> a
+org.apache.log4j.spi.RootLogger -> b.a.b.d.p:
+    void setLevel(org.apache.log4j.Level) -> a
+org.apache.log4j.spi.ThrowableInformation -> b.a.b.d.q:
+    java.lang.Throwable throwable -> a
+    org.apache.log4j.Category category -> b
+    java.lang.String[] rep -> c
+    java.lang.Throwable getThrowable() -> a
+    java.lang.String[] getThrowableStrRep() -> b
+org.apache.log4j.spi.ThrowableRenderer -> b.a.b.d.r:
+    java.lang.String[] doRender(java.lang.Throwable) -> a
+org.apache.log4j.spi.ThrowableRendererSupport -> b.a.b.d.s:
+    org.apache.log4j.spi.ThrowableRenderer getThrowableRenderer() -> f
+    void setThrowableRenderer(org.apache.log4j.spi.ThrowableRenderer) -> a
