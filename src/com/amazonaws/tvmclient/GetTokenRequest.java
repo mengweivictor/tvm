@@ -24,18 +24,25 @@ public class GetTokenRequest extends Request
     private final String key;
     private final boolean useSSL;
     
-    public GetTokenRequest( final String endpoint, final boolean useSSL, final String uid, final String key ) 
+    public GetTokenRequest( final String endpoint, 
+                            final boolean useSSL, 
+                            final String uid, 
+                            final String key ) 
     {
         this.endpoint = endpoint;
         this.useSSL = useSSL;
+        
+        
+        
         this.uid = uid;
         this.key = key;
+        
         /*this key is device id!!!*/
     }
     
     public String buildRequestUrl() 
     {
-        //是否使用SSL
+        //脢脟路帽脢鹿脫脙SSL
         StringBuilder builder = new StringBuilder( ( this.useSSL ? "https://" : "http://" ) );
         
         builder.append( this.endpoint );
