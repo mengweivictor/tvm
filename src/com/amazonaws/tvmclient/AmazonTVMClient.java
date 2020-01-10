@@ -39,20 +39,20 @@ public class AmazonTVMClient
     /**
      * The endpoint for the Token Vending Machine to connect to.
      * 
-     * Ä¿Ç°ÊÇTVM EC2·şÎñÆ÷µÄ¹«ÍøIPµØÖ·
+     * ç›®å‰æ˜¯TVM EC2æœåŠ¡å™¨çš„å…¬ç½‘IPåœ°å€
      */
     private String endpoint;
     
     /**
      * The appName declared by the Token Vending Machine.
-     * TVM EC2·şÎñÆ÷ÉÏÅäÖÃµÄÓ¦ÓÃÃû³Æ
+     * TVM EC2æœåŠ¡å™¨ä¸Šé…ç½®çš„åº”ç”¨åç§°
      */
     private String appName;
     
     /**
      * Use SSL when making connections to the Token Vending Machine.
      * 
-     * ÊÇ·ñÆôÓÃSSLÁ¬½Ó£¨Ä¿Ç°Ã»ÓĞÆôÓÃ£©
+     * æ˜¯å¦å¯ç”¨SSLè¿æ¥ï¼ˆç›®å‰æ²¡æœ‰å¯ç”¨ï¼‰
      * 
      */
     private boolean useSSL;
@@ -60,7 +60,7 @@ public class AmazonTVMClient
     /**
      * The shared preferences where credentials are other aws access information is stored.
      * 
-     * ±¾µØ±£´æÁË»ñÈ¡µÄÁÙÊ±Ö¤Êé
+     * æœ¬åœ°ä¿å­˜äº†è·å–çš„ä¸´æ—¶è¯ä¹¦
      * 
      */
     private SharedPreferences sharedPreferences;
@@ -90,15 +90,22 @@ public class AmazonTVMClient
         //this key is encrpyt the get token request
         String key = AmazonSharedPreferencesWrapper.getKeyForDevice( this.sharedPreferences );
         
-        //¹¹ÔìÇëÇó¶ÔÏó
+        //æ„é€ è¯·æ±‚å¯¹è±¡
         Request getTokenRequest = new GetTokenRequest( this.endpoint, this.useSSL, uid, key );
+	    
+	    
+	    
+	    
+	    
+	    
+	    
         
         log4j.debug("getTokenRequest;{" + getTokenRequest + "}");
         
-        //»ñÈ¡ÁÙÊ±Ö¤ÊéÏìÓ¦´¦ÀíÆ÷
+        //è·å–ä¸´æ—¶è¯ä¹¦å“åº”å¤„ç†å™¨
         ResponseHandler handler = new GetTokenResponseHandler( key );
 
-        //Ö´ĞĞ¾ßÌåµÄÔ¶³ÌÇëÇó£¬»ñÈ¡ÏìÓ¦½á¹û¶ÔÏó
+        //æ‰§è¡Œå…·ä½“çš„è¿œç¨‹è¯·æ±‚ï¼Œè·å–å“åº”ç»“æœå¯¹è±¡
         GetTokenResponse getTokenResponse = 
                 (GetTokenResponse)this.processRequest( getTokenRequest, handler );
         
@@ -107,7 +114,7 @@ public class AmazonTVMClient
         if ( getTokenResponse.requestWasSuccessful() ) 
         {
             
-            log4j.info("getToken()" + "»ñÈ¡ÁÙÊ±Ö¤Êé²Ù×÷³É¹¦£¬½«ÁÙÊ±Ö¤Êé±£´æ±¾µØ");
+            log4j.info("getToken()" + "è·å–ä¸´æ—¶è¯ä¹¦æ“ä½œæˆåŠŸï¼Œå°†ä¸´æ—¶è¯ä¹¦ä¿å­˜æœ¬åœ°");
             
             AmazonSharedPreferencesWrapper.storeCredentialsInSharedPreferences(this.sharedPreferences, 
                                                                                getTokenResponse.getAccessKey(), 
@@ -203,21 +210,21 @@ public class AmazonTVMClient
         Response response = null;
         int retries = 2;
         
-        //·¢ËÍ×î¶àÔ¤¶¨´ÎÊıµÄÔ¶³ÌÇëÇó
+        //å‘é€æœ€å¤šé¢„å®šæ¬¡æ•°çš„è¿œç¨‹è¯·æ±‚
         do
         {            
             response = TokenVendingMachineService.sendRequest( request, handler );
             
             if ( response.requestWasSuccessful() ) 
             {   
-                log4j.debug("processRequest()" + "Ô¶³Ì²Ù×÷³É¹¦£¬ response = {" + response + "}");
+                log4j.debug("processRequest()" + "è¿œç¨‹æ“ä½œæˆåŠŸï¼Œ response = {" + response + "}");
                 
                 return response;
             }
             else 
             {
                 
-                log4j.error("processRequest()" + "Ô¶³Ì²Ù×÷Ê§°Ü£¬ response = {" + response + "}");
+                log4j.error("processRequest()" + "è¿œç¨‹æ“ä½œå¤±è´¥ï¼Œ response = {" + response + "}");
                 
                 Log.w( LOG_TAG, "Request to Token Vending Machine failed with Code: " 
                               + "[" + response.getResponseCode() + "] " 
@@ -241,7 +248,7 @@ public class AmazonTVMClient
 		return randomString;
 	}
     
-    //´ÓURLÖĞ½âÎö³öÓòÃû»òÕßIP
+    //ä»URLä¸­è§£æå‡ºåŸŸåæˆ–è€…IP
     private String getEndpointDomainName( String endpoint ) 
     {
     	int startIndex = 0;
