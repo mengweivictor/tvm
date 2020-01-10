@@ -65,6 +65,15 @@ public class ListOrderThread extends Thread {
                     objectMapper.setDateFormat(myFormat);
                     Date todayDate = todayFormat.parse(this.today);
                     if(Util.isSameDay(orderDate, todayDate)) {
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
                         String orderAsString = objectMapper.writeValueAsString(SalesSystem.orders.get(orderDate));
                     }
                 } catch (JsonProcessingException e) {
