@@ -59,10 +59,12 @@ public class ListOrderThread extends Thread {
 
         synchronized (SalesSystem.orders) {
             for(Date orderDate: SalesSystem.orders.keySet()){
-                try {
+                try 
+                {
                     objectMapper.setDateFormat(myFormat);
                     Date todayDate = todayFormat.parse(this.today);
-                    if(Util.isSameDay(orderDate, todayDate)) {
+                    if(Util.isSameDay(orderDate, todayDate)) 
+                    {
                         String orderAsString = objectMapper.writeValueAsString(SalesSystem.orders.get(orderDate));
                     }
                 } catch (JsonProcessingException e) {
