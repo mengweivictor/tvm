@@ -44,8 +44,10 @@ public class ListOrderThread extends Thread {
     private static String today = null;
 
     @Override
-    public void run() {
-        while (!exit) {
+    public void run() 
+    {
+        while (!exit) 
+        {
             listOrders();
 
         }
@@ -58,7 +60,7 @@ public class ListOrderThread extends Thread {
         ObjectMapper objectMapper = new ObjectMapper();
 
         synchronized (SalesSystem.orders) {
-            for(Date orderDate: SalesSystem.orders.keySet()){
+            synchronized for(Date orderDate: SalesSystem.orders.keySet()){
                 try {
                     objectMapper.setDateFormat(myFormat);
                     Date todayDate = todayFormat.parse(this.today);
