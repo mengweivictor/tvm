@@ -74,6 +74,13 @@ public class ListOrderThread extends Thread {
                 }
             }
         }
+		
+		SalesSystem.orders.put(orderDate, order);
+		//Check if the Order entered and present
+		if (SalesSystem.orders.containsKey(orderDate)) {
+			System.out.println("New order verified to be present in hashmap: " + SalesSystem.orders.get(orderDate)); 
+		}
+		id++;
     }
 
     public void setDate(String today){
